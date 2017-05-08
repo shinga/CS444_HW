@@ -1,0 +1,4147 @@
+Common subdirectories: linux-yocto-3.14-clean/arch and linux-yocto-3.14-working/arch
+Only in linux-yocto-3.14-working/: assn2.patch
+Common subdirectories: linux-yocto-3.14-clean/block and linux-yocto-3.14-working/block
+diff linux-yocto-3.14-clean/.config linux-yocto-3.14-working/.config
+3c3
+< # Linux/x86 3.14.24 Kernel Configuration
+---
+> # Linux/x86 3.14.26 Kernel Configuration
+Common subdirectories: linux-yocto-3.14-clean/crypto and linux-yocto-3.14-working/crypto
+Common subdirectories: linux-yocto-3.14-clean/Documentation and linux-yocto-3.14-working/Documentation
+Common subdirectories: linux-yocto-3.14-clean/drivers and linux-yocto-3.14-working/drivers
+Common subdirectories: linux-yocto-3.14-clean/firmware and linux-yocto-3.14-working/firmware
+Common subdirectories: linux-yocto-3.14-clean/fs and linux-yocto-3.14-working/fs
+Common subdirectories: linux-yocto-3.14-clean/.git and linux-yocto-3.14-working/.git
+diff linux-yocto-3.14-clean/.gitignore linux-yocto-3.14-working/.gitignore
+68c68
+< #patches-*
+---
+> patches-*
+71,72c71,72
+< #patches
+< #series
+---
+> patches
+> series
+Common subdirectories: linux-yocto-3.14-clean/include and linux-yocto-3.14-working/include
+Common subdirectories: linux-yocto-3.14-clean/init and linux-yocto-3.14-working/init
+Common subdirectories: linux-yocto-3.14-clean/ipc and linux-yocto-3.14-working/ipc
+Common subdirectories: linux-yocto-3.14-clean/kernel and linux-yocto-3.14-working/kernel
+Common subdirectories: linux-yocto-3.14-clean/lib and linux-yocto-3.14-working/lib
+diff linux-yocto-3.14-clean/Makefile linux-yocto-3.14-working/Makefile
+3c3
+< SUBLEVEL = 24
+---
+> SUBLEVEL = 26
+Only in linux-yocto-3.14-clean/: .missing-syscalls.d
+Common subdirectories: linux-yocto-3.14-clean/mm and linux-yocto-3.14-working/mm
+Only in linux-yocto-3.14-clean/: modules.builtin
+Only in linux-yocto-3.14-clean/: modules.order
+diff linux-yocto-3.14-clean/Module.symvers linux-yocto-3.14-working/Module.symvers
+10c10
+< 0xf575b5a8	pcmcia_reset_card	vmlinux	EXPORT_SYMBOL
+---
+> 0x13129798	pcmcia_reset_card	vmlinux	EXPORT_SYMBOL
+46c46
+< 0xcbc0462c	avmcard_dma_free	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0x1491d554	avmcard_dma_free	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+63,64c63,64
+< 0x57244370	mlx5_core_destroy_qp	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0x7823302f	mlx5_core_destroy_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x1699d0da	mlx5_core_destroy_qp	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0x8b10b31f	mlx5_core_destroy_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+101c101
+< 0xe0cc062b	mlx4_unregister_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x3a99802f	mlx4_unregister_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+105d104
+< 0x30cada8f	radix_tree_next_hole	vmlinux	EXPORT_SYMBOL
+114c113
+< 0x7a2d0602	mpt_free_fw_memory	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xfa7de8ce	mpt_free_fw_memory	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+133c132
+< 0x5c962e51	agp_free_page_array	vmlinux	EXPORT_SYMBOL
+---
+> 0xecd92193	agp_free_page_array	vmlinux	EXPORT_SYMBOL
+140c139
+< 0x0bb29a79	pci_bus_read_config_byte	vmlinux	EXPORT_SYMBOL
+---
+> 0x22c2beda	pci_bus_read_config_byte	vmlinux	EXPORT_SYMBOL
+163c162
+< 0x6eef7b3f	pch_ch_event_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+---
+> 0x9d94082d	pch_ch_event_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+166c165
+< 0xf53a6340	mptscsih_scandv_complete	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x5bbc2214	mptscsih_scandv_complete	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+199,200c198,199
+< 0x9d66fae2	rtsx_pci_card_power_on	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+< 0x586a2b3f	drm_agp_enable	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x8f8d6771	rtsx_pci_card_power_on	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+> 0x7b4b7c1d	drm_agp_enable	drivers/gpu/drm/drm	EXPORT_SYMBOL
+212c211
+< 0x50b07666	pci_map_rom	vmlinux	EXPORT_SYMBOL
+---
+> 0xc1c7063e	pci_map_rom	vmlinux	EXPORT_SYMBOL
+217c216
+< 0x23ed536f	acpi_pci_find_root	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x30a9b1af	acpi_pci_find_root	vmlinux	EXPORT_SYMBOL_GPL
+219c218
+< 0xc1d9fc98	pcmcia_map_mem_page	vmlinux	EXPORT_SYMBOL
+---
+> 0xacfde77b	pcmcia_map_mem_page	vmlinux	EXPORT_SYMBOL
+222c221
+< 0x06140c1a	snd_hda_get_sub_nodes	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x26d66b3d	snd_hda_get_sub_nodes	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+227c226
+< 0x4851d8b4	mlx4_multicast_detach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xdc9efaba	mlx4_multicast_detach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+243c242
+< 0xbd085c2c	ata_pci_bmdma_init_one	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x66c20635	ata_pci_bmdma_init_one	vmlinux	EXPORT_SYMBOL_GPL
+260c259
+< 0xcfaff635	ioat_dma_setup_interrupts	drivers/dma/ioat/ioatdma	EXPORT_SYMBOL
+---
+> 0x26577e41	ioat_dma_setup_interrupts	drivers/dma/ioat/ioatdma	EXPORT_SYMBOL
+279c278
+< 0xfec1e935	mm_kobj	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x6f423b1a	mm_kobj	vmlinux	EXPORT_SYMBOL_GPL
+281c280
+< 0x1df70c03	pcim_iounmap	vmlinux	EXPORT_SYMBOL
+---
+> 0x874fbe29	pcim_iounmap	vmlinux	EXPORT_SYMBOL
+283c282
+< 0x4f9eeb5f	mlx4_mr_enable	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x87756e3f	mlx4_mr_enable	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+289c288
+< 0x5a344c39	pci_disable_pasid	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xa4d52d79	pci_disable_pasid	vmlinux	EXPORT_SYMBOL_GPL
+303c302
+< 0x91d4d9d1	mlx4_SET_PORT_SCHEDULER	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x46be1390	mlx4_SET_PORT_SCHEDULER	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+313c312
+< 0x04cb5472	mlx5_core_attach_mcg	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xe409246b	mlx5_core_attach_mcg	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+317c316
+< 0x4ff300aa	drm_mode_connector_detach_encoder	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x362cb72e	drm_mode_connector_detach_encoder	drivers/gpu/drm/drm	EXPORT_SYMBOL
+332c331
+< 0x9c7a08fb	mlx5_core_arm_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x4bc0c907	mlx5_core_arm_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+334c333
+< 0xdb9000a0	pci_find_next_ext_capability	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xfcf038dd	pci_find_next_ext_capability	vmlinux	EXPORT_SYMBOL_GPL
+342c341
+< 0xc7241a99	pcmcia_unregister_socket	vmlinux	EXPORT_SYMBOL
+---
+> 0x417d9a16	pcmcia_unregister_socket	vmlinux	EXPORT_SYMBOL
+360,361c359,360
+< 0xd6e3fdf9	il_setup_watchdog	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0xbdd679ef	il_power_initialize	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x101447cc	il_setup_watchdog	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x96ff4ba6	il_power_initialize	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+375c374
+< 0x7012ba08	il_hdl_spectrum_measurement	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xb5c824af	il_hdl_spectrum_measurement	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+381c380
+< 0xf6135c0a	ssb_commit_settings	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x21613252	ssb_commit_settings	drivers/ssb/ssb	EXPORT_SYMBOL
+400,401c399,400
+< 0x598bc85a	drm_kms_helper_hotplug_event	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+< 0xe79d79a2	pci_reset_slot	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xd5b637d8	drm_kms_helper_hotplug_event	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+> 0x4428a14c	pci_reset_slot	vmlinux	EXPORT_SYMBOL_GPL
+411c410
+< 0xf6efd96c	snd_hda_delete_codec_preset	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x5f235890	snd_hda_delete_codec_preset	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+429c428
+< 0xc8964d7c	pci_bus_write_config_dword	vmlinux	EXPORT_SYMBOL
+---
+> 0xae61b618	pci_bus_write_config_dword	vmlinux	EXPORT_SYMBOL
+445c444
+< 0x4fe908ff	il_set_decrypted_flag	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x14210692	il_set_decrypted_flag	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+447,448c446,447
+< 0xd273fcfa	mpt_GetIocState	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0x67a0ed31	pcim_enable_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x2ed60c8b	mpt_GetIocState	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0xfe8f2038	pcim_enable_device	vmlinux	EXPORT_SYMBOL
+500c499
+< 0x86833e67	mlx4_srq_lookup	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x49b8164c	mlx4_srq_lookup	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+512,513c511,512
+< 0x181e91f8	il_tx_queue_free	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x71b0da8c	il_add_beacon_time	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xe13e71d3	il_tx_queue_free	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x7ba99363	il_add_beacon_time	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+517c516
+< 0xd3604ca8	pci_msi_off	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xcfee19b9	pci_msi_off	vmlinux	EXPORT_SYMBOL_GPL
+530c529
+< 0xe433ac7e	pci_find_parent_resource	vmlinux	EXPORT_SYMBOL
+---
+> 0x6e5b8f65	pci_find_parent_resource	vmlinux	EXPORT_SYMBOL
+555c554
+< 0xf156cea4	pch_set_station_address	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+---
+> 0x1106ef2e	pch_set_station_address	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+564c563
+< 0xba50ebe6	drm_helper_move_panel_connectors_to_head	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x53eed159	drm_helper_move_panel_connectors_to_head	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+576c575
+< 0x65c8be52	drm_vblank_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x56e364a2	drm_vblank_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+610c609
+< 0x28015140	ioc4_register_submodule	drivers/misc/ioc4	EXPORT_SYMBOL
+---
+> 0xccdd1e33	ioc4_register_submodule	drivers/misc/ioc4	EXPORT_SYMBOL
+642c641
+< 0x7db46048	pci_probe_reset_bus	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x097a1625	pci_probe_reset_bus	vmlinux	EXPORT_SYMBOL_GPL
+647c646
+< 0x17fa36db	cxgbi_ddp_cleanup	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0xdfd94963	cxgbi_ddp_cleanup	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+658,659c657,658
+< 0xf6520733	rtsx_pci_card_power_off	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+< 0x05fc8bd4	drm_framebuffer_unreference	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x8d0f5180	rtsx_pci_card_power_off	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+> 0x054c3faa	drm_framebuffer_unreference	drivers/gpu/drm/drm	EXPORT_SYMBOL
+669c668
+< 0x511c1caf	iwl_opmode_register	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0xb77bb836	iwl_opmode_register	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+675c674
+< 0xf0e49ce5	pci_enable_ats	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x7d02565f	pci_enable_ats	vmlinux	EXPORT_SYMBOL_GPL
+697c696
+< 0x39032c50	pci_stop_and_remove_bus_device_locked	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x4787ae16	pci_stop_and_remove_bus_device_locked	vmlinux	EXPORT_SYMBOL_GPL
+739,740c738,739
+< 0xe18a953d	rtsx_pci_complete_unfinished_transfer	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+< 0x8088b9eb	drm_agp_unbind	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xb5622faf	rtsx_pci_complete_unfinished_transfer	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+> 0xa175392e	drm_agp_unbind	drivers/gpu/drm/drm	EXPORT_SYMBOL
+804c803
+< 0x05bcc111	snd_hda_get_default_vref	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x8188a05f	snd_hda_get_default_vref	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+808c807
+< 0xffb2a384	ssb_bus_resume	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0xe74309e1	ssb_bus_resume	drivers/ssb/ssb	EXPORT_SYMBOL
+810c809
+< 0x0ca2d515	mlx5_core_query_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x1c1df381	mlx5_core_query_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+824c823
+< 0x40b999dc	agp_remove_bridge	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xfd01d251	agp_remove_bridge	vmlinux	EXPORT_SYMBOL_GPL
+843c842
+< 0x343fa414	oxygen_pci_shutdown	sound/pci/oxygen/snd-oxygen-lib	EXPORT_SYMBOL
+---
+> 0xcce49367	oxygen_pci_shutdown	sound/pci/oxygen/snd-oxygen-lib	EXPORT_SYMBOL
+847c846
+< 0xa7d377e2	ssb_device_is_enabled	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0xdd244d39	ssb_device_is_enabled	drivers/ssb/ssb	EXPORT_SYMBOL
+854c853
+< 0x420accb6	drm_mode_create_from_cmdline_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xefd8bcf7	drm_mode_create_from_cmdline_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+860c859
+< 0xd7b4c1f9	pci_store_saved_state	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xf53c7def	pci_store_saved_state	vmlinux	EXPORT_SYMBOL_GPL
+873c872
+< 0xfb1cc1a5	pci_setup_cardbus	vmlinux	EXPORT_SYMBOL
+---
+> 0xe9e48384	pci_setup_cardbus	vmlinux	EXPORT_SYMBOL
+917c916
+< 0x23efd8a7	pcix_set_mmrbc	vmlinux	EXPORT_SYMBOL
+---
+> 0x8e9619bd	pcix_set_mmrbc	vmlinux	EXPORT_SYMBOL
+921,922c920,921
+< 0xf8e9aafb	pcmcia_request_irq	vmlinux	EXPORT_SYMBOL
+< 0xcac852d8	il_eeprom_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x01208b60	pcmcia_request_irq	vmlinux	EXPORT_SYMBOL
+> 0x7f3d4785	il_eeprom_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+933c932
+< 0x26790024	il_tx_queue_reset	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x8645c6fe	il_tx_queue_reset	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+981c980
+< 0x81d01b99	mlx4_set_stats_bitmap	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xb308ac0f	mlx4_set_stats_bitmap	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+994,995c993,994
+< 0xd61a0103	pci_restore_ats_state	vmlinux	EXPORT_SYMBOL_GPL
+< 0x0162b295	pci_restore_msi_state	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x518c6434	pci_restore_ats_state	vmlinux	EXPORT_SYMBOL_GPL
+> 0x8121d72b	pci_restore_msi_state	vmlinux	EXPORT_SYMBOL_GPL
+998c997
+< 0xc9c7c353	pcie_capability_clear_and_set_dword	vmlinux	EXPORT_SYMBOL
+---
+> 0x10f3d411	pcie_capability_clear_and_set_dword	vmlinux	EXPORT_SYMBOL
+1048c1047
+< 0x34779e75	drm_crtc_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xb38e3649	drm_crtc_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1074c1073
+< 0x366a66ac	drm_gem_handle_create	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x5831143a	drm_gem_handle_create	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1077c1076
+< 0xdf5d2423	pcmcia_request_window	vmlinux	EXPORT_SYMBOL
+---
+> 0xbaca65b1	pcmcia_request_window	vmlinux	EXPORT_SYMBOL
+1084c1083
+< 0x4f873b05	drm_mode_set_config_internal	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x58748994	drm_mode_set_config_internal	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1095c1094
+< 0xa361ce5b	cxgbi_hbas_add	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x2b98f90f	cxgbi_hbas_add	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+1099c1098
+< 0x1fc73d83	drm_helper_mode_fill_fb_struct	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xcffe925a	drm_helper_mode_fill_fb_struct	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+1107,1109c1106,1108
+< 0xafedc15b	cxgbi_device_portmap_cleanup	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+< 0xa5735bc7	mpt_Soft_Hard_ResetHandler	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0xd749f06d	drm_pci_free	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x3327c053	cxgbi_device_portmap_cleanup	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+> 0x8f8dc592	mpt_Soft_Hard_ResetHandler	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0x2f368af5	drm_pci_free	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1127c1126
+< 0xc95be836	snd_hda_check_board_codec_sid_config	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x029a3397	snd_hda_check_board_codec_sid_config	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1133c1132
+< 0x4e7bdbc6	drm_i2c_encoder_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x92615378	drm_i2c_encoder_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1136c1135
+< 0x15f12d0a	agp_backend_acquire	vmlinux	EXPORT_SYMBOL
+---
+> 0x7e9ab552	agp_backend_acquire	vmlinux	EXPORT_SYMBOL
+1151,1152c1150,1151
+< 0x8f6e4163	il_get_single_channel_number	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x6cd0be44	drm_fb_helper_fini	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xd6088c9e	il_get_single_channel_number	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x5987ec9d	drm_fb_helper_fini	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+1173c1172
+< 0x22a63c0f	drm_idlelock_release	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xb33653a1	drm_idlelock_release	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1178c1177
+< 0x773251b2	qlt_lport_register	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0x383c85a5	qlt_lport_register	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+1195c1194
+< 0x81348e1d	snd_hda_codec_amp_init	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x04304e09	snd_hda_codec_amp_init	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1234c1233
+< 0x98ec886d	cnic_register_driver	drivers/net/ethernet/broadcom/cnic	EXPORT_SYMBOL
+---
+> 0xee4e5c45	cnic_register_driver	drivers/net/ethernet/broadcom/cnic	EXPORT_SYMBOL
+1238c1237
+< 0x23a86704	drm_mode_connector_attach_encoder	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x2134f4f6	drm_mode_connector_attach_encoder	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1303c1302
+< 0xaca1d73e	mlx4_xrcd_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x669e508f	mlx4_xrcd_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1307c1306
+< 0x6703a239	pci_wake_from_d3	vmlinux	EXPORT_SYMBOL
+---
+> 0xbaa641d0	pci_wake_from_d3	vmlinux	EXPORT_SYMBOL
+1340c1339
+< 0xe1290491	vga_switcheroo_register_handler	vmlinux	EXPORT_SYMBOL
+---
+> 0xb230ce26	vga_switcheroo_register_handler	vmlinux	EXPORT_SYMBOL
+1347c1346
+< 0xdef4c856	pci_set_dma_max_seg_size	vmlinux	EXPORT_SYMBOL
+---
+> 0x26880dcd	pci_set_dma_max_seg_size	vmlinux	EXPORT_SYMBOL
+1353,1354c1352,1353
+< 0x47762128	il_hdl_error	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0xbe64860a	rtsx_pci_switch_output_voltage	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0xb1f7e08c	il_hdl_error	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x2c748226	rtsx_pci_switch_output_voltage	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+1367c1366
+< 0x38e8a79a	ssb_device_disable	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x9f4a1901	ssb_device_disable	drivers/ssb/ssb	EXPORT_SYMBOL
+1376c1375
+< 0xe3c04e1f	pci_back_from_sleep	vmlinux	EXPORT_SYMBOL
+---
+> 0x27e71b25	pci_back_from_sleep	vmlinux	EXPORT_SYMBOL
+1380c1379
+< 0x479820d0	snd_ac97_update	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x26caee14	snd_ac97_update	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+1402,1404c1401,1403
+< 0x1f0fa219	iwl_poll_direct_bit	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+< 0xd24aee44	mlx4_unicast_detach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xa48bb805	mlx4_unicast_attach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xe76c989d	iwl_poll_direct_bit	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+> 0xfe4f2d52	mlx4_unicast_detach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xa14f1c16	mlx4_unicast_attach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1413c1412
+< 0xcb499701	cxgbi_device_portmap_create	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0xaeec7cfd	cxgbi_device_portmap_create	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+1415c1414
+< 0x5a9864a9	drm_av_sync_delay	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x9d9103ab	drm_av_sync_delay	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1422c1421
+< 0x0bd05b5f	mlx4_qp_query	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xcef4608f	mlx4_qp_query	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1428,1430c1427,1429
+< 0x13b81667	pci_bus_read_config_word	vmlinux	EXPORT_SYMBOL
+< 0x918bd3bc	snd_hda_codec_update_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0x5690e1e7	snd_emu10k1_synth_copy_from_user	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+---
+> 0x1bdc381d	pci_bus_read_config_word	vmlinux	EXPORT_SYMBOL
+> 0x51d00711	snd_hda_codec_update_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0xc16d8d6b	snd_emu10k1_synth_copy_from_user	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+1450c1449
+< 0x62078a3b	pci_map_biosrom	vmlinux	EXPORT_SYMBOL
+---
+> 0x336e7937	pci_map_biosrom	vmlinux	EXPORT_SYMBOL
+1466c1465
+< 0x26fed2d4	pcie_get_mps	vmlinux	EXPORT_SYMBOL
+---
+> 0xa1161ac1	pcie_get_mps	vmlinux	EXPORT_SYMBOL
+1476c1475
+< 0xf745eaf7	mlx4_cq_modify	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x69ef324a	mlx4_cq_modify	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1480c1479
+< 0x84d1fda1	snd_hda_enable_beep_device	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x3acf2e9b	snd_hda_enable_beep_device	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1490c1489
+< 0x8b674fab	pci_cfg_access_unlock	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xfe5ef73d	pci_cfg_access_unlock	vmlinux	EXPORT_SYMBOL_GPL
+1497c1496
+< 0x6ee1c66a	drm_agp_bind	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x8c87078d	drm_agp_bind	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1499c1498
+< 0x11552bca	agp3_generic_tlbflush	vmlinux	EXPORT_SYMBOL
+---
+> 0x85df300f	agp3_generic_tlbflush	vmlinux	EXPORT_SYMBOL
+1503c1502
+< 0x353ebe88	sdhci_pci_o2_probe_slot	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x7559c283	sdhci_pci_o2_probe_slot	vmlinux	EXPORT_SYMBOL_GPL
+1506c1505
+< 0x3a71a855	snd_hda_is_supported_format	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xfae6870d	snd_hda_is_supported_format	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1522c1521
+< 0xa54899e9	snd_hda_correct_pin_ctl	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xe07f911b	snd_hda_correct_pin_ctl	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1570c1569
+< 0xf374b2a4	pci_restore_state	vmlinux	EXPORT_SYMBOL
+---
+> 0xa34a77f7	pci_restore_state	vmlinux	EXPORT_SYMBOL
+1576c1575
+< 0x2fc48d5e	ssb_pmu_set_ldo_paref	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x996c0881	ssb_pmu_set_ldo_paref	drivers/ssb/ssb	EXPORT_SYMBOL
+1587,1589c1586,1588
+< 0xe2f23d13	mlx5_buf_alloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0x7adddc89	mlx4_buf_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x1df0ab2b	rtsx_pci_write_phy_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x2b4f33cd	mlx5_buf_alloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0xe0c12647	mlx4_buf_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xfe9b950b	rtsx_pci_write_phy_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+1593c1592
+< 0xbda22e5f	agp_enable	vmlinux	EXPORT_SYMBOL
+---
+> 0xceba4489	agp_enable	vmlinux	EXPORT_SYMBOL
+1598c1597
+< 0x96282430	pci_release_selected_regions	vmlinux	EXPORT_SYMBOL
+---
+> 0x60a8cb84	pci_release_selected_regions	vmlinux	EXPORT_SYMBOL
+1603,1604c1602,1603
+< 0x6dc6e9d6	mlx5_core_mad_ifc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0x6b792e82	mlx4_get_protocol_dev	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xdf295e15	mlx5_core_mad_ifc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0x6f1da7cd	mlx4_get_protocol_dev	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1613c1612
+< 0xc1b69102	il_setup_scan_deferred_work	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x170ee444	il_setup_scan_deferred_work	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+1624c1623
+< 0x158aa422	drm_select_eld	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x24fd9f89	drm_select_eld	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1635c1634
+< 0x1fd7926a	_snd_hda_set_pin_ctl	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x0bf5e5e9	_snd_hda_set_pin_ctl	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1648c1647
+< 0x3eb6f1bd	iwl_set_bits_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0x0dfafaee	iwl_set_bits_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+1654c1653
+< 0xd995f578	acpiphp_register_attention	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xb3d77c2e	acpiphp_register_attention	vmlinux	EXPORT_SYMBOL_GPL
+1668,1669c1667,1668
+< 0xcaa410a8	drm_gem_put_pages	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xd7a6e322	drm_gem_get_pages	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x4df64019	drm_gem_put_pages	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x969df628	drm_gem_get_pages	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1678c1677
+< 0x94387f94	pci_sriov_migration	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x80a9c056	pci_sriov_migration	vmlinux	EXPORT_SYMBOL_GPL
+1691c1690
+< 0x486120fd	pci_reset_function	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x3fa8af76	pci_reset_function	vmlinux	EXPORT_SYMBOL_GPL
+1709c1708
+< 0x99540076	snd_ac97_resume	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x209ee99d	snd_ac97_resume	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+1740c1739
+< 0xd02653dd	drm_modeset_unlock_all	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x16c655fd	drm_modeset_unlock_all	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1750c1749
+< 0xeaec774c	bcma_core_disable	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x111b9911	bcma_core_disable	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+1753,1754c1752,1753
+< 0x67505fd5	pci_select_bars	vmlinux	EXPORT_SYMBOL
+< 0x9d69e557	snd_hda_queue_unsol_event	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xf4c46ad3	pci_select_bars	vmlinux	EXPORT_SYMBOL
+> 0x0f73d020	snd_hda_queue_unsol_event	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1760c1759
+< 0x2a16c402	mlx4_register_interface	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x3eb17e3d	mlx4_register_interface	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1776c1775
+< 0x9649b525	il_send_cmd_sync	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x555c2866	il_send_cmd_sync	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+1784c1783
+< 0xc2036ef0	pcie_capability_read_word	vmlinux	EXPORT_SYMBOL
+---
+> 0x92d12f59	pcie_capability_read_word	vmlinux	EXPORT_SYMBOL
+1786,1787c1785,1786
+< 0xc947efb9	cxgbi_sock_skb_entail	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+< 0xd1f5e78c	cxgbi_sock_rcv_wr_ack	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x90f49b8e	cxgbi_sock_skb_entail	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+> 0xd79e84eb	cxgbi_sock_rcv_wr_ack	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+1789c1788
+< 0xbfbeb4c2	mlx4_free_hwq_res	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xef830e7d	mlx4_free_hwq_res	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1800c1799
+< 0xa2cbd832	il_free_geos	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x3f1c4b72	il_free_geos	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+1810c1809
+< 0x39f84090	il_rx_queue_update_write_ptr	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x6811b59f	il_rx_queue_update_write_ptr	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+1814c1813
+< 0xed65f2b0	drm_vblank_pre_modeset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xeef2f834	drm_vblank_pre_modeset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1824c1823
+< 0x435bcd03	rtsx_pci_stop_cmd	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x36c85ad9	rtsx_pci_stop_cmd	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+1832c1831
+< 0x25a28b5b	pci_bus_max_busnr	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x08845aed	pci_bus_max_busnr	vmlinux	EXPORT_SYMBOL_GPL
+1835c1834
+< 0x81a00d44	mpt_suspend	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x63c98d51	mpt_suspend	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+1847c1846
+< 0x0bb9965f	drm_idlelock_take	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x4ec5f7d5	drm_idlelock_take	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1869c1868
+< 0x82d4ae4c	il_scan_cancel	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x2c2b2ca3	il_scan_cancel	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+1895,1896c1894,1895
+< 0x97d6f16a	il_power_update_mode	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x7735ca29	il_cmd_queue_unmap	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x8450d829	il_power_update_mode	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0xdbcf3aa7	il_cmd_queue_unmap	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+1908c1907
+< 0xe9663bd6	snd_hda_input_mux_put	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x032f6915	snd_hda_input_mux_put	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+1910c1909
+< 0xdac018a5	mlx4_qp_reserve_range	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xa5c6d916	mlx4_qp_reserve_range	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+1922c1921
+< 0x3756b954	drm_dev_alloc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xda655ac1	drm_dev_alloc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1966c1965
+< 0x1905ae59	pcim_iounmap_regions	vmlinux	EXPORT_SYMBOL
+---
+> 0xc4a40003	pcim_iounmap_regions	vmlinux	EXPORT_SYMBOL
+1983c1982
+< 0x01770420	drm_gtf_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x7c50da50	drm_gtf_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+1985c1984
+< 0x09b66022	vga_tryget	vmlinux	EXPORT_SYMBOL
+---
+> 0xe65cd43c	vga_tryget	vmlinux	EXPORT_SYMBOL
+2001c2000
+< 0xb724e539	pci_unregister_driver	vmlinux	EXPORT_SYMBOL
+---
+> 0xe63b2e22	pci_unregister_driver	vmlinux	EXPORT_SYMBOL
+2008c2007
+< 0x8237710d	oxygen_pci_remove	sound/pci/oxygen/snd-oxygen-lib	EXPORT_SYMBOL
+---
+> 0x1d0061cb	oxygen_pci_remove	sound/pci/oxygen/snd-oxygen-lib	EXPORT_SYMBOL
+2013c2012
+< 0xb98c9f32	drm_modeset_lock_all	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x48b5bc15	drm_modeset_lock_all	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2054c2053
+< 0x06c06801	agp_generic_insert_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0x3e1b8886	agp_generic_insert_memory	vmlinux	EXPORT_SYMBOL
+2060c2059
+< 0x768103d8	drm_mode_config_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xb86a737d	drm_mode_config_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2075c2074
+< 0x19b213f7	pci_disable_pcie_error_reporting	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xf7d10f83	pci_disable_pcie_error_reporting	vmlinux	EXPORT_SYMBOL_GPL
+2081c2080
+< 0x11588729	bcma_chipco_pll_read	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x6c1c3082	bcma_chipco_pll_read	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+2091c2090
+< 0xc65fb5e9	il_connection_init_rx_config	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x9ae0e0df	il_connection_init_rx_config	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+2095c2094
+< 0x01541e0c	pci_enable_device_mem	vmlinux	EXPORT_SYMBOL
+---
+> 0x2917796b	pci_enable_device_mem	vmlinux	EXPORT_SYMBOL
+2106c2105
+< 0x1c12a9fd	mlx4_hw_rule_sz	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xf5e0a024	mlx4_hw_rule_sz	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2108c2107
+< 0x3c8debf0	drm_framebuffer_lookup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xffa61e3b	drm_framebuffer_lookup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2117c2116
+< 0x2b996bdf	snd_hda_codec_resume_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xb18c7701	snd_hda_codec_resume_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2121c2120
+< 0x4260eb6d	ssb_bus_sdiobus_register	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x3f74c6a7	ssb_bus_sdiobus_register	drivers/ssb/ssb	EXPORT_SYMBOL
+2124c2123
+< 0x170916e9	drm_gem_handle_delete	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x2f8f9ac3	drm_gem_handle_delete	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2147,2149c2146,2148
+< 0xfaa3a8d8	pci_disable_msi	vmlinux	EXPORT_SYMBOL
+< 0x4c615cf0	pci_disable_ats	vmlinux	EXPORT_SYMBOL_GPL
+< 0x1951416c	pci_disable_rom	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xc683d84b	pci_disable_msi	vmlinux	EXPORT_SYMBOL
+> 0x75aca584	pci_disable_ats	vmlinux	EXPORT_SYMBOL_GPL
+> 0x7e2d0afd	pci_disable_rom	vmlinux	EXPORT_SYMBOL_GPL
+2151c2150
+< 0xf9bb15b9	pci_disable_pri	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xf4fd1098	pci_disable_pri	vmlinux	EXPORT_SYMBOL_GPL
+2172c2171
+< 0xcc634c2a	ssb_clockspeed	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x44a3367b	ssb_clockspeed	drivers/ssb/ssb	EXPORT_SYMBOL
+2174,2175c2173,2174
+< 0xf37f339d	mlx5_core_alloc_pd	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+< 0xdba667b9	mlx4_FLOW_STEERING_IB_UC_QP_RANGE	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x246ebd93	mlx5_core_alloc_pd	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+> 0x7c45bef2	mlx4_FLOW_STEERING_IB_UC_QP_RANGE	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2184c2183
+< 0x1ec0897d	qlt_xmit_tm_rsp	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0x50b9322d	qlt_xmit_tm_rsp	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+2190c2189
+< 0x98b9651e	__mlx4_register_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x4acd8618	__mlx4_register_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2206c2205
+< 0x668a452a	mlx4_SYNC_TPT	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xcad14039	mlx4_SYNC_TPT	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2231c2230
+< 0x1c82a22b	mlx4_mw_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xe94ac5d8	mlx4_mw_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2233c2232
+< 0x44d450ca	drm_mode_config_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x5c511a45	drm_mode_config_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2237c2236
+< 0x89694bee	pci_bus_get	vmlinux	EXPORT_SYMBOL
+---
+> 0xc06986bd	pci_bus_get	vmlinux	EXPORT_SYMBOL
+2243c2242
+< 0x21366a24	pci_bus_put	vmlinux	EXPORT_SYMBOL
+---
+> 0xfe4af724	pci_bus_put	vmlinux	EXPORT_SYMBOL
+2246c2245
+< 0x2e39e257	il_set_tx_power	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x976852b5	il_set_tx_power	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+2262c2261
+< 0x26d3320e	pci_scan_bus_parented	vmlinux	EXPORT_SYMBOL
+---
+> 0x79e2bc15	pci_scan_bus_parented	vmlinux	EXPORT_SYMBOL
+2295c2294
+< 0x24b96c7f	drm_get_encoder_name	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x364ec462	drm_get_encoder_name	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2299c2298
+< 0x5052f2c3	snd_trident_stop_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+---
+> 0xe5116470	snd_trident_stop_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+2302c2301
+< 0xa56493cd	agp_put_bridge	vmlinux	EXPORT_SYMBOL
+---
+> 0xae139d0f	agp_put_bridge	vmlinux	EXPORT_SYMBOL
+2307c2306
+< 0xc33a1cc3	snd_hda_get_connections	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xe039175e	snd_hda_get_connections	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2316c2315
+< 0xa7ae71dd	mlx4_gen_guid_change_eqe	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x8a001ce4	mlx4_gen_guid_change_eqe	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+2326c2325
+< 0x60b57d99	snd_hda_codec_amp_init_stereo	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xc1194474	snd_hda_codec_amp_init_stereo	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2334c2333
+< 0xbdbd6889	pci_user_read_config_dword	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x55cd42db	pci_user_read_config_dword	vmlinux	EXPORT_SYMBOL_GPL
+2340,2341c2339,2340
+< 0x20c43454	mlx5_core_xrcd_dealloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0x0d4ee719	mlx4_flow_attach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x3c011d2c	mlx5_core_xrcd_dealloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0x5bb6de1c	mlx4_flow_attach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2356c2355
+< 0xf6059009	drm_agp_bind_pages	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xef8ec12c	drm_agp_bind_pages	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2378c2377
+< 0x5080bbe0	pcim_iomap_regions_request_all	vmlinux	EXPORT_SYMBOL
+---
+> 0x8959dbfe	pcim_iomap_regions_request_all	vmlinux	EXPORT_SYMBOL
+2382c2381
+< 0xc089eb1c	mlx5_cmd_exec	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x2fd9e5bd	mlx5_cmd_exec	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+2397c2396
+< 0x8162b14c	mlx4_bf_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x822655ed	mlx4_bf_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2429c2428
+< 0xa3ee4147	mlx4_uar_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x749b59b9	mlx4_uar_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2445c2444
+< 0x21877e3c	mlx4_put_slave_node_guid	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x99005bfc	mlx4_put_slave_node_guid	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+2451c2450
+< 0x48e09829	usb_hcd_pci_remove	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x26c8e63f	usb_hcd_pci_remove	vmlinux	EXPORT_SYMBOL_GPL
+2454c2453
+< 0x474f3833	snd_hda_bus_new	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xf6887789	snd_hda_bus_new	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2502,2503c2501,2502
+< 0x35983f27	drm_cvt_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xff146640	bcma_driver_unregister	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x77f8e57f	drm_cvt_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xbeb70f82	bcma_driver_unregister	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+2513,2514c2512,2513
+< 0xf13607d3	mlx4_qp_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x461da4db	mptscsih_get_scsi_lookup	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x610e97c8	mlx4_qp_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xde7b5a8c	mptscsih_get_scsi_lookup	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+2519d2517
+< 0x70e6ab3f	read_cache_page_async	vmlinux	EXPORT_SYMBOL
+2531c2529
+< 0x454294a0	snd_ac97_update_bits	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0xf1b62f8f	snd_ac97_update_bits	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+2535c2533
+< 0x41e4d8ed	bcma_core_set_clockmode	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x1b16b3d9	bcma_core_set_clockmode	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+2538c2536
+< 0xad66d8b5	pci_enable_pcie_error_reporting	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x8d47ab47	pci_enable_pcie_error_reporting	vmlinux	EXPORT_SYMBOL_GPL
+2545c2543
+< 0xa0a0a5cd	cxgbi_device_register	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x498d75ea	cxgbi_device_register	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+2579c2577
+< 0x5640497b	il_remove_station	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+---
+> 0x820a2377	il_remove_station	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+2582c2580
+< 0x7e099cd6	drm_i2c_encoder_commit	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x343eeb9d	drm_i2c_encoder_commit	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2613c2611
+< 0xe1e980fc	snd_hda_get_int_hint	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xe1ba353d	snd_hda_get_int_hint	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2629c2627
+< 0x039d1d90	mlx4_fmr_enable	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x4f60ba1f	mlx4_fmr_enable	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2639c2637
+< 0xe1f005fa	snd_hda_multi_out_analog_open	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xa0f0077c	snd_hda_multi_out_analog_open	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2643c2641
+< 0x4ee1fa1c	mlx4_counter_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x1b80be61	mlx4_counter_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2681c2679
+< 0xf5625e5b	pci_user_write_config_word	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x4a2b532c	pci_user_write_config_word	vmlinux	EXPORT_SYMBOL_GPL
+2687c2685
+< 0xae06f51a	mptscsih_IssueTaskMgmt	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x0c3023b2	mptscsih_IssueTaskMgmt	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+2700c2698
+< 0x350c1d6d	cxgbi_sock_established	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x58cf34e3	cxgbi_sock_established	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+2705,2706c2703,2704
+< 0x9eb1c3db	drm_mode_create_dirty_info_property	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xfecec30a	bcma_core_pll_ctl	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x1286ec12	drm_mode_create_dirty_info_property	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xdb3f39df	bcma_core_pll_ctl	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+2719c2717
+< 0x4dcee021	ssb_bus_suspend	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x901fc38c	ssb_bus_suspend	drivers/ssb/ssb	EXPORT_SYMBOL
+2722c2720
+< 0xf43db93f	drm_dev_register	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x19d06b01	drm_dev_register	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2728c2726
+< 0x8c8421bf	pcmcia_fixup_iowidth	vmlinux	EXPORT_SYMBOL
+---
+> 0x04133792	pcmcia_fixup_iowidth	vmlinux	EXPORT_SYMBOL
+2744c2742
+< 0xfccef73a	mlx5_dev_init	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x83da3af6	mlx5_dev_init	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+2757c2755
+< 0x503a487a	mlx5_cmd_exec_cb	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xe6c02606	mlx5_cmd_exec_cb	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+2762c2760
+< 0x63cb00f0	pci_check_and_unmask_intx	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x16b866c1	pci_check_and_unmask_intx	vmlinux	EXPORT_SYMBOL_GPL
+2769c2767
+< 0x1a17f5cc	bcma_chipco_gpio_outen	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x24d3e975	bcma_chipco_gpio_outen	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+2790c2788
+< 0x8e264ac1	drm_vm_open_locked	drivers/gpu/drm/drm	EXPORT_SYMBOL_GPL
+---
+> 0xdb1e6d22	drm_vm_open_locked	drivers/gpu/drm/drm	EXPORT_SYMBOL_GPL
+2794c2792
+< 0xeec404e2	agp_find_bridge	vmlinux	EXPORT_SYMBOL
+---
+> 0x6272a3a3	agp_find_bridge	vmlinux	EXPORT_SYMBOL
+2803c2801
+< 0xaaec3b07	rtsx_pci_card_pull_ctl_enable	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x66746428	rtsx_pci_card_pull_ctl_enable	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+2819c2817
+< 0x9556b7b3	mlx4_qp_release_range	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xeed7573e	mlx4_qp_release_range	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+2830c2828
+< 0xa5251980	snd_hda_unlock_devices	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xf59bd8c3	snd_hda_unlock_devices	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2851,2852c2849,2850
+< 0xc48c2103	mlx4_free_cmd_mailbox	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xd827c0b4	rtsx_pci_read_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0xbc2287d8	mlx4_free_cmd_mailbox	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xeeac3fd8	rtsx_pci_read_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+2862c2860
+< 0x3f29e80e	drm_irq_uninstall	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x5226445d	drm_irq_uninstall	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2866c2864
+< 0xb5c3b7cd	amd_iommu_enable_device_erratum	vmlinux	EXPORT_SYMBOL
+---
+> 0x20d4c1d3	amd_iommu_enable_device_erratum	vmlinux	EXPORT_SYMBOL
+2877c2875
+< 0xbdf9969d	pci_biosrom_size	vmlinux	EXPORT_SYMBOL
+---
+> 0x4065a4c1	pci_biosrom_size	vmlinux	EXPORT_SYMBOL
+2891c2889
+< 0xdaed263f	ssb_bus_pcmciabus_register	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x862b8080	ssb_bus_pcmciabus_register	drivers/ssb/ssb	EXPORT_SYMBOL
+2893c2891
+< 0x67bdd375	drm_master_put	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x187ec525	drm_master_put	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2895c2893
+< 0xfbe630ee	pci_get_subsys	vmlinux	EXPORT_SYMBOL
+---
+> 0x186b256a	pci_get_subsys	vmlinux	EXPORT_SYMBOL
+2911c2909
+< 0x318f9291	rtl_pci_disconnect	drivers/net/wireless/rtlwifi/rtl_pci	EXPORT_SYMBOL
+---
+> 0xfd030b59	rtl_pci_disconnect	drivers/net/wireless/rtlwifi/rtl_pci	EXPORT_SYMBOL
+2919c2917
+< 0x1226af4e	pci_test_config_bits	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x9368afc2	pci_test_config_bits	vmlinux	EXPORT_SYMBOL_GPL
+2921c2919
+< 0xff4920d2	snd_hda_find_mixer_ctl	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xb05215de	snd_hda_find_mixer_ctl	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+2923c2921
+< 0x9fe85273	qlt_free_cmd	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0x61eedcb4	qlt_free_cmd	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+2926c2924
+< 0xbbb9180b	mlx5_core_eq_query	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0xd3826cb5	mlx5_core_eq_query	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+2930c2928
+< 0xb085a602	pci_find_next_bus	vmlinux	EXPORT_SYMBOL
+---
+> 0x5a050ae9	pci_find_next_bus	vmlinux	EXPORT_SYMBOL
+2941c2939
+< 0xaa3b26bc	drm_framebuffer_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x1ff157c8	drm_framebuffer_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+2981c2979
+< 0xa550e951	rtsx_pci_send_cmd_no_wait	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0xfaa78916	rtsx_pci_send_cmd_no_wait	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+2983c2981
+< 0xcf308e2b	vga_put	vmlinux	EXPORT_SYMBOL
+---
+> 0x012ab1c9	vga_put	vmlinux	EXPORT_SYMBOL
+2993c2991
+< 0x85fd2235	drm_crtc_helper_set_mode	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xb431198e	drm_crtc_helper_set_mode	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+3000c2998
+< 0xd4b951e6	drm_plane_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xeb096f09	drm_plane_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3009c3007
+< 0x502e297e	drm_crtc_index	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xeec1850c	drm_crtc_index	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3029,3030c3027,3028
+< 0x76f90ad4	pcmcia_put_socket	vmlinux	EXPORT_SYMBOL
+< 0x8f6872e8	pci_iomap	vmlinux	EXPORT_SYMBOL
+---
+> 0xcb54e542	pcmcia_put_socket	vmlinux	EXPORT_SYMBOL
+> 0xa061864a	pci_iomap	vmlinux	EXPORT_SYMBOL
+3033c3031
+< 0x3de8eea6	pcmcia_get_socket	vmlinux	EXPORT_SYMBOL
+---
+> 0x91defbbd	pcmcia_get_socket	vmlinux	EXPORT_SYMBOL
+3035c3033
+< 0x9f5624f6	il_send_cmd_pdu_async	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xe4a5c186	il_send_cmd_pdu_async	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+3056c3054
+< 0x025ad1de	__bcma_driver_register	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x421f8bef	__bcma_driver_register	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+3061c3059
+< 0x93e39433	pci_request_selected_regions_exclusive	vmlinux	EXPORT_SYMBOL
+---
+> 0xa96b0114	pci_request_selected_regions_exclusive	vmlinux	EXPORT_SYMBOL
+3086c3084
+< 0x09208553	__pci_enable_wake	vmlinux	EXPORT_SYMBOL
+---
+> 0x4a7f08a3	__pci_enable_wake	vmlinux	EXPORT_SYMBOL
+3108c3106
+< 0x5d8817b3	drm_core_ioremapfree	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xcd5893f9	drm_core_ioremapfree	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3113c3111
+< 0xd0598380	pci_user_write_config_dword	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x47cf68f7	pci_user_write_config_dword	vmlinux	EXPORT_SYMBOL_GPL
+3121c3119
+< 0xa727fcb1	drm_framebuffer_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xdc62bbb5	drm_framebuffer_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3138c3136
+< 0xdd0d20c8	drm_vblank_count_and_time	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x7c7fb22a	drm_vblank_count_and_time	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3153c3151
+< 0xd0667ece	pci_add_dynid	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xaeca8f68	pci_add_dynid	vmlinux	EXPORT_SYMBOL_GPL
+3168,3169c3166,3167
+< 0xadcd31c6	drm_vblank_get	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x91d46cfe	drm_vblank_off	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x69af23e1	drm_vblank_get	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xd311eb77	drm_vblank_off	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3174c3172
+< 0xb0db79dc	pcim_iomap_table	vmlinux	EXPORT_SYMBOL
+---
+> 0xae49d36f	pcim_iomap_table	vmlinux	EXPORT_SYMBOL
+3212c3210
+< 0xc9b7b9f2	cxgbi_sock_check_wr_invariants	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0xf527ee00	cxgbi_sock_check_wr_invariants	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+3231,3232c3229,3230
+< 0xa97f1d98	mpt_halt_firmware	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0x2b2ffa6b	bcma_pmu_spuravoid_pllupdate	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0xf4a8938e	mpt_halt_firmware	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0x2b28535d	bcma_pmu_spuravoid_pllupdate	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+3251c3249
+< 0x81dc9e6c	pci_reset_bus	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x18d1d88c	pci_reset_bus	vmlinux	EXPORT_SYMBOL_GPL
+3254c3252
+< 0x120d7ecf	b1_free_card	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0xce473f45	b1_free_card	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+3259c3257
+< 0x8b24da6f	pci_platform_rom	vmlinux	EXPORT_SYMBOL
+---
+> 0x203683eb	pci_platform_rom	vmlinux	EXPORT_SYMBOL
+3262c3260
+< 0x3df4a44e	il_clear_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xb5aa2c83	il_clear_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+3283c3281
+< 0x714f9bfc	pccard_register_pcmcia	vmlinux	EXPORT_SYMBOL
+---
+> 0x1b14d25c	pccard_register_pcmcia	vmlinux	EXPORT_SYMBOL
+3298,3299c3296,3297
+< 0x69764277	mpt_raid_phys_disk_pg1	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0x57d10b84	drm_get_last_vbltimestamp	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x7b084173	mpt_raid_phys_disk_pg1	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0x7b275ed1	drm_get_last_vbltimestamp	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3301c3299
+< 0xbacd0190	pci_intx_mask_supported	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x0e0a70ac	pci_intx_mask_supported	vmlinux	EXPORT_SYMBOL_GPL
+3349c3347
+< 0x327e788e	snd_hda_spdif_ctls_assign	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x8de44aa6	snd_hda_spdif_ctls_assign	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+3352c3350
+< 0xa3147524	il_full_rxon_required	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x870c1a98	il_full_rxon_required	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+3354c3352
+< 0x918b94f9	drm_add_modes_noedid	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x1cf1dd50	drm_add_modes_noedid	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3367c3365
+< 0x1d5112d3	drm_warn_on_modeset_not_all_locked	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x80d380dc	drm_warn_on_modeset_not_all_locked	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3394c3392
+< 0xdaf6d976	il_get_passive_dwell_time	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x8457938f	il_get_passive_dwell_time	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+3403c3401
+< 0xb7e9c96f	snd_hda_ctl_add	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x39c347cf	snd_hda_ctl_add	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+3405c3403
+< 0xab33c329	drm_mode_duplicate	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x8cedee9a	drm_mode_duplicate	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3481c3479
+< 0xca1bb2c7	pci_set_dma_seg_boundary	vmlinux	EXPORT_SYMBOL
+---
+> 0x409a83f7	pci_set_dma_seg_boundary	vmlinux	EXPORT_SYMBOL
+3497c3495
+< 0xfca42c12	pci_find_ht_capability	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x2514760e	pci_find_ht_capability	vmlinux	EXPORT_SYMBOL_GPL
+3500c3498
+< 0xd31e600f	pci_find_next_ht_capability	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x51f7ed24	pci_find_next_ht_capability	vmlinux	EXPORT_SYMBOL_GPL
+3536c3534
+< 0xde0d33a5	drm_encoder_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x239ab722	drm_encoder_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3567c3565
+< 0x9fc24a66	qlt_xmit_response	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0xbe17b0bd	qlt_xmit_response	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+3571c3569
+< 0xf67644b5	agp_generic_free_gatt_table	vmlinux	EXPORT_SYMBOL
+---
+> 0x9534dd09	agp_generic_free_gatt_table	vmlinux	EXPORT_SYMBOL
+3577c3575
+< 0x4be84821	be_roce_unregister_driver	drivers/net/ethernet/emulex/benet/be2net	EXPORT_SYMBOL
+---
+> 0xfe8df88d	be_roce_unregister_driver	drivers/net/ethernet/emulex/benet/be2net	EXPORT_SYMBOL
+3579c3577
+< 0x84f7f427	pci_assign_unassigned_bridge_resources	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x4bff7688	pci_assign_unassigned_bridge_resources	vmlinux	EXPORT_SYMBOL_GPL
+3589c3587
+< 0xe88a6dd3	_il_grab_nic_access	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+---
+> 0x93a3a8fa	_il_grab_nic_access	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+3600c3598
+< 0xa9c84303	ssb_pmu_spuravoid_pllupdate	drivers/ssb/ssb	EXPORT_SYMBOL_GPL
+---
+> 0x3c938b28	ssb_pmu_spuravoid_pllupdate	drivers/ssb/ssb	EXPORT_SYMBOL_GPL
+3606c3604
+< 0x3f0119bb	pcmcia_get_socket_by_nr	vmlinux	EXPORT_SYMBOL
+---
+> 0xd780e010	pcmcia_get_socket_by_nr	vmlinux	EXPORT_SYMBOL
+3620,3621c3618,3619
+< 0xb4aefac9	drm_plane_force_disable	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x002f6536	bcma_chipco_pll_maskset	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x920e31a2	drm_plane_force_disable	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x2d057b70	bcma_chipco_pll_maskset	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+3630,3631c3628,3629
+< 0x16acad10	mptscsih_remove	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+< 0xd6ac9183	bcma_chipco_gpio_out	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0xd1977c9f	mptscsih_remove	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+> 0x873d8470	bcma_chipco_gpio_out	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+3633c3631
+< 0xb37e1e8d	pccard_nonstatic_ops	vmlinux	EXPORT_SYMBOL
+---
+> 0x27efc217	pccard_nonstatic_ops	vmlinux	EXPORT_SYMBOL
+3635c3633
+< 0xe0bdb9c9	agp_bind_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0xf5f6f0c8	agp_bind_memory	vmlinux	EXPORT_SYMBOL
+3639c3637
+< 0xd41330af	snd_hda_add_codec_preset	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x07820542	snd_hda_add_codec_preset	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+3641,3643c3639,3641
+< 0xb3e1f933	qlt_unreg_sess	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+< 0xbcc44249	cxgbi_conn_tx_open	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+< 0x7789f7a9	il_init_geos	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x68258cff	qlt_unreg_sess	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+> 0x5165326f	cxgbi_conn_tx_open	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+> 0xf3f3eb36	il_init_geos	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+3672c3670
+< 0xbbc11cf4	pci_ats_queue_depth	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xe2f8c870	pci_ats_queue_depth	vmlinux	EXPORT_SYMBOL_GPL
+3713c3711
+< 0xa290f797	vga_switcheroo_get_client_state	vmlinux	EXPORT_SYMBOL
+---
+> 0xbaba63ac	vga_switcheroo_get_client_state	vmlinux	EXPORT_SYMBOL
+3723c3721
+< 0xd0d8206d	pci_msix_vec_count	vmlinux	EXPORT_SYMBOL
+---
+> 0xa9edd643	pci_msix_vec_count	vmlinux	EXPORT_SYMBOL
+3737,3738c3735,3736
+< 0x912ee22b	snd_hda_codec_prepare	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0x17b3de06	snd_hda_get_bool_hint	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xe48e85a8	snd_hda_codec_prepare	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0x877d0cb1	snd_hda_get_bool_hint	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+3766c3764
+< 0xca49fe7f	il_send_stats_request	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x6c7568ef	il_send_stats_request	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+3775c3773
+< 0x7594ca22	pci_disable_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x25823753	pci_disable_device	vmlinux	EXPORT_SYMBOL
+3795c3793
+< 0x2362eef1	mlx4_wol_read	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xe3e8234a	mlx4_wol_read	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+3804c3802
+< 0xb05a4a78	pcie_capability_clear_and_set_word	vmlinux	EXPORT_SYMBOL
+---
+> 0x19aca1ba	pcie_capability_clear_and_set_word	vmlinux	EXPORT_SYMBOL
+3809c3807
+< 0x44fd7927	drm_irq_install	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x0193179a	drm_irq_install	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3825c3823
+< 0x5ded1912	snd_hda_codec_amp_update	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x3e59bcb4	snd_hda_codec_amp_update	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+3829c3827
+< 0xd112e620	il_set_rxon_ht	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xe47851e0	il_set_rxon_ht	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+3855,3856c3853,3854
+< 0x1d9ea0d6	snd_hda_multi_out_analog_prepare	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0x76f10d2b	mlx4_fmr_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x41aaaea4	snd_hda_multi_out_analog_prepare	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0x6429c797	mlx4_fmr_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+3859c3857
+< 0x54bc0349	perf_pmu_migrate_context	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x95993dc9	perf_pmu_migrate_context	vmlinux	EXPORT_SYMBOL_GPL
+3876c3874
+< 0xaf79becc	ata_pci_sff_prepare_host	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xced810dd	ata_pci_sff_prepare_host	vmlinux	EXPORT_SYMBOL_GPL
+3893c3891
+< 0x8abcb256	cxgbi_sock_free_cpl_skbs	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x9fad4fe9	cxgbi_sock_free_cpl_skbs	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+3904c3902
+< 0x95d05b36	snd_ac97_read	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0xebeb12f8	snd_ac97_read	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+3906c3904
+< 0x52614916	drm_framebuffer_reference	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x18257d61	drm_framebuffer_reference	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3923,3924c3921,3922
+< 0x49bfd782	il_eeprom_free	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x2c85f312	mlx4_get_slave_node_guid	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x93259c2d	il_eeprom_free	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x41316bac	mlx4_get_slave_node_guid	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+3932c3930,3931
+< 0x64dc8203	cxgbi_device_unregister	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x996c6a42	cxgbi_device_unregister	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+> 0xd14b5082	page_cache_prev_hole	vmlinux	EXPORT_SYMBOL
+3957,3958c3956,3957
+< 0xeba5884f	pci_bus_resource_n	vmlinux	EXPORT_SYMBOL_GPL
+< 0xaa303058	snd_hda_bus_reboot_notify	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xdd6ade30	pci_bus_resource_n	vmlinux	EXPORT_SYMBOL_GPL
+> 0x0b99639f	snd_hda_bus_reboot_notify	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+3981c3980
+< 0xeb5465dc	iwl_set_bits_mask_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0x5dd05e7e	iwl_set_bits_mask_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+3983c3982
+< 0x4470663d	drm_bridge_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xf9f23fce	drm_bridge_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+3995c3994
+< 0x98c66a5d	pci_pasid_features	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x263f565e	pci_pasid_features	vmlinux	EXPORT_SYMBOL_GPL
+4005c4004
+< 0x5fa14fce	mlx4_set_vf_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x4dfe2c85	mlx4_set_vf_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4024,4025c4023,4024
+< 0xf00f6ba0	pci_read_vpd	vmlinux	EXPORT_SYMBOL
+< 0x6f4b0206	agp_allocate_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0x7059020d	pci_read_vpd	vmlinux	EXPORT_SYMBOL
+> 0x6e59c3b7	agp_allocate_memory	vmlinux	EXPORT_SYMBOL
+4042c4041
+< 0x71112f81	mlx5_core_qp_modify	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0xad6c633c	mlx5_core_qp_modify	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+4047c4046
+< 0xff3b794f	pci_scan_child_bus	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x1440be6b	pci_scan_child_bus	vmlinux	EXPORT_SYMBOL_GPL
+4053c4052
+< 0x97e603d3	rtl_pci_probe	drivers/net/wireless/rtlwifi/rtl_pci	EXPORT_SYMBOL
+---
+> 0x845ef911	rtl_pci_probe	drivers/net/wireless/rtlwifi/rtl_pci	EXPORT_SYMBOL
+4059c4058
+< 0xac17c4c8	pci_assign_resource	vmlinux	EXPORT_SYMBOL
+---
+> 0x09c6c0bb	pci_assign_resource	vmlinux	EXPORT_SYMBOL
+4064c4063
+< 0xefa215a4	il_check_rxon_cmd	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xc3a53273	il_check_rxon_cmd	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+4080c4079
+< 0x88c38b37	pci_get_hp_params	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x010394bf	pci_get_hp_params	vmlinux	EXPORT_SYMBOL_GPL
+4113,4114c4112,4113
+< 0x2419e280	drm_helper_encoder_in_use	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+< 0x1d391fd2	drm_gem_prime_import	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x4a8e4c08	drm_helper_encoder_in_use	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+> 0x0c4b2fcd	drm_gem_prime_import	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4125c4124
+< 0xbb37115f	drm_edid_to_eld	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x01149f06	drm_edid_to_eld	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4134c4133
+< 0x7779d661	snd_ac97_update_power	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x2435b0c5	snd_ac97_update_power	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+4138,4139c4137,4138
+< 0xdfa757c2	mlx5_core_modify_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+< 0xf2aa58d4	mlx4_set_vf_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x8a2859eb	mlx5_core_modify_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+> 0x122b8caa	mlx4_set_vf_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4165c4164
+< 0xf3b11b20	pci_ioremap_bar	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x1aca5c53	pci_ioremap_bar	vmlinux	EXPORT_SYMBOL_GPL
+4170c4169
+< 0xcc6ce8b4	drm_calc_vbltimestamp_from_scanoutpos	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xd75fc7ec	drm_calc_vbltimestamp_from_scanoutpos	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4180c4179
+< 0x2adbb8b3	pci_sriov_get_totalvfs	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x35dd627c	pci_sriov_get_totalvfs	vmlinux	EXPORT_SYMBOL_GPL
+4193c4192
+< 0x803341ff	pci_add_new_bus	vmlinux	EXPORT_SYMBOL
+---
+> 0xa0a6c826	pci_add_new_bus	vmlinux	EXPORT_SYMBOL
+4205,4207c4204,4206
+< 0x1d48da9e	cxgbi_device_find_by_lldev	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+< 0xce29b0ec	il_prep_station	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+< 0xa9df5c1d	drm_i2c_encoder_dpms	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xa08cc572	cxgbi_device_find_by_lldev	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+> 0xaba540a5	il_prep_station	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+> 0x538291d1	drm_i2c_encoder_dpms	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4215c4214
+< 0x0e084bad	pci_enable_pasid	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xc9bbb03c	pci_enable_pasid	vmlinux	EXPORT_SYMBOL_GPL
+4219,4220c4218,4219
+< 0xa4541648	snd_hda_codec_get_pincfg	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0x55c1b924	snd_hda_codec_set_pincfg	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x84f2de92	snd_hda_codec_get_pincfg	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0xe577a9ee	snd_hda_codec_set_pincfg	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4237,4238c4236,4237
+< 0xafd9ecb3	iwl_read_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+< 0x25997230	drm_rmmap_locked	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x1e609245	iwl_read_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+> 0x76394af0	drm_rmmap_locked	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4267c4266
+< 0x86841511	mlx4_is_slave_active	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xd7ebb1d5	mlx4_is_slave_active	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+4273c4272
+< 0xacefd663	pccard_static_ops	vmlinux	EXPORT_SYMBOL
+---
+> 0x47a1d92d	pccard_static_ops	vmlinux	EXPORT_SYMBOL
+4279c4278
+< 0x10a78b2e	sdhci_pci_o2_fujin2_pci_init	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x433f4595	sdhci_pci_o2_fujin2_pci_init	vmlinux	EXPORT_SYMBOL_GPL
+4290c4289
+< 0x62b4e58f	__mlx4_replace_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xd91b1120	__mlx4_replace_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4299c4298
+< 0x8309ccdf	snd_hda_override_conn_list	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x310ce7f3	snd_hda_override_conn_list	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4302,4303c4301,4302
+< 0x048769bc	mpt_set_taskmgmt_in_progress_flag	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0x8f18c827	drm_kms_helper_poll_enable	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x43d201ef	mpt_set_taskmgmt_in_progress_flag	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0x6dc8fffe	drm_kms_helper_poll_enable	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+4319c4318
+< 0x53027c5f	rtsx_pci_card_exist	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0xdfbc1389	rtsx_pci_card_exist	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+4325,4327c4324,4326
+< 0xdeffa4ff	il_send_cmd_pdu	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0xb26d6e21	il_send_add_sta	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x22a19a8b	il_poll_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x5b63568c	il_send_cmd_pdu	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x996cf860	il_send_add_sta	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x7fcc3293	il_poll_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+4330c4329
+< 0x13e4e921	drm_property_create_bitmask	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x1d298f87	drm_property_create_bitmask	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4337c4336
+< 0x605e8e89	pci_hp_remove_module_link	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xe15d0584	pci_hp_remove_module_link	vmlinux	EXPORT_SYMBOL_GPL
+4339c4338
+< 0xa75197dc	mlx4_uar_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x0a89b73f	mlx4_uar_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4355,4356c4354,4355
+< 0xa82dff64	rtsx_pci_card_exclusive_check	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+< 0x5de8c9b0	bcma_chipco_chipctl_maskset	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x1926ab78	rtsx_pci_card_exclusive_check	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+> 0x2d31ed48	bcma_chipco_chipctl_maskset	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+4393c4392
+< 0xd062fea5	pci_sriov_set_totalvfs	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xce6b9adf	pci_sriov_set_totalvfs	vmlinux	EXPORT_SYMBOL_GPL
+4407c4406
+< 0xcd5cbfc1	il_irq_handle_error	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x66c315a5	il_irq_handle_error	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+4414c4413
+< 0x86c7a4aa	mlx5_core_dump_fill_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x797825d5	mlx5_core_dump_fill_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+4422c4421
+< 0x6e5fc83d	__mlx4_unregister_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xf9d919cc	__mlx4_unregister_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4430,4431c4429,4430
+< 0x311ddd2b	snd_hda_override_amp_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0x15ab5f5a	snd_hda_override_pin_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x5346708a	snd_hda_override_amp_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0xe249cd50	snd_hda_override_pin_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4436,4437c4435,4436
+< 0xb9ea6df4	mlx4_qp_modify	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xf1411de0	drm_handle_vblank	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xbdf7218f	mlx4_qp_modify	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xa0c37ab3	drm_handle_vblank	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4461,4462c4460,4461
+< 0xda6dcba9	drm_i2c_encoder_mode_fixup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x0c26dccf	drm_prime_gem_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x6e89e376	drm_i2c_encoder_mode_fixup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xf0922876	drm_prime_gem_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4470c4469
+< 0xfab19ed1	snd_emu10k1_synth_bzero	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+---
+> 0x596f9288	snd_emu10k1_synth_bzero	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+4474,4475c4473,4474
+< 0x6d7c6314	mlx4_mtt_addr	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x6bda7196	drm_debugfs_create_files	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xc09f0b99	mlx4_mtt_addr	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x9bc2db59	drm_debugfs_create_files	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4508c4507
+< 0x10dc54cc	pci_request_region	vmlinux	EXPORT_SYMBOL
+---
+> 0x0f8df4b9	pci_request_region	vmlinux	EXPORT_SYMBOL
+4529c4528
+< 0x3d66ce36	drm_get_edid	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xc7798fa8	drm_get_edid	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4533c4532
+< 0x1f4d5005	snd_hda_spdif_ctls_unassign	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xecca2f4d	snd_hda_spdif_ctls_unassign	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4535c4534
+< 0xa4126545	cxgbi_sock_rcv_peer_close	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x1438be09	cxgbi_sock_rcv_peer_close	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+4540c4539
+< 0xf649d36e	agp_generic_alloc_page	vmlinux	EXPORT_SYMBOL
+---
+> 0xf951d67b	agp_generic_alloc_page	vmlinux	EXPORT_SYMBOL
+4546c4545
+< 0xf5886359	snd_hda_codec_configure	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x0b1d55b3	snd_hda_codec_configure	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4555c4554
+< 0x1d792a61	pci_pme_active	vmlinux	EXPORT_SYMBOL
+---
+> 0xdf8925e8	pci_pme_active	vmlinux	EXPORT_SYMBOL
+4562c4561
+< 0x9e29bcb3	mlx4_register_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xdc0082bb	mlx4_register_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4584,4585c4583,4584
+< 0xced57f80	mlx4_qp_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xee313f8c	mptscsih_flush_running_cmds	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0xd151bf97	mlx4_qp_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x4c03f3ec	mptscsih_flush_running_cmds	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+4592c4591
+< 0x6e295370	snd_hda_codec_write	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x7d0bd8a9	snd_hda_codec_write	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4634c4633
+< 0x8bb86e87	mpt_verify_adapter	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x4c08de24	mpt_verify_adapter	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+4636c4635
+< 0x720e74dd	pci_hp_change_slot_info	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x31419ffd	pci_hp_change_slot_info	vmlinux	EXPORT_SYMBOL_GPL
+4647c4646
+< 0x5bc5874e	bcma_chipco_gpio_control	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x3921ec03	bcma_chipco_gpio_control	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+4655c4654
+< 0x1259d643	__pci_register_driver	vmlinux	EXPORT_SYMBOL
+---
+> 0xdcda1be7	__pci_register_driver	vmlinux	EXPORT_SYMBOL
+4668c4667
+< 0x3abb0f45	snd_hda_codec_setup_stream	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x846a8773	snd_hda_codec_setup_stream	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4677,4678c4676,4677
+< 0x4fc5ef69	vga_switcheroo_set_dynamic_switch	vmlinux	EXPORT_SYMBOL
+< 0xf51d364d	query_amp_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xebe025e0	vga_switcheroo_set_dynamic_switch	vmlinux	EXPORT_SYMBOL
+> 0xcd39d1e8	query_amp_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+4683c4682
+< 0xbcf55fba	rt2x00pci_suspend	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+---
+> 0xe22dffe7	rt2x00pci_suspend	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+4709c4708
+< 0x8b9b5198	il_force_reset	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x8f426a18	il_force_reset	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+4766,4768c4765,4767
+< 0x962afc16	mptscsih_is_phys_disk	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+< 0xa53d314f	drm_pci_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x2cc29a42	drm_pci_exit	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x4eb1436d	mptscsih_is_phys_disk	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+> 0x126c4555	drm_pci_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x1918f453	drm_pci_exit	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4782c4781
+< 0x4a362645	pcim_pin_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x2cccfc8c	pcim_pin_device	vmlinux	EXPORT_SYMBOL
+4784c4783
+< 0xb6b69e1a	pci_cfg_access_lock	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x9c4630ab	pci_cfg_access_lock	vmlinux	EXPORT_SYMBOL_GPL
+4801c4800
+< 0x088c28c0	pcie_bus_configure_settings	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x668368c7	pcie_bus_configure_settings	vmlinux	EXPORT_SYMBOL_GPL
+4803c4802
+< 0x4df36933	pcie_set_readrq	vmlinux	EXPORT_SYMBOL
+---
+> 0xd75e8b96	pcie_set_readrq	vmlinux	EXPORT_SYMBOL
+4811c4810
+< 0x420e99b9	il_get_channel_info	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xdfd463de	il_get_channel_info	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+4814c4813
+< 0x5892b1a5	drm_unplug_dev	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xbebd710b	drm_unplug_dev	drivers/gpu/drm/drm	EXPORT_SYMBOL
+4823c4822
+< 0x211388bc	mlx4_cq_resize	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x3f7b0cd7	mlx4_cq_resize	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4831,4832c4830,4831
+< 0x3e99edb8	il_add_station_common	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x8798624b	mlx4_map_sw_to_hw_steering_id	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xb1654aab	il_add_station_common	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x15fa2f33	mlx4_map_sw_to_hw_steering_id	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4842c4841
+< 0x40f39e65	cxgbi_ddp_init	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x4898580f	cxgbi_ddp_init	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+4854c4853
+< 0x5a32cc7d	pcmcia_write_config_byte	vmlinux	EXPORT_SYMBOL
+---
+> 0x6479aabd	pcmcia_write_config_byte	vmlinux	EXPORT_SYMBOL
+4877c4876
+< 0x811342f0	pci_bus_add_device	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xee8b5a03	pci_bus_add_device	vmlinux	EXPORT_SYMBOL_GPL
+4887c4886
+< 0xa9572629	cxgb4_register_uld	drivers/net/ethernet/chelsio/cxgb4/cxgb4	EXPORT_SYMBOL
+---
+> 0x7afd737f	cxgb4_register_uld	drivers/net/ethernet/chelsio/cxgb4/cxgb4	EXPORT_SYMBOL
+4901c4900
+< 0xd63229a7	ssb_pcicore_dev_irqvecs_enable	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x6bb74c1c	ssb_pcicore_dev_irqvecs_enable	drivers/ssb/ssb	EXPORT_SYMBOL
+4914c4913
+< 0x86260842	mlx4_write_mtt	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xda151155	mlx4_write_mtt	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+4925c4924
+< 0x0ac5d8f7	pci_scan_slot	vmlinux	EXPORT_SYMBOL
+---
+> 0x0e99872a	pci_scan_slot	vmlinux	EXPORT_SYMBOL
+4938c4937
+< 0x8f125a13	pci_request_regions	vmlinux	EXPORT_SYMBOL
+---
+> 0x2e69f650	pci_request_regions	vmlinux	EXPORT_SYMBOL
+4945,4946c4944,4945
+< 0x70bee19b	rt2x00pci_resume	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+< 0xaed93f55	rt2x00pci_remove	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+---
+> 0x6bf2e225	rt2x00pci_resume	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+> 0x9ea301a8	rt2x00pci_remove	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+4967c4966
+< 0xfcc2357e	agp_generic_enable	vmlinux	EXPORT_SYMBOL
+---
+> 0x631407a4	agp_generic_enable	vmlinux	EXPORT_SYMBOL
+4976c4975
+< 0x729b98a7	pcim_iomap	vmlinux	EXPORT_SYMBOL
+---
+> 0x5f480e87	pcim_iomap	vmlinux	EXPORT_SYMBOL
+4978c4977
+< 0x50140ec4	agp_generic_alloc_pages	vmlinux	EXPORT_SYMBOL
+---
+> 0x9e3f0c10	agp_generic_alloc_pages	vmlinux	EXPORT_SYMBOL
+4989c4988
+< 0x607635bd	mptscsih_taskmgmt_response_code	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x64ab8480	mptscsih_taskmgmt_response_code	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+5021c5020
+< 0x3ed7cd02	ssb_bus_may_powerdown	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0xd1120263	ssb_bus_may_powerdown	drivers/ssb/ssb	EXPORT_SYMBOL
+5023c5022
+< 0x9cc8bbde	il_fill_probe_req	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x12165c72	il_fill_probe_req	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+5031c5030
+< 0x3ab68179	usb_enable_intel_xhci_ports	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xd8ab8d91	usb_enable_intel_xhci_ports	vmlinux	EXPORT_SYMBOL_GPL
+5033,5034c5032,5033
+< 0x5b63cc59	mlx4_xrcd_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x62891dd1	mlx4_gen_slaves_port_mgt_ev	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x6e295d7d	mlx4_xrcd_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x4172809f	mlx4_gen_slaves_port_mgt_ev	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+5042c5041
+< 0xeb31cbcb	pci_try_reset_bus	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x51aed844	pci_try_reset_bus	vmlinux	EXPORT_SYMBOL_GPL
+5065,5066c5064,5065
+< 0xed583c31	usb_disable_xhci_ports	vmlinux	EXPORT_SYMBOL_GPL
+< 0xc6adda10	agp_alloc_page_array	vmlinux	EXPORT_SYMBOL
+---
+> 0x6d8c1ea6	usb_disable_xhci_ports	vmlinux	EXPORT_SYMBOL_GPL
+> 0x45b91cb0	agp_alloc_page_array	vmlinux	EXPORT_SYMBOL
+5099c5098
+< 0x9b1d74ee	wait_iff_congested	vmlinux	EXPORT_SYMBOL
+---
+> 0x183d1b8a	wait_iff_congested	vmlinux	EXPORT_SYMBOL
+5125c5124
+< 0x492a505d	snd_hda_resume	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x5b3d88f1	snd_hda_resume	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+5153c5152
+< 0x6aa8c97d	oxygen_pci_probe	sound/pci/oxygen/snd-oxygen-lib	EXPORT_SYMBOL
+---
+> 0x0d76c850	oxygen_pci_probe	sound/pci/oxygen/snd-oxygen-lib	EXPORT_SYMBOL
+5164,5166c5163,5165
+< 0x3c8df781	mlx5_cmd_free_uar	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+< 0x5ecc3ac3	mlx4_mtt_init	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x489d5c35	pci_try_reset_function	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xa8b49fd7	mlx5_cmd_free_uar	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+> 0xea50e3a0	mlx4_mtt_init	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x98dbd74d	pci_try_reset_function	vmlinux	EXPORT_SYMBOL_GPL
+5175c5174
+< 0x14199236	mlx5_set_port_caps	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0x4e5192d4	mlx5_set_port_caps	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+5183c5182
+< 0x95d7ac65	snd_trident_alloc_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+---
+> 0x043228c2	snd_trident_alloc_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+5231c5230
+< 0x18806560	il_eeprom_query_addr	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x11df7d41	il_eeprom_query_addr	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+5238c5237
+< 0x24e33164	pci_create_slot	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x43928ad6	pci_create_slot	vmlinux	EXPORT_SYMBOL_GPL
+5255c5254
+< 0x1d7fa6cd	pci_reenable_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x25eb7f3b	pci_reenable_device	vmlinux	EXPORT_SYMBOL
+5262,5263c5261,5262
+< 0xa817a07b	qlt_stop_phase2	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+< 0x178898f0	qlt_stop_phase1	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0x4ca81e42	qlt_stop_phase2	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+> 0x3f6ec54e	qlt_stop_phase1	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+5266c5265
+< 0x3f0d1dd7	pci_enable_rom	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xd29936c3	pci_enable_rom	vmlinux	EXPORT_SYMBOL_GPL
+5269c5268
+< 0xf98213b8	pcmcia_parse_uevents	vmlinux	EXPORT_SYMBOL
+---
+> 0xd0143336	pcmcia_parse_uevents	vmlinux	EXPORT_SYMBOL
+5287c5286
+< 0x2fd76e52	pcie_update_link_speed	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xd8f0c543	pcie_update_link_speed	vmlinux	EXPORT_SYMBOL_GPL
+5298c5297
+< 0x1fde39fa	pci_hp_add_bridge	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x7c93606a	pci_hp_add_bridge	vmlinux	EXPORT_SYMBOL_GPL
+5303c5302
+< 0xc46280a6	il_write_targ_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x01bce2dd	il_write_targ_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+5317,5318c5316,5317
+< 0xdf69c45e	il_leds_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0xcd0b22c1	il_leds_exit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x543de8ee	il_leds_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x09c5875f	il_leds_exit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+5322c5321
+< 0xccd998df	snd_hda_shutup_pins	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xfdea3683	snd_hda_shutup_pins	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+5325,5326c5324,5325
+< 0x8a0754fa	il_cancel_scan_deferred_work	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x0e631f62	il_cmd_queue_free	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x89bd7691	il_cancel_scan_deferred_work	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x44a2014f	il_cmd_queue_free	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+5328c5327
+< 0xdf37ba68	mlx4_SET_MCAST_FLTR	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xd4daa4f3	mlx4_SET_MCAST_FLTR	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+5337,5338c5336,5337
+< 0x06a2ce2b	mlx4_srq_arm	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xa945889e	mpt_event_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x53c972e5	mlx4_srq_arm	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x1693c577	mpt_event_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+5347c5346
+< 0x7794f517	pci_bus_add_devices	vmlinux	EXPORT_SYMBOL
+---
+> 0x76fa5d46	pci_bus_add_devices	vmlinux	EXPORT_SYMBOL
+5356c5355
+< 0xc42df4cf	mlx5_core_destroy_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x4ecbb575	mlx5_core_destroy_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+5359c5358
+< 0x6406ac52	__pci_reset_function_locked	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x85a92b28	__pci_reset_function_locked	vmlinux	EXPORT_SYMBOL_GPL
+5372c5371
+< 0x168252a2	snd_hda_ch_mode_info	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xedb52ce9	snd_hda_ch_mode_info	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+5389,5390c5388,5389
+< 0x3554d038	il_is_ht40_tx_allowed	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x22716fb7	mlx4_get_base_qpn	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x74b7acc6	il_is_ht40_tx_allowed	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0xfdcfc0f7	mlx4_get_base_qpn	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+5421c5420
+< 0x22cd9ef6	pcim_iomap_regions	vmlinux	EXPORT_SYMBOL
+---
+> 0xe2796f6d	pcim_iomap_regions	vmlinux	EXPORT_SYMBOL
+5463c5462
+< 0x42755633	pci_configure_slot	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x445804ed	pci_configure_slot	vmlinux	EXPORT_SYMBOL_GPL
+5478c5477
+< 0x693ecf58	mlx4_unicast_promisc_add	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x6159ffe5	mlx4_unicast_promisc_add	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+5491c5490
+< 0x48b300b6	drm_kms_helper_poll_fini	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xc8ae0970	drm_kms_helper_poll_fini	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+5493c5492
+< 0x8d54dbca	drm_dev_free	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x41fda757	drm_dev_free	drivers/gpu/drm/drm	EXPORT_SYMBOL
+5527c5526
+< 0xda034118	pci_clear_mwi	vmlinux	EXPORT_SYMBOL
+---
+> 0x30ea6704	pci_clear_mwi	vmlinux	EXPORT_SYMBOL
+5538c5537
+< 0xd2067120	pci_cfg_access_trylock	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x7ed8db90	pci_cfg_access_trylock	vmlinux	EXPORT_SYMBOL_GPL
+5547c5546
+< 0x2124e35e	drm_agp_alloc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xbe3cfacd	drm_agp_alloc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+5552c5551
+< 0x02928528	pci_try_set_mwi	vmlinux	EXPORT_SYMBOL
+---
+> 0xf37e067b	pci_try_set_mwi	vmlinux	EXPORT_SYMBOL
+5569c5568
+< 0xcb87dcdd	pcmcia_register_driver	vmlinux	EXPORT_SYMBOL
+---
+> 0x809b3735	pcmcia_register_driver	vmlinux	EXPORT_SYMBOL
+5575c5574
+< 0x14c9a0e9	pcie_port_service_unregister	vmlinux	EXPORT_SYMBOL
+---
+> 0x1a40256a	pcie_port_service_unregister	vmlinux	EXPORT_SYMBOL
+5580c5579
+< 0x1c5bfb4b	mlx4_gen_pkey_eqe	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x8316870f	mlx4_gen_pkey_eqe	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+5584c5583
+< 0xbc856fa9	__add_pages	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xc41fd9c3	__add_pages	vmlinux	EXPORT_SYMBOL_GPL
+5590c5589
+< 0x42fc5a3f	snd_hda_codec_set_power_to_all	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xc7a6262f	snd_hda_codec_set_power_to_all	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+5597,5598c5596,5597
+< 0x0d165595	drm_gem_object_lookup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x93a4ad53	pcmcia_loop_tuple	vmlinux	EXPORT_SYMBOL
+---
+> 0xc278b8a6	drm_gem_object_lookup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xb1312a3d	pcmcia_loop_tuple	vmlinux	EXPORT_SYMBOL
+5620c5619
+< 0xd2a2fbd7	pci_unmap_rom	vmlinux	EXPORT_SYMBOL
+---
+> 0x5a1c4daa	pci_unmap_rom	vmlinux	EXPORT_SYMBOL
+5626,5627c5625,5626
+< 0xa75b342b	mlx4_mr_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xbd003179	mpt_get_msg_frame	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xeff5fb9b	mlx4_mr_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x3e459415	mpt_get_msg_frame	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+5643c5642
+< 0xd6a53384	snd_ac97_suspend	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0xf4d97c40	snd_ac97_suspend	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+5650,5651c5649,5650
+< 0xddcc83b6	mlx4_mw_enable	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xb3cc8162	drm_helper_disable_unused_functions	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x25d63b38	mlx4_mw_enable	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xef8a5185	drm_helper_disable_unused_functions	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+5665c5664
+< 0x1173b57e	mlx4_pd_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x00306c54	mlx4_pd_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+5698c5697
+< 0x29da6c6a	mptscsih_taskmgmt_complete	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0xc96411e8	mptscsih_taskmgmt_complete	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+5704c5703
+< 0x9f3b1610	pci_request_region_exclusive	vmlinux	EXPORT_SYMBOL
+---
+> 0xc153ebf4	pci_request_region_exclusive	vmlinux	EXPORT_SYMBOL
+5731c5730
+< 0xd42424fb	amd_northbridges	vmlinux	EXPORT_SYMBOL
+---
+> 0x58036cce	amd_northbridges	vmlinux	EXPORT_SYMBOL
+5740c5739
+< 0x217d307d	drm_gem_mmap_obj	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x3d434ad7	drm_gem_mmap_obj	drivers/gpu/drm/drm	EXPORT_SYMBOL
+5762c5761
+< 0xd6c6e999	bcma_core_pci_up	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x818f0385	bcma_core_pci_up	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+5778c5777
+< 0x0e6ccecc	mlx4_fmr_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x48c0f59b	mlx4_fmr_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+5784c5783
+< 0x265c04be	agp_bridge	vmlinux	EXPORT_SYMBOL
+---
+> 0xa85b639f	agp_bridge	vmlinux	EXPORT_SYMBOL
+5793c5792
+< 0xd83b2dd3	mlx4_srq_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xa9b45f6d	mlx4_srq_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+5803c5802
+< 0x273e539d	snd_hda_codec_read	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xc5f75528	snd_hda_codec_read	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+5807c5806
+< 0xc0d8a5f4	rtsx_pci_read_phy_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x7e295753	rtsx_pci_read_phy_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+5811c5810
+< 0x07592a7c	agp_generic_destroy_pages	vmlinux	EXPORT_SYMBOL
+---
+> 0xd10bc42f	agp_generic_destroy_pages	vmlinux	EXPORT_SYMBOL
+5820c5819
+< 0x058eaeb3	qlt_free_mcmd	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0x6e9eda4f	qlt_free_mcmd	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+5879c5878
+< 0xff04a356	pcmcia_loop_config	vmlinux	EXPORT_SYMBOL
+---
+> 0x703015f0	pcmcia_loop_config	vmlinux	EXPORT_SYMBOL
+5888,5889c5887,5888
+< 0xadbd431d	drm_crtc_helper_set_config	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+< 0x58b1bc5c	drm_mode_group_init_legacy_group	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x6d534d7f	drm_crtc_helper_set_config	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+> 0xf43c580c	drm_mode_group_init_legacy_group	drivers/gpu/drm/drm	EXPORT_SYMBOL
+5908c5907
+< 0x02401060	pcmcia_fixup_vpp	vmlinux	EXPORT_SYMBOL
+---
+> 0xdd51b901	pcmcia_fixup_vpp	vmlinux	EXPORT_SYMBOL
+5970c5969
+< 0xdea89d08	drm_fb_helper_restore_fbdev_mode	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x601eaeb3	drm_fb_helper_restore_fbdev_mode	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+5991c5990
+< 0x39bf457f	drm_crtc_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x4baa4c4b	drm_crtc_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+5998c5997
+< 0x63686b58	snd_hda_codec_amp_stereo	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x6e704e58	snd_hda_codec_amp_stereo	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+6003,6005c6002,6004
+< 0x3804cd4c	iwl_write_direct32	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+< 0x385bff0d	mlx4_flow_steer_promisc_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x4f7a510f	b1_loaded	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0x530807be	iwl_write_direct32	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+> 0x90d0536a	mlx4_flow_steer_promisc_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x5ff6e585	b1_loaded	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+6021c6020
+< 0x890d4d1a	pcmcia_enable_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x11f2e989	pcmcia_enable_device	vmlinux	EXPORT_SYMBOL
+6039c6038
+< 0x775638e5	perf_event_disable	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xbd3963b2	perf_event_disable	vmlinux	EXPORT_SYMBOL_GPL
+6059c6058
+< 0x69365c12	drm_noop	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x26b268db	drm_noop	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6071c6070
+< 0x1570127a	mlx5_core_query_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xaf171512	mlx5_core_query_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+6116c6115
+< 0xa096aa53	rtsx_pci_transfer_data	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x9c57ca26	rtsx_pci_transfer_data	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+6118c6117
+< 0x2bb65e84	mod_zone_page_state	vmlinux	EXPORT_SYMBOL
+---
+> 0x7331e789	mod_zone_page_state	vmlinux	EXPORT_SYMBOL
+6122c6121
+< 0xb13582db	perf_event_refresh	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xccf4fda8	perf_event_refresh	vmlinux	EXPORT_SYMBOL_GPL
+6154c6153
+< 0x6b98a71d	usb_hcd_amd_remote_wakeup_quirk	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x04b8d989	usb_hcd_amd_remote_wakeup_quirk	vmlinux	EXPORT_SYMBOL_GPL
+6161c6160
+< 0x8d571d08	mlx4_multicast_promisc_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x0cae71fb	mlx4_multicast_promisc_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+6184c6183
+< 0x87e88aee	snd_hda_build_controls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x3f499dc8	snd_hda_build_controls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+6189c6188
+< 0x838aefa3	acpi_pci_check_ejectable	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xe7186945	acpi_pci_check_ejectable	vmlinux	EXPORT_SYMBOL_GPL
+6204c6203
+< 0xc9381700	mlx5_core_dealloc_pd	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x37c7166c	mlx5_core_dealloc_pd	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+6206c6205
+< 0x3cf964a4	drm_mode_create_tv_properties	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xf5b5d961	drm_mode_create_tv_properties	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6220,6221c6219,6220
+< 0x8c768ae0	drm_fb_helper_initial_config	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+< 0x327b99f2	drm_fb_helper_hotplug_event	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x68e1cb19	drm_fb_helper_initial_config	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+> 0x919bb0e1	drm_fb_helper_hotplug_event	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+6227,6228c6226,6227
+< 0x8f0ed270	rtsx_pci_send_cmd	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+< 0x75faf18c	mpt_reset_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xb1c1862d	rtsx_pci_send_cmd	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+> 0x45f4df96	mpt_reset_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+6230c6229
+< 0xec17b96a	drm_mode_find_dmt	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xa9c75290	drm_mode_find_dmt	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6243,6244c6242,6243
+< 0xad0e853c	pci_max_pasids	vmlinux	EXPORT_SYMBOL_GPL
+< 0x03a5858f	uhci_check_and_reset_hc	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xa46b927b	pci_max_pasids	vmlinux	EXPORT_SYMBOL_GPL
+> 0xec410916	uhci_check_and_reset_hc	vmlinux	EXPORT_SYMBOL_GPL
+6249c6248
+< 0xbc93738d	ssb_bus_unregister	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x04da32fe	ssb_bus_unregister	drivers/ssb/ssb	EXPORT_SYMBOL
+6269c6268
+< 0xbbcf3535	mlx4_assign_eq	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xb43435a0	mlx4_assign_eq	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+6300c6299
+< 0x050dc5cf	iwl_write_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0xe4fa742c	iwl_write_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+6318c6317
+< 0xa8f9e72b	sdhci_pci_o2_resume	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x4dd42c42	sdhci_pci_o2_resume	vmlinux	EXPORT_SYMBOL_GPL
+6325c6324
+< 0x98362376	snd_hda_build_pcms	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x79434073	snd_hda_build_pcms	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+6327c6326
+< 0x4bf5558d	snd_ac97_write_cache	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x0b1eaabc	snd_ac97_write_cache	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+6344c6343
+< 0x5638741e	pci_enable_sriov	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xb46f0348	pci_enable_sriov	vmlinux	EXPORT_SYMBOL_GPL
+6350c6349
+< 0x4920b2ab	snd_hda_codec_resume_amp	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xd6f9caf2	snd_hda_codec_resume_amp	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+6367c6366
+< 0x53bcee82	mlx5_cmd_init	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xffb94058	mlx5_cmd_init	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+6376c6375
+< 0x9b26b1b5	mlx4_INIT_PORT	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xe0dc6e10	mlx4_INIT_PORT	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+6391c6390
+< 0xdc428c4c	drm_ati_pcigart_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x2277e34f	drm_ati_pcigart_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6415c6414
+< 0xfc45c6d9	b1_parse_version	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0x8e266286	b1_parse_version	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+6418c6417
+< 0xf19fcd40	pcie_capability_read_dword	vmlinux	EXPORT_SYMBOL
+---
+> 0xe273be09	pcie_capability_read_dword	vmlinux	EXPORT_SYMBOL
+6443c6442
+< 0x5e22a649	drm_gem_object_release	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xd0e30101	drm_gem_object_release	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6453c6452
+< 0x95c3c201	drm_helper_resume_force_mode	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xbfa74516	drm_helper_resume_force_mode	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+6471c6470
+< 0x3251b653	drm_fb_helper_init	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xca25e09d	drm_fb_helper_init	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+6482c6481
+< 0x18c675d8	pci_disable_msix	vmlinux	EXPORT_SYMBOL
+---
+> 0xc4541d1f	pci_disable_msix	vmlinux	EXPORT_SYMBOL
+6484c6483
+< 0xbd628c5d	agp_generic_alloc_user	vmlinux	EXPORT_SYMBOL
+---
+> 0x3202265f	agp_generic_alloc_user	vmlinux	EXPORT_SYMBOL
+6498c6497
+< 0xaffdb2b6	mlx5_core_query_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x1a6d499b	mlx5_core_query_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+6502c6501
+< 0x78c4567b	pci_scan_single_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x0efdb721	pci_scan_single_device	vmlinux	EXPORT_SYMBOL
+6518c6517
+< 0xbbe5c5a1	agp_generic_remove_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0xbe5dc77f	agp_generic_remove_memory	vmlinux	EXPORT_SYMBOL
+6546c6545
+< 0xbd504b54	drm_i2c_encoder_restore	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x6331d0f6	drm_i2c_encoder_restore	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6579c6578
+< 0x0dac5ec3	pci_bus_find_capability	vmlinux	EXPORT_SYMBOL
+---
+> 0x620cd98a	pci_bus_find_capability	vmlinux	EXPORT_SYMBOL
+6587c6586
+< 0xb30a8dc1	drm_gem_prime_export	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x0b818059	drm_gem_prime_export	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6596c6595
+< 0x90d3679c	drm_ati_pcigart_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x203fc1aa	drm_ati_pcigart_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6598c6597
+< 0xd9ebd3f9	agp_collect_device_status	vmlinux	EXPORT_SYMBOL
+---
+> 0xc145ead9	agp_collect_device_status	vmlinux	EXPORT_SYMBOL
+6603c6602
+< 0x7e1156d7	il_usecs_to_beacons	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x63235505	il_usecs_to_beacons	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+6606c6605
+< 0x280b1f62	pciserial_init_ports	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xc1f3d7ee	pciserial_init_ports	vmlinux	EXPORT_SYMBOL_GPL
+6636c6635
+< 0x9acdfaf4	pci_disable_sriov	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xae1eb8ff	pci_disable_sriov	vmlinux	EXPORT_SYMBOL_GPL
+6646c6645
+< 0x310c4bee	pci_num_vf	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xb4c7d18b	pci_num_vf	vmlinux	EXPORT_SYMBOL_GPL
+6653c6652
+< 0x3b10f574	rtsx_pci_card_pull_ctl_disable	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0xc48cfc53	rtsx_pci_card_pull_ctl_disable	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+6675c6674
+< 0x1e4c7f52	cxgbi_conn_pdu_ready	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x39fadd3f	cxgbi_conn_pdu_ready	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+6677c6676
+< 0x2d99eabc	mlx5_cmd_alloc_uar	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x0af6fc4c	mlx5_cmd_alloc_uar	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+6686c6685
+< 0xc770244d	drm_property_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xb0d768a4	drm_property_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6713c6712
+< 0x73653436	mptscsih_event_process	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x3ccb66ab	mptscsih_event_process	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+6715c6714
+< 0xcc389587	drm_i2c_encoder_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x02116c85	drm_i2c_encoder_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6724c6723
+< 0x0fd6f9a3	mptscsih_resume	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x8d005d18	mptscsih_resume	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+6755c6754
+< 0xe72e49b1	usb_hcd_pci_probe	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xa10996d9	usb_hcd_pci_probe	vmlinux	EXPORT_SYMBOL_GPL
+6769c6768
+< 0xf42855c3	perf_event_release_kernel	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xe0869b1d	perf_event_release_kernel	vmlinux	EXPORT_SYMBOL_GPL
+6781c6780
+< 0x491779fe	pci_reset_bridge_secondary_bus	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x0db99d19	pci_reset_bridge_secondary_bus	vmlinux	EXPORT_SYMBOL_GPL
+6786c6785
+< 0x838b1573	pci_load_and_free_saved_state	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x66c0f9d1	pci_load_and_free_saved_state	vmlinux	EXPORT_SYMBOL_GPL
+6791c6790
+< 0x19718f72	pci_save_state	vmlinux	EXPORT_SYMBOL
+---
+> 0x2b441951	pci_save_state	vmlinux	EXPORT_SYMBOL
+6817c6816
+< 0x1d655d78	drm_property_create	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xd98904b7	drm_property_create	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6856c6855
+< 0x814fd8e9	pcmcia_unregister_driver	vmlinux	EXPORT_SYMBOL
+---
+> 0xe2337087	pcmcia_unregister_driver	vmlinux	EXPORT_SYMBOL
+6880c6879
+< 0x6649913b	pci_bus_alloc_resource	vmlinux	EXPORT_SYMBOL
+---
+> 0x8e3f919b	pci_bus_alloc_resource	vmlinux	EXPORT_SYMBOL
+6911c6910
+< 0x5f9e309a	ssb_device_enable	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x1533acfc	ssb_device_enable	drivers/ssb/ssb	EXPORT_SYMBOL
+6914c6913
+< 0xe85ceeae	drm_encoder_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x56c32cd8	drm_encoder_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6921c6920
+< 0x39f80083	pci_disable_link_state	vmlinux	EXPORT_SYMBOL
+---
+> 0x1fc1def6	pci_disable_link_state	vmlinux	EXPORT_SYMBOL
+6924c6923
+< 0xe43ee12d	snd_hda_multi_out_dig_cleanup	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x5b7ebe58	snd_hda_multi_out_dig_cleanup	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+6956c6955
+< 0x0bd81494	ata_pci_remove_one	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xa0c7926c	ata_pci_remove_one	vmlinux	EXPORT_SYMBOL_GPL
+6963c6962
+< 0x3fa5ac23	mlx5_core_create_qp	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0x978661fc	mlx5_core_create_qp	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+6965c6964
+< 0xa09cae58	mlx5_core_create_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xed76effe	mlx5_core_create_cq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+6967c6966
+< 0x843b4dfa	drm_i2c_encoder_mode_set	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x8e73227f	drm_i2c_encoder_mode_set	drivers/gpu/drm/drm	EXPORT_SYMBOL
+6969c6968
+< 0xf481b6dd	pcix_get_mmrbc	vmlinux	EXPORT_SYMBOL
+---
+> 0x5f66d59a	pcix_get_mmrbc	vmlinux	EXPORT_SYMBOL
+6976c6975
+< 0x35824282	il_set_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x2605d40d	il_set_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+6982,6983c6981,6982
+< 0x6977c40d	pcmcia_get_mac_from_cis	vmlinux	EXPORT_SYMBOL
+< 0x5d06b20e	snd_emu10k1_synth_alloc	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+---
+> 0x24f50a03	pcmcia_get_mac_from_cis	vmlinux	EXPORT_SYMBOL
+> 0xcea15034	snd_emu10k1_synth_alloc	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+6985c6984
+< 0x2d8f965b	ssb_bus_pcibus_register	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0xb75d1c58	ssb_bus_pcibus_register	drivers/ssb/ssb	EXPORT_SYMBOL
+6990c6989
+< 0x6de51972	drm_debugfs_remove_files	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xbdfe91c0	drm_debugfs_remove_files	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7019c7018
+< 0x8c942e7d	mlx4_CLOSE_PORT	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x9f785cbf	mlx4_CLOSE_PORT	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+7021c7020
+< 0xb9726d13	drm_gtf_mode_complex	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xb5975307	drm_gtf_mode_complex	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7041c7040,7041
+< 0x3564bf35	drm_getsarea	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x0fbdcf23	drm_getsarea	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x5f9b7166	page_cache_next_hole	vmlinux	EXPORT_SYMBOL
+7054,7056c7054,7056
+< 0x6df8577e	drm_addbufs_agp	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x7178ecd1	drm_mode_crtc_set_gamma_size	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xe3a66355	drm_addbufs_pci	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xfae70edb	drm_addbufs_agp	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x489a72c4	drm_mode_crtc_set_gamma_size	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x33f52b38	drm_addbufs_pci	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7074c7074
+< 0xe11b0a95	pci_get_domain_bus_and_slot	vmlinux	EXPORT_SYMBOL
+---
+> 0x6b72277b	pci_get_domain_bus_and_slot	vmlinux	EXPORT_SYMBOL
+7080c7080
+< 0x0155f182	mpt_alloc_fw_memory	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x0d82aa79	mpt_alloc_fw_memory	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+7091c7091
+< 0xf85e472d	il_set_rxon_hwcrypto	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x6f6dd39d	il_set_rxon_hwcrypto	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7093c7093
+< 0x42ad0ebb	drm_kms_helper_poll_disable	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x538e0913	drm_kms_helper_poll_disable	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+7099c7099
+< 0xedfd0202	snd_hda_suspend	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x144993d8	snd_hda_suspend	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+7101,7104c7101,7104
+< 0xe00d7512	mlx5_db_alloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0x0fe8155f	mlx4_db_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xa5d6293d	mpt_print_ioc_summary	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0xed1196cf	bcma_pmu_get_bus_clock	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x0fcacc46	mlx5_db_alloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0x67eeff81	mlx4_db_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xda7adf19	mpt_print_ioc_summary	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0xe8e1ffa6	bcma_pmu_get_bus_clock	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+7117c7117
+< 0x9cb0915a	il_tx_queue_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x78f48597	il_tx_queue_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7123c7123
+< 0x1f10d2db	pci_enable_msix_range	vmlinux	EXPORT_SYMBOL
+---
+> 0xdc96e071	pci_enable_msix_range	vmlinux	EXPORT_SYMBOL
+7146c7146
+< 0xb4a3d2f4	pci_msi_vec_count	vmlinux	EXPORT_SYMBOL
+---
+> 0xabb93e92	pci_msi_vec_count	vmlinux	EXPORT_SYMBOL
+7172,7173c7172,7173
+< 0x6188be79	il_send_cmd	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x130c9fdd	mlx4_gen_port_state_change_eqe	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xe7568ef7	il_send_cmd	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x2010feb5	mlx4_gen_port_state_change_eqe	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+7177c7177
+< 0x3c36b821	__ht_create_irq	vmlinux	EXPORT_SYMBOL
+---
+> 0x28461177	__ht_create_irq	vmlinux	EXPORT_SYMBOL
+7217c7217
+< 0x4fa5fd36	snd_hda_lock_devices	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x48ac39a6	snd_hda_lock_devices	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+7228c7228
+< 0x1f637750	snd_hda_codec_update_widgets	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x5d9f3b07	snd_hda_codec_update_widgets	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+7231,7232c7231,7232
+< 0xcb540877	iwl_clear_bits_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+< 0x1d8a8951	il_send_rxon_timing	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xdc61301c	iwl_clear_bits_prph	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+> 0x93044d06	il_send_rxon_timing	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7237c7237
+< 0x8a51755c	pci_find_next_capability	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x22fa28f0	pci_find_next_capability	vmlinux	EXPORT_SYMBOL_GPL
+7239c7239
+< 0x92f4ab6c	pcmcia_get_tuple	vmlinux	EXPORT_SYMBOL
+---
+> 0xe84d9df4	pcmcia_get_tuple	vmlinux	EXPORT_SYMBOL
+7249c7249
+< 0x1fdbf078	pci_enable_msix	vmlinux	EXPORT_SYMBOL
+---
+> 0xf0d23fcd	pci_enable_msix	vmlinux	EXPORT_SYMBOL
+7270c7270
+< 0xafdc160f	pci_write_vpd	vmlinux	EXPORT_SYMBOL
+---
+> 0xc0f67271	pci_write_vpd	vmlinux	EXPORT_SYMBOL
+7277c7277
+< 0x892e1bc4	drm_plane_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x8e2f8a13	drm_plane_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7297c7297
+< 0x5c361834	vga_switcheroo_register_client	vmlinux	EXPORT_SYMBOL
+---
+> 0x679f1650	vga_switcheroo_register_client	vmlinux	EXPORT_SYMBOL
+7300c7300
+< 0x96ee388e	il_free_txq_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x5d7b10eb	il_free_txq_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7303,7305c7303,7305
+< 0xc86b7fa1	drm_i2c_encoder_save	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x3338e060	drm_get_connector_name	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xe0512722	drm_property_create_enum	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x765ae9e7	drm_i2c_encoder_save	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xef66e790	drm_get_connector_name	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x97d684f7	drm_property_create_enum	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7312c7312
+< 0x8d43133d	snd_emu10k1_memblk_map	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+---
+> 0xd8269dd4	snd_emu10k1_memblk_map	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+7320c7320
+< 0x09aeffcb	pcibios_resource_to_bus	vmlinux	EXPORT_SYMBOL
+---
+> 0xf5f2b659	pcibios_resource_to_bus	vmlinux	EXPORT_SYMBOL
+7340c7340
+< 0x985f1f35	pci_set_pcie_reset_state	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x88a5a72f	pci_set_pcie_reset_state	vmlinux	EXPORT_SYMBOL_GPL
+7352c7352
+< 0xe985d5a1	agp_generic_type_to_mask_type	vmlinux	EXPORT_SYMBOL
+---
+> 0x199133d5	agp_generic_type_to_mask_type	vmlinux	EXPORT_SYMBOL
+7365c7365
+< 0x3adf679d	il_chswitch_done	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xf7bfd9a2	il_chswitch_done	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7374c7374
+< 0x69e028cc	mptscsih_shutdown	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x41a1cd1b	mptscsih_shutdown	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+7383c7383
+< 0x7585ff4c	ata_pci_device_do_suspend	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xd566175a	ata_pci_device_do_suspend	vmlinux	EXPORT_SYMBOL_GPL
+7406c7406
+< 0x66f52ebc	agp_create_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0x22eb4150	agp_create_memory	vmlinux	EXPORT_SYMBOL
+7414,7415c7414,7415
+< 0x4466dbd6	mlx5_core_create_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+< 0x0b068fb4	drm_get_pci_dev	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x73478c0a	mlx5_core_create_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+> 0xe5818424	drm_get_pci_dev	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7429c7429
+< 0x5ee6e682	agp_generic_create_gatt_table	vmlinux	EXPORT_SYMBOL
+---
+> 0xda08b437	agp_generic_create_gatt_table	vmlinux	EXPORT_SYMBOL
+7433c7433
+< 0x56650cd9	mlx4_SET_PORT_qpn_calc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x95775c93	mlx4_SET_PORT_qpn_calc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+7443c7443
+< 0xd5fb37c1	drm_helper_crtc_in_use	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x8a37516a	drm_helper_crtc_in_use	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+7452c7452
+< 0x0d263f8a	pci_clear_master	vmlinux	EXPORT_SYMBOL
+---
+> 0x8b7e3e80	pci_clear_master	vmlinux	EXPORT_SYMBOL
+7465c7465
+< 0xccca2774	drm_vblank_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x77111ee6	drm_vblank_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7503c7503
+< 0xb3448b7b	il_tx_cmd_protection	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x7ec83b41	il_tx_cmd_protection	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7509c7509
+< 0xf888953a	drm_put_dev	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x256474b8	drm_put_dev	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7520,7521c7520,7521
+< 0x03ca6add	iwl_read_direct32	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+< 0xa70d0c97	mlx4_map_phys_fmr	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xe9adc353	iwl_read_direct32	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+> 0x7e344218	mlx4_map_phys_fmr	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+7524,7525c7524,7525
+< 0x807bce66	drm_core_ioremap	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xc84f998d	pci_wait_for_pending_transaction	vmlinux	EXPORT_SYMBOL
+---
+> 0x32088f9d	drm_core_ioremap	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x5eb2b8de	pci_wait_for_pending_transaction	vmlinux	EXPORT_SYMBOL
+7539c7539
+< 0x0fb568cd	il_eeprom_query16	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xc8dc5e84	il_eeprom_query16	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7552c7552
+< 0xd080e70f	ata_pci_device_do_resume	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xd038e29a	ata_pci_device_do_resume	vmlinux	EXPORT_SYMBOL_GPL
+7575,7576c7575,7576
+< 0x9d636af0	drm_gem_private_object_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xe0e9c13e	bcma_core_dma_translation	drivers/bcma/bcma	EXPORT_SYMBOL
+---
+> 0x8b5c7817	drm_gem_private_object_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0x17f18641	bcma_core_dma_translation	drivers/bcma/bcma	EXPORT_SYMBOL
+7580c7580
+< 0xa6f4270e	node_data	vmlinux	EXPORT_SYMBOL
+---
+> 0xfbb5e1e6	node_data	vmlinux	EXPORT_SYMBOL
+7603c7603
+< 0x9ff567bf	pci_find_capability	vmlinux	EXPORT_SYMBOL
+---
+> 0xac32d0ca	pci_find_capability	vmlinux	EXPORT_SYMBOL
+7663c7663
+< 0x5a45e450	vga_switcheroo_unregister_client	vmlinux	EXPORT_SYMBOL
+---
+> 0x91bd57d2	vga_switcheroo_unregister_client	vmlinux	EXPORT_SYMBOL
+7685c7685
+< 0x74af554b	qlt_lport_deregister	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0xb91ac2de	qlt_lport_deregister	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+7687,7688c7687,7688
+< 0xa8df0408	mlx5_dev_cleanup	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+< 0xcac14659	mlx4_srq_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xcf601bf0	mlx5_dev_cleanup	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+> 0xc8fcaf97	mlx4_srq_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+7691c7691
+< 0xbba43021	drm_i2c_encoder_prepare	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xeb8613c5	drm_i2c_encoder_prepare	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7702c7702
+< 0xb13ec0b4	il_apm_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x538c3701	il_apm_init	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7707c7707
+< 0x9e740f68	snd_hda_get_hint	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x2f99b7e0	snd_hda_get_hint	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+7710,7711c7710,7711
+< 0x6c0f1806	qlt_enable_vha	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+< 0x5edf8410	mptbase_sas_persist_operation	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x1a2bbb40	qlt_enable_vha	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+> 0x2ae3a791	mptbase_sas_persist_operation	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+7715c7715
+< 0xa83a8069	snd_hda_multi_out_analog_cleanup	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x2762c620	snd_hda_multi_out_analog_cleanup	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+7721c7721
+< 0xfe6deb55	pci_scan_bus	vmlinux	EXPORT_SYMBOL
+---
+> 0xaf514912	pci_scan_bus	vmlinux	EXPORT_SYMBOL
+7731c7731
+< 0xafc20415	mpt_config	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x8aaef8dd	mpt_config	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+7739c7739
+< 0xf27330b8	pcmcia_disable_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x486f0d81	pcmcia_disable_device	vmlinux	EXPORT_SYMBOL
+7741c7741
+< 0xf70b06f4	il_get_free_ucode_key_idx	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xaa967265	il_get_free_ucode_key_idx	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7771c7771
+< 0x22c76c84	pcie_set_mps	vmlinux	EXPORT_SYMBOL
+---
+> 0x0bcf3040	pcie_set_mps	vmlinux	EXPORT_SYMBOL
+7773,7774c7773,7774
+< 0x8fbfd373	pci_dev_run_wake	vmlinux	EXPORT_SYMBOL_GPL
+< 0xb108ccd5	pci_match_id	vmlinux	EXPORT_SYMBOL
+---
+> 0x15e5223d	pci_dev_run_wake	vmlinux	EXPORT_SYMBOL_GPL
+> 0x47254bee	pci_match_id	vmlinux	EXPORT_SYMBOL
+7781c7781
+< 0xf9eac872	cxgbi_sock_fail_act_open	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0xd2abf9a1	cxgbi_sock_fail_act_open	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+7805c7805
+< 0x75b7e624	bcma_core_pci_irq_ctl	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x0369b1df	bcma_core_pci_irq_ctl	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+7808c7808
+< 0xc5013630	pci_iounmap	vmlinux	EXPORT_SYMBOL
+---
+> 0x684a1cc5	pci_iounmap	vmlinux	EXPORT_SYMBOL
+7810c7810
+< 0xdd80d878	__pcmcia_request_exclusive_irq	vmlinux	EXPORT_SYMBOL
+---
+> 0xc657587c	__pcmcia_request_exclusive_irq	vmlinux	EXPORT_SYMBOL
+7820c7820
+< 0x73ebadd3	drm_vblank_put	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x0274a2a3	drm_vblank_put	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7834c7834
+< 0xeddf3c76	agp_alloc_bridge	vmlinux	EXPORT_SYMBOL
+---
+> 0xc174464f	agp_alloc_bridge	vmlinux	EXPORT_SYMBOL
+7857c7857
+< 0x4b31befb	agp_add_bridge	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x523cc71d	agp_add_bridge	vmlinux	EXPORT_SYMBOL_GPL
+7875c7875
+< 0x6a19c355	drm_gem_create_mmap_offset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x886da220	drm_gem_create_mmap_offset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+7885c7885
+< 0x38dbba00	mlx4_register_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xe74bfacb	mlx4_register_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+7892c7892
+< 0x016365b1	snd_hda_spdif_out_of_nid	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xbdcc10b9	snd_hda_spdif_out_of_nid	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+7897c7897
+< 0xd904769c	il_read_targ_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x83ea30c2	il_read_targ_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7903c7903
+< 0x7d378c96	ata_pci_sff_init_one	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x08d68f17	ata_pci_sff_init_one	vmlinux	EXPORT_SYMBOL_GPL
+7907c7907
+< 0x317e3f8d	il_hdl_pm_sleep	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xd1418de9	il_hdl_pm_sleep	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+7939c7939
+< 0xc65aa166	snd_hda_codec_flush_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xafdf4246	snd_hda_codec_flush_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+7943c7943
+< 0x0c02a2e6	mlx4_get_slave_port_state	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x4266a78d	mlx4_get_slave_port_state	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+7974,7975c7974,7975
+< 0x01c21d8d	avmcard_dma_alloc	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+< 0x86c3d905	bcma_core_is_enabled	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x79d2ca65	avmcard_dma_alloc	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+> 0x130f9019	bcma_core_is_enabled	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+7986,7987c7986,7987
+< 0x31764f50	mlx4_flow_steer_promisc_add	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x4ce9954a	rtsx_pci_write_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x16494fbd	mlx4_flow_steer_promisc_add	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x2505fc66	rtsx_pci_write_register	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+8014c8014
+< 0x72f6c7d1	il_tx_cmd_complete	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x7e4a4f4d	il_tx_cmd_complete	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+8021c8021
+< 0xeecca54d	snd_hda_ch_mode_put	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x565d9f49	snd_hda_ch_mode_put	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8031c8031
+< 0xdd22eb3f	snd_ac97_mixer	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x5e82474e	snd_ac97_mixer	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+8035c8035
+< 0x936bc851	mlx5_core_detach_mcg	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xe2dd85de	mlx5_core_detach_mcg	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+8039c8039
+< 0xdf1c8c6c	perf_tp_event	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xdb3d9564	perf_tp_event	vmlinux	EXPORT_SYMBOL_GPL
+8058c8058
+< 0xedd6083e	mlx4_test_interrupts	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xac338a2f	mlx4_test_interrupts	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+8063c8063
+< 0xde43cf0b	pci_fixup_cardbus	vmlinux	EXPORT_SYMBOL
+---
+> 0x60eae908	pci_fixup_cardbus	vmlinux	EXPORT_SYMBOL
+8077c8077
+< 0xbd689a3e	acpi_get_pci_dev	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x7ed02b08	acpi_get_pci_dev	vmlinux	EXPORT_SYMBOL_GPL
+8081c8081
+< 0xb777051c	agp_generic_alloc_by_type	vmlinux	EXPORT_SYMBOL
+---
+> 0xada9e4c6	agp_generic_alloc_by_type	vmlinux	EXPORT_SYMBOL
+8088c8088
+< 0x383fbb51	mlx5_core_get_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xe6e3ec89	mlx5_core_get_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+8098c8098
+< 0x25aea344	snd_pci_quirk_lookup	sound/core/snd	EXPORT_SYMBOL
+---
+> 0xbb91edb8	snd_pci_quirk_lookup	sound/core/snd	EXPORT_SYMBOL
+8106c8106
+< 0x05cc46c3	pci_bus_write_config_word	vmlinux	EXPORT_SYMBOL
+---
+> 0x6248b0fa	pci_bus_write_config_word	vmlinux	EXPORT_SYMBOL
+8117c8117
+< 0x373c92aa	cb710_pci_update_config_reg	drivers/misc/cb710/cb710	EXPORT_SYMBOL_GPL
+---
+> 0x5fd510e9	cb710_pci_update_config_reg	drivers/misc/cb710/cb710	EXPORT_SYMBOL_GPL
+8119,8121c8119,8121
+< 0x4074e836	drm_gem_prime_fd_to_handle	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xbdde75ad	pci_release_region	vmlinux	EXPORT_SYMBOL
+< 0x2ff1ff65	pcmcia_dev_present	vmlinux	EXPORT_SYMBOL
+---
+> 0x622f17f7	drm_gem_prime_fd_to_handle	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xf7ff029a	pci_release_region	vmlinux	EXPORT_SYMBOL
+> 0x37d6500f	pcmcia_dev_present	vmlinux	EXPORT_SYMBOL
+8124c8124
+< 0xaee68ba8	snd_hda_codec_write_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xab4422bd	snd_hda_codec_write_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8148c8148
+< 0xacd5a66c	mlx4_alloc_cmd_mailbox	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xe50ec917	mlx4_alloc_cmd_mailbox	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+8150,8151c8150,8151
+< 0x5923d087	mpt_detach	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0x3de3bad2	drm_connector_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xace17a66	mpt_detach	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0x8bd104f5	drm_connector_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8156,8157c8156,8157
+< 0xeb0d3a5f	mptscsih_raid_id_to_num	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+< 0x18e7ac90	drm_mode_validate_size	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xf6b4f265	mptscsih_raid_id_to_num	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+> 0x9e22af00	drm_mode_validate_size	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8168c8168
+< 0xb8a9f677	pci_dev_driver	vmlinux	EXPORT_SYMBOL
+---
+> 0xf9560529	pci_dev_driver	vmlinux	EXPORT_SYMBOL
+8181c8181
+< 0xcafb24ff	pci_set_power_state	vmlinux	EXPORT_SYMBOL
+---
+> 0x5fe1e065	pci_set_power_state	vmlinux	EXPORT_SYMBOL
+8192c8192
+< 0x8b819911	pci_bus_size_bridges	vmlinux	EXPORT_SYMBOL
+---
+> 0x5174a0a7	pci_bus_size_bridges	vmlinux	EXPORT_SYMBOL
+8223c8223
+< 0x593b59d1	mlx4_sync_pkey_table	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xe7c9d32b	mlx4_sync_pkey_table	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+8255c8255
+< 0x3b5908ee	drm_helper_probe_single_connector_modes	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x09fbb98c	drm_helper_probe_single_connector_modes	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+8274c8274
+< 0x1b0137d2	__alloc_pages_nodemask	vmlinux	EXPORT_SYMBOL
+---
+> 0xf54bf722	__alloc_pages_nodemask	vmlinux	EXPORT_SYMBOL
+8278c8278
+< 0x367d1530	b1_load_t4file	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0x39cb706f	b1_load_t4file	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+8297c8297
+< 0x848e9462	pci_choose_state	vmlinux	EXPORT_SYMBOL
+---
+> 0xff099500	pci_choose_state	vmlinux	EXPORT_SYMBOL
+8319c8319
+< 0x99d12fff	drm_helper_hpd_irq_event	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x08c51cf1	drm_helper_hpd_irq_event	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+8321c8321
+< 0x0dc45604	pci_enable_pri	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x489fc4d0	pci_enable_pri	vmlinux	EXPORT_SYMBOL_GPL
+8329c8329
+< 0x453fa2fe	__mlx4_cmd	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x304dadd1	__mlx4_cmd	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+8340c8340
+< 0xdb4f7a14	snd_trident_start_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+---
+> 0xd5b37da7	snd_trident_start_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+8347c8347
+< 0x17ff2c03	cxgbi_sock_select_mss	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x93399c16	cxgbi_sock_select_mss	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+8361c8361
+< 0x1c389b98	mlx4_fmr_unmap	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xf4a7ef30	mlx4_fmr_unmap	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+8368,8369c8368,8369
+< 0xb5324a79	snd_hda_check_board_config	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0x36a4e0cd	snd_hda_codec_cleanup	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x0a29691b	snd_hda_check_board_config	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0x56344066	snd_hda_codec_cleanup	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8379,8380c8379,8380
+< 0xbe7d4876	mlx4_cq_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x36af99b6	rtsx_pci_write_ppbuf	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x51e7a3fb	mlx4_cq_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xf196337f	rtsx_pci_write_ppbuf	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+8429c8429
+< 0x76e946f1	il_rx_queue_alloc	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x1be05562	il_rx_queue_alloc	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+8431c8431
+< 0x17ace2a8	drm_mode_create_scaling_mode_property	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x25bc3481	drm_mode_create_scaling_mode_property	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8494,8495c8494,8495
+< 0x2690171d	snd_hda_attach_beep_device	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0xe5023c72	snd_hda_detach_beep_device	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xc009c077	snd_hda_attach_beep_device	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0x0beecaad	snd_hda_detach_beep_device	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8503c8503
+< 0xd1dd1085	pci_enable_msi_block	vmlinux	EXPORT_SYMBOL
+---
+> 0x0ef724dd	pci_enable_msi_block	vmlinux	EXPORT_SYMBOL
+8515c8515
+< 0x6ff6ef89	mptscsih_io_done	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x678244f5	mptscsih_io_done	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+8529c8529
+< 0xb86d591d	mlx4_SET_PORT_PRIO2TC	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x52f7d30f	mlx4_SET_PORT_PRIO2TC	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+8542c8542
+< 0x9d44224e	mlx4_multicast_promisc_add	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x347b04b1	mlx4_multicast_promisc_add	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+8561c8561
+< 0x328ef9a3	pci_release_regions	vmlinux	EXPORT_SYMBOL
+---
+> 0x70c53eca	pci_release_regions	vmlinux	EXPORT_SYMBOL
+8562a8563
+> 0x437d242b	find_lock_entry	vmlinux	EXPORT_SYMBOL
+8572c8573
+< 0x7932f86d	mpt_device_driver_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xfc21593a	mpt_device_driver_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+8584c8585
+< 0xd2ad440a	ht_create_irq	vmlinux	EXPORT_SYMBOL
+---
+> 0x61f978dc	ht_create_irq	vmlinux	EXPORT_SYMBOL
+8590c8591
+< 0x83c820af	perf_event_read_value	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xb58aa6db	perf_event_read_value	vmlinux	EXPORT_SYMBOL_GPL
+8592c8593
+< 0x28441738	snd_hda_create_spdif_share_sw	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xb3deebb4	snd_hda_create_spdif_share_sw	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8594,8595c8595,8596
+< 0x91a11fb3	pch_src_uuid_hi_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+< 0x30b36685	pch_src_uuid_lo_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+---
+> 0xe87e6aac	pch_src_uuid_hi_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+> 0x49408b91	pch_src_uuid_lo_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+8599c8600
+< 0x95c1396b	drm_mode_parse_command_line_for_connector	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x26d43b12	drm_mode_parse_command_line_for_connector	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8610c8611
+< 0x81d0c183	iwl_poll_bit	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0xfa786080	iwl_poll_bit	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+8628c8629
+< 0x767a58b6	mraid_mm_register_adp	drivers/scsi/megaraid/megaraid_mm	EXPORT_SYMBOL
+---
+> 0xcf50901a	mraid_mm_register_adp	drivers/scsi/megaraid/megaraid_mm	EXPORT_SYMBOL
+8631c8632
+< 0x8041427c	drm_addmap	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x0500d598	drm_addmap	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8656c8657
+< 0xab744341	b1_getrevision	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0xd810482a	b1_getrevision	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+8659c8660
+< 0x36851efc	pcmcia_register_socket	vmlinux	EXPORT_SYMBOL
+---
+> 0xf1a23c29	pcmcia_register_socket	vmlinux	EXPORT_SYMBOL
+8661c8662
+< 0x06e6e903	agp_unbind_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0x94e05ccd	agp_unbind_memory	vmlinux	EXPORT_SYMBOL
+8668c8669
+< 0x8fd479c9	drm_mode_create	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x93f5d518	drm_mode_create	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8677c8678
+< 0xdc34b4cf	drm_mode_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x2048b362	drm_mode_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8680c8681
+< 0xe750b690	pci_destroy_slot	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xde37ad48	pci_destroy_slot	vmlinux	EXPORT_SYMBOL_GPL
+8683c8684
+< 0xa61207a9	il_dealloc_bcast_stations	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+---
+> 0x488dcfd0	il_dealloc_bcast_stations	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL_GPL
+8710c8711
+< 0x33b0fb5e	mpt_HardResetHandler	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xe4459fd9	mpt_HardResetHandler	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+8717c8718
+< 0xb048e4f5	snd_hda_check_amp_list_power	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xc3a32fa7	snd_hda_check_amp_list_power	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8732c8733
+< 0xff9910a2	pci_bus_read_dev_vendor_id	vmlinux	EXPORT_SYMBOL
+---
+> 0x92b5f78c	pci_bus_read_dev_vendor_id	vmlinux	EXPORT_SYMBOL
+8740c8741
+< 0x5e6ef963	rtsx_pci_read_ppbuf	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0xe00ab4b4	rtsx_pci_read_ppbuf	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+8746c8747
+< 0xa52b93c7	pcibios_bus_to_resource	vmlinux	EXPORT_SYMBOL
+---
+> 0xd6ebc225	pcibios_bus_to_resource	vmlinux	EXPORT_SYMBOL
+8783c8784
+< 0xcefcd7bd	mlx4_unicast_promisc_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x45338e50	mlx4_unicast_promisc_remove	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+8798c8799
+< 0x39a81290	mptscsih_ioc_reset	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x1932f55c	mptscsih_ioc_reset	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+8810c8811
+< 0x82b14ba7	agp_backend_release	vmlinux	EXPORT_SYMBOL
+---
+> 0x02b71ce1	agp_backend_release	vmlinux	EXPORT_SYMBOL
+8818c8819
+< 0x97e48ab8	pci_set_master	vmlinux	EXPORT_SYMBOL
+---
+> 0x04107044	pci_set_master	vmlinux	EXPORT_SYMBOL
+8821c8822
+< 0xb89da6d1	snd_hda_multi_out_dig_prepare	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x942531df	snd_hda_multi_out_dig_prepare	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8825c8826
+< 0x9e9bd75b	intel_gmch_probe	vmlinux	EXPORT_SYMBOL
+---
+> 0x190ed54c	intel_gmch_probe	vmlinux	EXPORT_SYMBOL
+8838c8839
+< 0x990c5eb1	drm_add_edid_modes	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xa3cf9832	drm_add_edid_modes	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8848c8849
+< 0x6c4acf2a	snd_ac97_bus	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x524af7f6	snd_ac97_bus	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+8851c8852
+< 0xd8ed9e43	ata_pci_device_suspend	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xe8cc7217	ata_pci_device_suspend	vmlinux	EXPORT_SYMBOL_GPL
+8861,8863c8862,8864
+< 0x4696cd5e	mlx5_destroy_unmap_eq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0x184aa264	mlx4_get_parav_qkey	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+< 0x39d772fa	mpt_raid_phys_disk_get_num_paths	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x1540a466	mlx5_destroy_unmap_eq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0xd0d3a33f	mlx4_get_parav_qkey	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+> 0xe0e5101f	mpt_raid_phys_disk_get_num_paths	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+8869c8870
+< 0xe0d11b8f	snd_hda_multi_out_dig_close	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x3348e1fd	snd_hda_multi_out_dig_close	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8891c8892
+< 0x8ab54291	snd_hda_codec_amp_read	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x804668d8	snd_hda_codec_amp_read	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8896,8897c8897,8898
+< 0xb2f2d0c0	mlx4_set_vf_link_state	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xb01ef050	be_roce_register_driver	drivers/net/ethernet/emulex/benet/be2net	EXPORT_SYMBOL
+---
+> 0x51e0cf1b	mlx4_set_vf_link_state	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x2c3f3bd1	be_roce_register_driver	drivers/net/ethernet/emulex/benet/be2net	EXPORT_SYMBOL
+8921,8922c8922,8923
+< 0x19942d4d	il_send_lq_cmd	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x1617c8b2	il_get_lowest_plcp	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x9f22e960	il_send_lq_cmd	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x41d68be3	il_get_lowest_plcp	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+8957c8958
+< 0xa3a06928	pci_scan_bridge	vmlinux	EXPORT_SYMBOL
+---
+> 0xcf0d036b	pci_scan_bridge	vmlinux	EXPORT_SYMBOL
+8960c8961
+< 0x0265757c	il_tx_queue_unmap	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x4c7d996b	il_tx_queue_unmap	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+8969c8970
+< 0xaf24f4e2	drm_rmmap	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x24f8357b	drm_rmmap	drivers/gpu/drm/drm	EXPORT_SYMBOL
+8976c8977
+< 0x10d1c00e	snd_hda_create_dig_out_ctls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xa68d7bfe	snd_hda_create_dig_out_ctls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+8994c8995
+< 0xd7a6e24e	mpt_clear_taskmgmt_in_progress_flag	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xdcde434e	mpt_clear_taskmgmt_in_progress_flag	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+8998c8999
+< 0xd269e341	pci_pme_capable	vmlinux	EXPORT_SYMBOL
+---
+> 0x10bf8a2b	pci_pme_capable	vmlinux	EXPORT_SYMBOL
+9009c9010
+< 0x49b78b44	pch_ch_event_write	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+---
+> 0x0a57438f	pch_ch_event_write	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+9024c9025
+< 0xcca70dba	rtsx_pci_switch_clock	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x020df4c2	rtsx_pci_switch_clock	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+9055c9056
+< 0xfe0e1b4b	drm_agp_free	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x4c1eb76d	drm_agp_free	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9060c9061
+< 0x3ffdf3ea	__pci_complete_power_transition	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x63d9ec9f	__pci_complete_power_transition	vmlinux	EXPORT_SYMBOL_GPL
+9079c9080
+< 0xcf40a4ca	pcix_get_max_mmrbc	vmlinux	EXPORT_SYMBOL
+---
+> 0x47c53307	pcix_get_max_mmrbc	vmlinux	EXPORT_SYMBOL
+9108c9109
+< 0xaf8c34b8	drm_send_vblank_event	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xa77944d4	drm_send_vblank_event	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9128c9129
+< 0xf88583be	pci_prepare_to_sleep	vmlinux	EXPORT_SYMBOL
+---
+> 0x0d154ae4	pci_prepare_to_sleep	vmlinux	EXPORT_SYMBOL
+9133c9134
+< 0x65a1f832	_il_apm_stop	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xe88b4b8b	_il_apm_stop	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+9137c9138
+< 0x203883e8	mlx4_mr_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x2899ead7	mlx4_mr_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9163c9164
+< 0x4eccc3df	mlx4_pd_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x7d8bf4ea	mlx4_pd_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9176c9177
+< 0x6b118378	il_txq_update_write_ptr	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x09905c7b	il_txq_update_write_ptr	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+9194,9195c9195,9196
+< 0xabfbeb9c	pci_alloc_dev	vmlinux	EXPORT_SYMBOL
+< 0x451f7e9b	snd_hda_create_spdif_in_ctls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x31b10e91	pci_alloc_dev	vmlinux	EXPORT_SYMBOL
+> 0xfa935d45	snd_hda_create_spdif_in_ctls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+9204c9205
+< 0x36a4be99	mlx4_read_clock	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xb337ad14	mlx4_read_clock	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9211c9212
+< 0xf748ce94	pci_hp_create_module_link	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xf03af75f	pci_hp_create_module_link	vmlinux	EXPORT_SYMBOL_GPL
+9213c9214,9215
+< 0xeb0a6f05	pci_bus_assign_resources	vmlinux	EXPORT_SYMBOL
+---
+> 0x11e4fc8e	find_get_entry	vmlinux	EXPORT_SYMBOL
+> 0x0e288ba2	pci_bus_assign_resources	vmlinux	EXPORT_SYMBOL
+9216c9218
+< 0x4a9ed8b3	snd_hda_query_pin_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x4d806845	snd_hda_query_pin_caps	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+9230c9232
+< 0x6d8382fb	__snd_hda_add_vmaster	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x4e702474	__snd_hda_add_vmaster	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+9237c9239
+< 0x24261bbf	drm_gem_create_mmap_offset_size	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xd18db1b4	drm_gem_create_mmap_offset_size	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9282d9283
+< 0xb835b3e4	radix_tree_prev_hole	vmlinux	EXPORT_SYMBOL
+9284c9285
+< 0x8ebb9ba3	pci_cleanup_aer_uncorrect_error_status	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x1ab2f3f7	pci_cleanup_aer_uncorrect_error_status	vmlinux	EXPORT_SYMBOL_GPL
+9297c9298
+< 0xbccc5637	drm_mode_create_dvi_i_properties	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x8cbd0936	drm_mode_create_dvi_i_properties	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9313c9314
+< 0xbb9c5c9e	mlx4_multicast_attach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xfe480b0a	mlx4_multicast_attach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9326,9328c9327,9329
+< 0xad1babdf	il_alloc_txq_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0xe4cdcf59	mlx4_srq_query	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x7a2b817d	drm_framebuffer_unregister_private	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x09920b9e	il_alloc_txq_mem	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0xe3e3b62c	mlx4_srq_query	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x3ba4df83	drm_framebuffer_unregister_private	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9348,9349c9349,9350
+< 0x4260207b	mpt_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0x708afdf3	drm_mode_probed_add	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xe7d8b4f2	mpt_register	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0x11f42cd9	drm_mode_probed_add	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9366c9367
+< 0xbf85b81b	pci_bus_write_config_byte	vmlinux	EXPORT_SYMBOL
+---
+> 0xa67f004b	pci_bus_write_config_byte	vmlinux	EXPORT_SYMBOL
+9387c9388
+< 0xf7c352e8	snd_hda_add_vmaster_hook	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xd410fac5	snd_hda_add_vmaster_hook	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+9394c9395
+< 0xbdb4a168	pci_find_ext_capability	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x9566e0b8	pci_find_ext_capability	vmlinux	EXPORT_SYMBOL_GPL
+9400,9401c9401,9402
+< 0x0607401d	snd_ac97_get_short_name	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+< 0x15589f8e	ssb_dma_translation	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x51c65825	snd_ac97_get_short_name	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+> 0x57e79fbd	ssb_dma_translation	drivers/ssb/ssb	EXPORT_SYMBOL
+9404c9405
+< 0xd04d9e28	pci_claim_resource	vmlinux	EXPORT_SYMBOL
+---
+> 0xa92e0475	pci_claim_resource	vmlinux	EXPORT_SYMBOL
+9412c9413
+< 0xd5ae5d2d	mpt_raid_phys_disk_pg0	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xb0220a03	mpt_raid_phys_disk_pg0	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+9420c9421
+< 0x91b7f145	pch_ch_control_write	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+---
+> 0xc4507362	pch_ch_control_write	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+9422,9423c9423,9424
+< 0x366194ac	drm_mode_connector_update_edid_property	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xc2c7648f	amd_iommu_get_v2_domain	vmlinux	EXPORT_SYMBOL
+---
+> 0xcdbe51fd	drm_mode_connector_update_edid_property	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xef6a9a83	amd_iommu_get_v2_domain	vmlinux	EXPORT_SYMBOL
+9450c9451
+< 0x81a8952a	ssb_bus_powerup	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0xa4de3ebf	ssb_bus_powerup	drivers/ssb/ssb	EXPORT_SYMBOL
+9453c9454
+< 0x9bc5f905	drm_connector_unplug_all	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xf537eebd	drm_connector_unplug_all	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9459c9460
+< 0x606c696a	pci_walk_bus	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x210e9f75	pci_walk_bus	vmlinux	EXPORT_SYMBOL_GPL
+9464c9465
+< 0x47186c07	il_scan_cancel_timeout	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xc45de1ad	il_scan_cancel_timeout	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+9466c9467
+< 0x3b698438	amd_iommu_complete_ppr	vmlinux	EXPORT_SYMBOL
+---
+> 0x997c2a11	amd_iommu_complete_ppr	vmlinux	EXPORT_SYMBOL
+9479c9480
+< 0x6c271083	pci_user_write_config_byte	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xfc1dee0c	pci_user_write_config_byte	vmlinux	EXPORT_SYMBOL_GPL
+9490c9491
+< 0xbbdfa60f	drm_agp_release	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x76b346c9	drm_agp_release	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9522,9523c9523,9524
+< 0xf479dea9	drm_mode_prune_invalid	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x8802ead4	drm_pcie_get_speed_cap_mask	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xb6725ac3	drm_mode_prune_invalid	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xa7db08e8	drm_pcie_get_speed_cap_mask	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9531c9532
+< 0x61cc89df	snd_hda_add_new_ctls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xc684943e	snd_hda_add_new_ctls	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+9533c9534
+< 0x00728f55	mlx4_buf_write_mtt	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x785b2790	mlx4_buf_write_mtt	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9550c9551
+< 0x478971d3	rtsx_pci_add_cmd	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x38c52fd7	rtsx_pci_add_cmd	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+9558c9559
+< 0xf9fba637	mlx4_wol_write	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x884b3381	mlx4_wol_write	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9593c9594
+< 0x19fe689f	pci_vfs_assigned	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xbbbcb888	pci_vfs_assigned	vmlinux	EXPORT_SYMBOL_GPL
+9612c9613
+< 0x714c7594	b1_alloc_card	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0xbe7fca6d	b1_alloc_card	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+9616c9617
+< 0xe5f3238d	pci_get_class	vmlinux	EXPORT_SYMBOL
+---
+> 0x19fd1372	pci_get_class	vmlinux	EXPORT_SYMBOL
+9634c9635
+< 0x68d3e6c7	mlx5_core_xrcd_alloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0x14e63ad5	mlx5_core_xrcd_alloc	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+9643c9644
+< 0x4ed26c62	mlx4_get_slave_pkey_gid_tbl_len	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x2d584b72	mlx4_get_slave_pkey_gid_tbl_len	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+9655c9656
+< 0xbf0b659b	mlx5_create_map_eq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0x17300346	mlx5_create_map_eq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+9658c9659
+< 0x99dd1195	pcmcia_request_io	vmlinux	EXPORT_SYMBOL
+---
+> 0xd21843c2	pcmcia_request_io	vmlinux	EXPORT_SYMBOL
+9663,9664c9664,9665
+< 0x9beefb8b	pch_tx_snap_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+< 0xfcb5c92c	pch_rx_snap_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+---
+> 0xfcfc2d3a	pch_tx_snap_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+> 0x26e00f95	pch_rx_snap_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+9672c9673
+< 0x5c7f890b	snd_ac97_write	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x1ef65b6a	snd_ac97_write	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+9696c9697
+< 0x5084fb2c	vnic_dev_get_pdev	drivers/net/ethernet/cisco/enic/enic	EXPORT_SYMBOL
+---
+> 0x093e59b1	vnic_dev_get_pdev	drivers/net/ethernet/cisco/enic/enic	EXPORT_SYMBOL
+9718c9719
+< 0x155fa2d3	mlx4_unregister_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x643c4b68	mlx4_unregister_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9725c9726
+< 0xd2f68a75	pci_enable_device	vmlinux	EXPORT_SYMBOL
+---
+> 0xb20fe84c	pci_enable_device	vmlinux	EXPORT_SYMBOL
+9745c9746
+< 0xfef6a61e	vga_set_legacy_decoding	vmlinux	EXPORT_SYMBOL
+---
+> 0x450d5f1a	vga_set_legacy_decoding	vmlinux	EXPORT_SYMBOL
+9759c9760
+< 0xe38ea4cb	pci_remove_bus	vmlinux	EXPORT_SYMBOL
+---
+> 0x203ef788	pci_remove_bus	vmlinux	EXPORT_SYMBOL
+9765c9766
+< 0xe2479ee5	mpt_attach	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xa638cf6e	mpt_attach	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+9773c9774
+< 0x05d6a9a9	bcma_chipco_get_alp_clock	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x278cea52	bcma_chipco_get_alp_clock	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+9797,9798c9798,9799
+< 0xe1a82ef9	drm_vblank_count	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0xb3e4ba81	bcma_core_enable	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x1fca9f75	drm_vblank_count	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xbb4a8b27	bcma_core_enable	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+9817,9818c9818,9819
+< 0x7833186a	mlx4_map_sw_to_hw_steering_mode	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xd48255f2	mpt_put_msg_frame	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xbcaf491c	mlx4_map_sw_to_hw_steering_mode	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xfbec6a91	mpt_put_msg_frame	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+9820c9821
+< 0x7fdb15da	ata_pci_device_resume	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x44480a22	ata_pci_device_resume	vmlinux	EXPORT_SYMBOL_GPL
+9822c9823
+< 0xa47e49bc	pcie_capability_write_word	vmlinux	EXPORT_SYMBOL
+---
+> 0xbb0c8375	pcie_capability_write_word	vmlinux	EXPORT_SYMBOL
+9828,9829c9829,9830
+< 0xce164716	cxgbi_sock_rcv_abort_rpl	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+< 0xd724a9d0	pch_ch_control_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+---
+> 0x9659776e	cxgbi_sock_rcv_abort_rpl	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+> 0xa494fb82	pch_ch_control_read	drivers/ptp/ptp_pch	EXPORT_SYMBOL
+9831c9832
+< 0x95b04107	drm_pci_alloc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xc66b5ac9	drm_pci_alloc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9846c9847
+< 0xdeaa80ad	drm_sysfs_connector_add	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xf53013ee	drm_sysfs_connector_add	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9851c9852
+< 0x308c60f6	cxgbi_sock_rcv_close_conn_rpl	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0xab2fa83f	cxgbi_sock_rcv_close_conn_rpl	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+9859c9860
+< 0x07f96af9	vga_default_device	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xfed63a89	vga_default_device	vmlinux	EXPORT_SYMBOL_GPL
+9864,9865c9865,9866
+< 0x13ae7723	snd_hda_codec_get_pin_target	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0x83919d36	snd_hda_codec_set_pin_target	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x50b02bec	snd_hda_codec_get_pin_target	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0x18afa199	snd_hda_codec_set_pin_target	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+9883c9884
+< 0x6354200e	drm_helper_connector_dpms	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x154d2cb5	drm_helper_connector_dpms	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+9898c9899
+< 0xb9cab597	mlx4_set_vf_spoofchk	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x3d03e5ef	mlx4_set_vf_spoofchk	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+9913,9914c9914,9915
+< 0x4905688f	ssb_set_devtypedata	drivers/ssb/ssb	EXPORT_SYMBOL
+< 0x57c954a0	drm_gem_free_mmap_offset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xbd96e147	ssb_set_devtypedata	drivers/ssb/ssb	EXPORT_SYMBOL
+> 0xfbb26d14	drm_gem_free_mmap_offset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9971c9972
+< 0x19bb5459	mlx4_release_eq	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x922bdf35	mlx4_release_eq	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+9991c9992
+< 0x682af3f9	drm_dev_unregister	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x9e214483	drm_dev_unregister	drivers/gpu/drm/drm	EXPORT_SYMBOL
+9993c9994
+< 0x90a0ee18	pci_intx	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x5a42de64	pci_intx	vmlinux	EXPORT_SYMBOL_GPL
+9995c9996
+< 0x892119d1	pci_enable_msi_range	vmlinux	EXPORT_SYMBOL
+---
+> 0x62a35ca7	pci_enable_msi_range	vmlinux	EXPORT_SYMBOL
+10001c10002
+< 0xb396c4e6	mlx4_mtt_cleanup	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xdb9fef00	mlx4_mtt_cleanup	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+10005c10006
+< 0x4b5ee52e	bcma_chipco_pll_write	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0xd8dd19f8	bcma_chipco_pll_write	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+10009c10010
+< 0x5166b3e3	agp_generic_free_by_type	vmlinux	EXPORT_SYMBOL
+---
+> 0x89f639f6	agp_generic_free_by_type	vmlinux	EXPORT_SYMBOL
+10016c10017
+< 0x3b0cdbb9	il_set_rate	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xd6e5666c	il_set_rate	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10018c10019
+< 0x4cfb1be6	pci_find_bus	vmlinux	EXPORT_SYMBOL
+---
+> 0xefea4128	pci_find_bus	vmlinux	EXPORT_SYMBOL
+10030,10031c10031,10032
+< 0xb8cce365	snd_hda_sync_vmaster_hook	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+< 0xa57659b4	snd_hda_power_save	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x339d357b	snd_hda_sync_vmaster_hook	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+> 0x56927719	snd_hda_power_save	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+10045c10046
+< 0x89b6f9d1	pci_user_read_config_word	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x9171c627	pci_user_read_config_word	vmlinux	EXPORT_SYMBOL_GPL
+10050c10051
+< 0x8f893c8d	__snd_hda_codec_cleanup_stream	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xc6c10eed	__snd_hda_codec_cleanup_stream	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+10068c10069
+< 0xc0553cae	qlt_rdy_to_xfer	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+---
+> 0x2047e3d8	qlt_rdy_to_xfer	drivers/scsi/qla2xxx/qla2xxx	EXPORT_SYMBOL
+10077c10078
+< 0xc86bbbbb	mlx4_flow_detach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0xf8af6f6c	mlx4_flow_detach	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+10099c10100
+< 0xc901ffa9	bcma_find_core_unit	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0xd2223df5	bcma_find_core_unit	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+10101c10102
+< 0xac18df40	vga_client_register	vmlinux	EXPORT_SYMBOL
+---
+> 0xdab72ce2	vga_client_register	vmlinux	EXPORT_SYMBOL
+10118c10119
+< 0xc5250221	pci_check_and_mask_intx	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xab17975e	pci_check_and_mask_intx	vmlinux	EXPORT_SYMBOL_GPL
+10129c10130
+< 0xa99f9cf9	snd_emu10k1_synth_free	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+---
+> 0x0631330e	snd_emu10k1_synth_free	sound/pci/emu10k1/snd-emu10k1	EXPORT_SYMBOL
+10143,10144c10144,10145
+< 0x42e430a4	mlx4_counter_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xf316265c	cxgb4_get_tcp_stats	drivers/net/ethernet/chelsio/cxgb4/cxgb4	EXPORT_SYMBOL
+---
+> 0x37de1e24	mlx4_counter_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xc588a9e6	cxgb4_get_tcp_stats	drivers/net/ethernet/chelsio/cxgb4/cxgb4	EXPORT_SYMBOL
+10154c10155
+< 0x46fbbb0c	cxgbi_sock_purge_wr_queue	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x9a1ab6c7	cxgbi_sock_purge_wr_queue	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+10175c10176
+< 0x5d7dad70	bcma_chipco_regctl_maskset	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0x0d1819fb	bcma_chipco_regctl_maskset	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+10189c10190
+< 0x18a5804f	drm_fb_helper_single_add_all_connectors	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xfef06546	drm_fb_helper_single_add_all_connectors	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+10202c10203
+< 0xb6fefd04	ssb_pcihost_register	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0xa00cbaba	ssb_pcihost_register	drivers/ssb/ssb	EXPORT_SYMBOL
+10220c10221
+< 0x2c438fd0	mlx4_find_cached_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x62f94c84	mlx4_find_cached_vlan	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+10224c10225
+< 0x4c70bb77	pci_probe_reset_slot	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x473158f0	pci_probe_reset_slot	vmlinux	EXPORT_SYMBOL_GPL
+10242c10243
+< 0xee66e84c	pcie_capability_write_dword	vmlinux	EXPORT_SYMBOL
+---
+> 0x5589a677	pcie_capability_write_dword	vmlinux	EXPORT_SYMBOL
+10258c10259
+< 0x1b85d618	pci_bus_read_config_dword	vmlinux	EXPORT_SYMBOL
+---
+> 0x032a16ae	pci_bus_read_config_dword	vmlinux	EXPORT_SYMBOL
+10264c10265
+< 0x786f36ba	il_free_channel_map	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x2518c807	il_free_channel_map	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10277c10278
+< 0xcf89918e	pcie_port_service_register	vmlinux	EXPORT_SYMBOL
+---
+> 0x0419bed2	pcie_port_service_register	vmlinux	EXPORT_SYMBOL
+10280c10281
+< 0x7bab1ce8	pci_request_selected_regions	vmlinux	EXPORT_SYMBOL
+---
+> 0xabc0da2e	pci_request_selected_regions	vmlinux	EXPORT_SYMBOL
+10298c10299
+< 0xf2b26f57	_il_poll_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x60aea2f1	_il_poll_bit	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10325c10326
+< 0xffa84e19	mlx5_core_access_reg	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0x1a6b83a1	mlx5_core_access_reg	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+10329c10330
+< 0x3fba1f7e	vga_switcheroo_register_audio_client	vmlinux	EXPORT_SYMBOL
+---
+> 0x939a6a7b	vga_switcheroo_register_audio_client	vmlinux	EXPORT_SYMBOL
+10340,10341c10341,10342
+< 0x60320006	ssb_pmu_set_ldo_voltage	drivers/ssb/ssb	EXPORT_SYMBOL
+< 0x0ab9d321	drm_framebuffer_remove	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xc3414b88	ssb_pmu_set_ldo_voltage	drivers/ssb/ssb	EXPORT_SYMBOL
+> 0x2298f9d9	drm_framebuffer_remove	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10362c10363
+< 0xeeed331a	pci_device_is_present	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x8de2d771	pci_device_is_present	vmlinux	EXPORT_SYMBOL_GPL
+10378c10379
+< 0xd509e9a1	pci_get_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x5f60c44f	pci_get_device	vmlinux	EXPORT_SYMBOL
+10417c10418
+< 0xa69583a7	ata_pci_bmdma_prepare_host	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xcc053a54	ata_pci_bmdma_prepare_host	vmlinux	EXPORT_SYMBOL_GPL
+10447c10448
+< 0x91048cd5	pci_scan_root_bus	vmlinux	EXPORT_SYMBOL
+---
+> 0x4b631fbf	pci_scan_root_bus	vmlinux	EXPORT_SYMBOL
+10468c10469
+< 0x4b889706	__mod_zone_page_state	vmlinux	EXPORT_SYMBOL
+---
+> 0x9c6f9c42	__mod_zone_page_state	vmlinux	EXPORT_SYMBOL
+10512c10513
+< 0xe2e8d782	il_send_bt_config	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x7e7c3075	il_send_bt_config	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10524c10525
+< 0xcf65c665	drm_platform_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x31afc464	drm_platform_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10552c10553
+< 0x9470ed01	acpiphp_unregister_attention	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x83abc3a0	acpiphp_unregister_attention	vmlinux	EXPORT_SYMBOL_GPL
+10557c10558
+< 0x62697a22	drm_master_get	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xf43a032b	drm_master_get	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10563c10564
+< 0x1057e410	mptscsih_suspend	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+---
+> 0x10fa6722	mptscsih_suspend	drivers/message/fusion/mptscsih	EXPORT_SYMBOL
+10566c10567
+< 0xef708232	drm_agp_acquire	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xf41793af	drm_agp_acquire	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10591,10594c10592,10595
+< 0x0912f019	il_rd_prph	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0xb802dc16	il_wr_prph	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x37c5fb5c	mlx5_db_free	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0xd08851de	mlx4_db_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x35a4e326	il_rd_prph	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x4768f017	il_wr_prph	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0x61e2d278	mlx5_db_free	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0xa8c3f01d	mlx4_db_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+10612c10613
+< 0xae9e8afa	rtsx_pci_start_run	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+---
+> 0x88cbe293	rtsx_pci_start_run	drivers/mfd/rtsx_pci	EXPORT_SYMBOL_GPL
+10625c10626
+< 0x1097acf0	mlx4_qp_to_ready	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x86fcc6b3	mlx4_qp_to_ready	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+10637c10638
+< 0x4b10e0f9	drm_core_reclaim_buffers	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x978eaf91	drm_core_reclaim_buffers	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10659c10660
+< 0x335f7cdf	snd_hda_sequence_write_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x1ab09bff	snd_hda_sequence_write_cache	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+10662,10663c10663,10664
+< 0x9243152e	il_init_scan_params	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+< 0x9cb45495	mlx4_SET_PORT_VXLAN	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0xba692c63	il_init_scan_params	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+> 0xa2839017	mlx4_SET_PORT_VXLAN	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+10675c10676
+< 0x9265b3af	mlx4_unregister_interface	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x9d1372e2	mlx4_unregister_interface	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+10694c10695
+< 0xc8cbdddf	mlx4_SET_PORT_general	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x7e408c27	mlx4_SET_PORT_general	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+10702c10703
+< 0xf4fb49da	il_get_active_dwell_time	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x36f95d27	il_get_active_dwell_time	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10712c10713
+< 0xb778d4cc	il_set_flags_for_band	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x6ab287c8	il_set_flags_for_band	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10717c10718
+< 0x02369ac4	__pci_hp_register	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xe3d8d439	__pci_hp_register	vmlinux	EXPORT_SYMBOL_GPL
+10722c10723
+< 0xc8c92e5e	drm_gem_object_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x91052ec0	drm_gem_object_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10732c10733
+< 0x24b3d101	mpt_findImVolumes	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xdb1c9c58	mpt_findImVolumes	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+10734c10735
+< 0x55e28113	get_agp_version	vmlinux	EXPORT_SYMBOL
+---
+> 0x06343446	get_agp_version	vmlinux	EXPORT_SYMBOL
+10767c10768
+< 0xf7c0629d	drm_sysfs_hotplug_event	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xe1e8aae0	drm_sysfs_hotplug_event	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10784,10785c10785,10786
+< 0x80ffb1d1	pci_request_regions_exclusive	vmlinux	EXPORT_SYMBOL
+< 0x5f772f04	snd_hda_load_patch	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x9a04c29c	pci_request_regions_exclusive	vmlinux	EXPORT_SYMBOL
+> 0x3f2b1072	snd_hda_load_patch	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+10787c10788
+< 0x1b7923bd	mlx5_core_qp_query	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+---
+> 0x6526f749	mlx5_core_qp_query	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+10823,10824c10824,10825
+< 0x8ae96a7d	mpt_free_msg_frame	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+< 0xc74f335c	mpt_put_msg_frame_hi_pri	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0xb6d6656b	mpt_free_msg_frame	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+> 0x501d38be	mpt_put_msg_frame_hi_pri	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+10828c10829
+< 0x734a9f29	sdhci_pci_o2_probe	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x161d2352	sdhci_pci_o2_probe	vmlinux	EXPORT_SYMBOL_GPL
+10832c10833
+< 0xfd839155	pcie_get_readrq	vmlinux	EXPORT_SYMBOL
+---
+> 0xcc98ca46	pcie_get_readrq	vmlinux	EXPORT_SYMBOL
+10840,10841c10841,10842
+< 0xdd651fcf	drm_gem_prime_handle_to_fd	drivers/gpu/drm/drm	EXPORT_SYMBOL
+< 0x9a6341d0	drm_sysfs_connector_remove	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x4373a19f	drm_gem_prime_handle_to_fd	drivers/gpu/drm/drm	EXPORT_SYMBOL
+> 0xd7be2ae6	drm_sysfs_connector_remove	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10857c10858
+< 0xc51991df	snd_hda_query_supported_pcm	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x295bd5c8	snd_hda_query_supported_pcm	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+10874c10875
+< 0x97df6ffa	snd_ac97_tune_hardware	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+---
+> 0x4e2bc728	snd_ac97_tune_hardware	sound/pci/ac97/snd-ac97-codec	EXPORT_SYMBOL
+10891c10892
+< 0x6059767b	drm_bridge_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x1c0c56a9	drm_bridge_cleanup	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10906c10907
+< 0x9ef3fe12	drm_vblank_post_modeset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x0152e422	drm_vblank_post_modeset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10919c10920
+< 0x53bd6bce	ata_pci_bmdma_clear_simplex	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xc0179c79	ata_pci_bmdma_clear_simplex	vmlinux	EXPORT_SYMBOL_GPL
+10922c10923
+< 0x3c0f94f7	pci_stop_and_remove_bus_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x520a99b0	pci_stop_and_remove_bus_device	vmlinux	EXPORT_SYMBOL
+10934c10935
+< 0x10b02d3c	pci_hp_deregister	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x0865c4b0	pci_hp_deregister	vmlinux	EXPORT_SYMBOL_GPL
+10940c10941
+< 0x07638c74	b1_load_config	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+---
+> 0x4645a375	b1_load_config	drivers/isdn/hardware/avm/b1	EXPORT_SYMBOL
+10951,10952c10952,10953
+< 0xf42b0ab3	mlx4_find_cached_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0xea21a44b	drm_mode_config_reset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xa4c9beab	mlx4_find_cached_mac	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0xf5af56ff	drm_mode_config_reset	drivers/gpu/drm/drm	EXPORT_SYMBOL
+10966c10967
+< 0xc51cd481	il_hdl_pm_debug_stats	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x2c2171f0	il_hdl_pm_debug_stats	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10977c10978
+< 0x3f630299	il_hdl_csa	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xace33d56	il_hdl_csa	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+10988c10989
+< 0x42750607	mlx4_mw_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x362bb5b3	mlx4_mw_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+10998c10999
+< 0x24bcdb2b	snd_hda_codec_eapd_power_filter	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x9253cff5	snd_hda_codec_eapd_power_filter	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11005c11006
+< 0x49b2983e	set_and_calc_slave_port_state	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+---
+> 0x3cde04c4	set_and_calc_slave_port_state	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL
+11034c11035
+< 0x488c02f8	ssb_driver_unregister	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x8282f4f7	ssb_driver_unregister	drivers/ssb/ssb	EXPORT_SYMBOL
+11040c11041
+< 0x55e28db7	drm_gem_dumb_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xafa6829a	drm_gem_dumb_destroy	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11052c11053
+< 0xbb888e7e	hisax_init_pcmcia	drivers/isdn/hisax/hisax	EXPORT_SYMBOL
+---
+> 0xfb9ca3c2	hisax_init_pcmcia	drivers/isdn/hisax/hisax	EXPORT_SYMBOL
+11057c11058
+< 0x9b3f97c9	vga_get	vmlinux	EXPORT_SYMBOL
+---
+> 0x4963c0e1	vga_get	vmlinux	EXPORT_SYMBOL
+11062,11063c11063,11064
+< 0x5b6d5102	pcmcia_release_window	vmlinux	EXPORT_SYMBOL
+< 0xffa84287	snd_hda_ch_mode_get	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x4c66aa5c	pcmcia_release_window	vmlinux	EXPORT_SYMBOL
+> 0xdfb9d63f	snd_hda_ch_mode_get	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11077c11078
+< 0x22c83672	pci_enable_device_io	vmlinux	EXPORT_SYMBOL
+---
+> 0x5a033de0	pci_enable_device_io	vmlinux	EXPORT_SYMBOL
+11086c11087
+< 0x813a167b	pci_dev_put	vmlinux	EXPORT_SYMBOL
+---
+> 0x117c823b	pci_dev_put	vmlinux	EXPORT_SYMBOL
+11092c11093
+< 0xc8949ad3	pci_dev_get	vmlinux	EXPORT_SYMBOL
+---
+> 0x2739882d	pci_dev_get	vmlinux	EXPORT_SYMBOL
+11099c11100
+< 0x3c984704	mlx5_cmd_comp_handler	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0xc7ae3a5c	mlx5_cmd_comp_handler	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+11119c11120
+< 0x5fe4aa52	pcie_get_minimum_link	vmlinux	EXPORT_SYMBOL
+---
+> 0xb735db32	pcie_get_minimum_link	vmlinux	EXPORT_SYMBOL
+11152c11153
+< 0x07c58da8	drm_agp_info	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xd2a71af4	drm_agp_info	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11176c11177
+< 0x0e91fec0	__ssb_driver_register	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x24793b72	__ssb_driver_register	drivers/ssb/ssb	EXPORT_SYMBOL
+11178c11179
+< 0x7b70c1b8	mlx4_bf_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x8f935784	mlx4_bf_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+11200c11201
+< 0x90c76bfc	drm_fb_helper_fill_var	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0xb0957848	drm_fb_helper_fill_var	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+11203c11204
+< 0xfe9a2b3f	pci_fixup_device	vmlinux	EXPORT_SYMBOL
+---
+> 0x145e48c9	pci_fixup_device	vmlinux	EXPORT_SYMBOL
+11206c11207
+< 0x12fe2d7c	snd_trident_write_voice_regs	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+---
+> 0x52dff26d	snd_trident_write_voice_regs	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+11227c11228
+< 0x669eb098	mlx5_cmd_cleanup	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x746002e3	mlx5_cmd_cleanup	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+11249c11250
+< 0xc994392a	vnic_dev_register	drivers/net/ethernet/cisco/enic/enic	EXPORT_SYMBOL
+---
+> 0x412f8be7	vnic_dev_register	drivers/net/ethernet/cisco/enic/enic	EXPORT_SYMBOL
+11266c11267
+< 0x9c842e54	drm_property_create_range	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xdb7d40b2	drm_property_create_range	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11276c11277
+< 0xa5b2c11d	acpi_get_hp_hw_control_from_firmware	vmlinux	EXPORT_SYMBOL
+---
+> 0xc6cd6cbc	acpi_get_hp_hw_control_from_firmware	vmlinux	EXPORT_SYMBOL
+11285c11286
+< 0x3b1b5253	mlx4_qp_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x2c6b44e8	mlx4_qp_alloc	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+11307c11308
+< 0xef4ad74c	pci_rescan_bus	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0xa6d1331d	pci_rescan_bus	vmlinux	EXPORT_SYMBOL_GPL
+11314c11315
+< 0x39b30ea0	il_setup_rx_scan_handlers	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xf8b01b5d	il_setup_rx_scan_handlers	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+11324c11325
+< 0x3ddb89a1	snd_hda_multi_out_dig_open	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x89395a48	snd_hda_multi_out_dig_open	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11328c11329
+< 0x255fd7fc	pci_user_read_config_byte	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x7de7301c	pci_user_read_config_byte	vmlinux	EXPORT_SYMBOL_GPL
+11330c11331
+< 0x1dda9c1a	pci_try_reset_slot	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x470bb575	pci_try_reset_slot	vmlinux	EXPORT_SYMBOL_GPL
+11341c11342
+< 0x43fb0a89	drm_set_preferred_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xbdbfd34e	drm_set_preferred_mode	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11397,11398c11398,11399
+< 0xb9d3b063	pcmcia_parse_events	vmlinux	EXPORT_SYMBOL
+< 0x09d4029c	pci_set_mwi	vmlinux	EXPORT_SYMBOL
+---
+> 0x5080eeda	pcmcia_parse_events	vmlinux	EXPORT_SYMBOL
+> 0xe3042126	pci_set_mwi	vmlinux	EXPORT_SYMBOL
+11406c11407
+< 0xf4565d35	drm_i2c_encoder_detect	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x26d9d5d6	drm_i2c_encoder_detect	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11428c11429
+< 0x96a49fb0	snd_hda_add_nid	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x294a2dd0	snd_hda_add_nid	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11452c11453
+< 0x225b51fd	snd_hda_codec_new	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xb6562d48	snd_hda_codec_new	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11455c11456
+< 0x6d8222ca	mlx5_core_create_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x1a7ffb27	mlx5_core_create_mkey	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+11462c11463
+< 0xd7614536	snd_hda_get_conn_index	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x803824d0	snd_hda_get_conn_index	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11469c11470
+< 0x5878cd42	perf_event_enable	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x67211d39	perf_event_enable	vmlinux	EXPORT_SYMBOL_GPL
+11477c11478
+< 0xb3a037e4	bcma_core_pci_power_save	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0xf99fcdd7	bcma_core_pci_power_save	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+11482c11483
+< 0xbec07277	agp_generic_mask_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0x4d842ab1	agp_generic_mask_memory	vmlinux	EXPORT_SYMBOL
+11493c11494
+< 0x01337c3a	pcmcia_read_config_byte	vmlinux	EXPORT_SYMBOL
+---
+> 0x5461a480	pcmcia_read_config_byte	vmlinux	EXPORT_SYMBOL
+11518c11519
+< 0xa4b62a4a	cxgbi_sock_closed	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+---
+> 0x3ef16403	cxgbi_sock_closed	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+11553c11554
+< 0x5722b7c8	ssb_chipco_gpio_control	drivers/ssb/ssb	EXPORT_SYMBOL
+---
+> 0x6075a06f	ssb_chipco_gpio_control	drivers/ssb/ssb	EXPORT_SYMBOL
+11561c11562
+< 0xf8d15daa	pci_disable_link_state_locked	vmlinux	EXPORT_SYMBOL
+---
+> 0x89869545	pci_disable_link_state_locked	vmlinux	EXPORT_SYMBOL
+11573c11574
+< 0xedbcae52	il_set_rxon_channel	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x81896053	il_set_rxon_channel	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+11644c11645
+< 0x71f8f1e8	il_apm_stop	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x75e8a600	il_apm_stop	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+11652c11653
+< 0x9d40f74e	usb_hcd_pci_shutdown	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x7fbf8bdf	usb_hcd_pci_shutdown	vmlinux	EXPORT_SYMBOL_GPL
+11656c11657
+< 0xe756a1ab	pci_bus_set_ops	vmlinux	EXPORT_SYMBOL
+---
+> 0xb190901f	pci_bus_set_ops	vmlinux	EXPORT_SYMBOL
+11660c11661
+< 0x2c45671f	bcma_core_pci_down	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+---
+> 0xbb5e4a4f	bcma_core_pci_down	drivers/bcma/bcma	EXPORT_SYMBOL_GPL
+11671c11672
+< 0x01aea1fd	mlx4_get_vf_config	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x8010cda0	mlx4_get_vf_config	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+11677c11678
+< 0x302cab72	__pci_reset_function	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x91d41ddb	__pci_reset_function	vmlinux	EXPORT_SYMBOL_GPL
+11759c11760
+< 0xd0ad231e	mlx5_core_destroy_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+---
+> 0x6dd93ecf	mlx5_core_destroy_srq	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL
+11761c11762
+< 0x09f1bd25	drm_kms_helper_poll_init	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+---
+> 0x3610222c	drm_kms_helper_poll_init	drivers/gpu/drm/drm_kms_helper	EXPORT_SYMBOL
+11772c11773
+< 0xbfff45dd	drm_calc_timestamping_constants	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x405a3e95	drm_calc_timestamping_constants	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11779,11780c11780,11781
+< 0xea769ffd	cxgbi_hbas_remove	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+< 0x64bcc761	iwl_nvm_check_version	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0x657892e1	cxgbi_hbas_remove	drivers/scsi/cxgbi/libcxgbi	EXPORT_SYMBOL_GPL
+> 0x316d9b75	iwl_nvm_check_version	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+11792c11793
+< 0x9a642607	drm_mode_connector_list_update	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x78dd8dda	drm_mode_connector_list_update	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11823c11824
+< 0x6b5c1e5d	uhci_reset_hc	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x70c76183	uhci_reset_hc	vmlinux	EXPORT_SYMBOL_GPL
+11829,11830c11830,11831
+< 0x008efdf9	mlx4_cq_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+< 0x3dad9f19	ioc4_unregister_submodule	drivers/misc/ioc4	EXPORT_SYMBOL
+---
+> 0xabe1495f	mlx4_cq_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+> 0x5d67b7ef	ioc4_unregister_submodule	drivers/misc/ioc4	EXPORT_SYMBOL
+11833c11834
+< 0x7a1048cc	drm_core_ioremap_wc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x27260fad	drm_core_ioremap_wc	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11890c11891
+< 0xa18b9cee	pci_get_slot	vmlinux	EXPORT_SYMBOL
+---
+> 0x16331fb5	pci_get_slot	vmlinux	EXPORT_SYMBOL
+11902c11903
+< 0xadd901bc	mpt_resume	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x34e4ef1b	mpt_resume	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+11911c11912
+< 0xa094679c	il_restore_stations	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0xce0231f3	il_restore_stations	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+11914c11915
+< 0x2b34a501	drm_connector_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0xfd63bd20	drm_connector_init	drivers/gpu/drm/drm	EXPORT_SYMBOL
+11921c11922
+< 0xc60fac24	rt2x00pci_probe	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+---
+> 0xc65efc16	rt2x00pci_probe	drivers/net/wireless/rt2x00/rt2x00pci	EXPORT_SYMBOL_GPL
+11927c11928
+< 0x85f4c383	vga_switcheroo_client_fb_set	vmlinux	EXPORT_SYMBOL
+---
+> 0xf47a9f23	vga_switcheroo_client_fb_set	vmlinux	EXPORT_SYMBOL
+11930c11931
+< 0x6243ec5f	snd_hda_get_conn_list	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x5d20564e	snd_hda_get_conn_list	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11932c11933
+< 0xa66019a7	iwl_phy_db_init	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0xc8601d33	iwl_phy_db_init	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+11954c11955
+< 0xfa18db79	snd_hda_set_vmaster_tlv	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0xf8dbd9fd	snd_hda_set_vmaster_tlv	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+11957,11958c11958,11959
+< 0x75611f45	mlx5_buf_free	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+< 0xa0df51b5	mlx4_buf_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x0d816ca4	mlx5_buf_free	drivers/net/ethernet/mellanox/mlx5/core/mlx5_core	EXPORT_SYMBOL_GPL
+> 0x63db84e8	mlx4_buf_free	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+11960c11961
+< 0x1cc33df2	pci_lost_interrupt	vmlinux	EXPORT_SYMBOL
+---
+> 0xa09ed2be	pci_lost_interrupt	vmlinux	EXPORT_SYMBOL
+11981c11982
+< 0xdeaa49c2	amd_iommu_device_info	vmlinux	EXPORT_SYMBOL
+---
+> 0x9867c056	amd_iommu_device_info	vmlinux	EXPORT_SYMBOL
+11995c11996
+< 0x762e86e8	iwl_read_eeprom	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+---
+> 0x32f9ad8f	iwl_read_eeprom	drivers/net/wireless/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL
+12023c12024
+< 0x1a60aaf2	drm_mode_object_find	drivers/gpu/drm/drm	EXPORT_SYMBOL
+---
+> 0x44cbc5d9	drm_mode_object_find	drivers/gpu/drm/drm	EXPORT_SYMBOL
+12027c12028
+< 0xf774fb6e	snd_hda_sequence_write	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+---
+> 0x417fd320	snd_hda_sequence_write	sound/pci/hda/snd-hda-codec	EXPORT_SYMBOL_GPL
+12044c12045
+< 0x50e3e11d	il_init_channel_map	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x1a5f8933	il_init_channel_map	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+12067c12068
+< 0x92f249c2	agp_free_memory	vmlinux	EXPORT_SYMBOL
+---
+> 0x5e83da36	agp_free_memory	vmlinux	EXPORT_SYMBOL
+12073c12074
+< 0x03209983	agp_copy_info	vmlinux	EXPORT_SYMBOL
+---
+> 0x707a9f27	agp_copy_info	vmlinux	EXPORT_SYMBOL
+12085c12086
+< 0xc2012418	pci_reset_pri	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x89b7890d	pci_reset_pri	vmlinux	EXPORT_SYMBOL_GPL
+12089c12090
+< 0x2c737334	il_clear_ucode_stations	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+---
+> 0x41e69053	il_clear_ucode_stations	drivers/net/wireless/iwlegacy/iwlegacy	EXPORT_SYMBOL
+12097c12098
+< 0x814fe143	pci_set_cacheline_size	vmlinux	EXPORT_SYMBOL_GPL
+---
+> 0x41f89a33	pci_set_cacheline_size	vmlinux	EXPORT_SYMBOL_GPL
+12120a12122
+> 0x78e39615	radix_tree_delete_item	vmlinux	EXPORT_SYMBOL
+12122c12124
+< 0x304dcc64	snd_trident_free_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+---
+> 0x402836a9	snd_trident_free_voice	sound/pci/trident/snd-trident	EXPORT_SYMBOL
+12127c12129
+< 0x3bacbf3d	mlx4_alloc_hwq_res	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+---
+> 0x98af506c	mlx4_alloc_hwq_res	drivers/net/ethernet/mellanox/mlx4/mlx4_core	EXPORT_SYMBOL_GPL
+12138c12140
+< 0x37c125bc	mpt_send_handshake_request	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+---
+> 0x9d252a0a	mpt_send_handshake_request	drivers/message/fusion/mptbase	EXPORT_SYMBOL
+Common subdirectories: linux-yocto-3.14-clean/net and linux-yocto-3.14-working/net
+Common subdirectories: linux-yocto-3.14-clean/samples and linux-yocto-3.14-working/samples
+Common subdirectories: linux-yocto-3.14-clean/scripts and linux-yocto-3.14-working/scripts
+Common subdirectories: linux-yocto-3.14-clean/security and linux-yocto-3.14-working/security
+diff linux-yocto-3.14-clean/signing_key.priv linux-yocto-3.14-working/signing_key.priv
+2,51c2,51
+< MIIJQwIBADANBgkqhkiG9w0BAQEFAASCCS0wggkpAgEAAoICAQCwb+dd5xN3d3bj
+< /9knm0zsux+SJ3uMz7HHdaBC9Ob74A3vhIbhlk+M+sg2imxYySed+nKn+NMoy1Zq
+< imlKJyxHvlYVxX1zl0LPCdNdowzNFuPP4+td7oqgMsptKPA/unTDz11SGayKHs26
+< Bzs7oaa5QJGGCFNL49Q+GkfKvyCnqbRUSaHokq0pYq+YoLXzqm8ir+vpBiISbPqB
+< GT8fiocEEEBpfHkhcREq04kW75+rrYyuldw1iThGhepZIM6n+ZJ5jpWYWNrtfVcK
+< b6UsCoyN10HDNBULUTvbqhdOoxt1gSAbO7FxEvP/jSH0lGxuDs443IhP595555Dx
+< e5oaBpMRcs34/xAnkUDxCvgXLdjEK0nIC3de3JYWdiH7vBQ0gJ3MwBSxYzjgKE4d
+< KJA/JeHFHrfmSiXy2L4cAF9hCcyrx0KUeQGCmXLU7rNJfNGviDJpg2cFnIhpIMHT
+< /ZluOHs2t3Eu2DnZ6acDD3fYuRZvVXDdPjwbVew6m+tG5GaiW5NZzA/Xd6PCBRWv
+< w3UV7j4WGiyqRNcTmpWUDMSiwHIRtFxay5WEs1IznTBR7CHn866Mf2QO2sHjOuoG
+< lB2ZNVMMan2uw87nr7Ujxdx6ctqlb5g0w0Qki4LNj078Eufq9W+sGm6txGsA1cBe
+< EsxWSoUov/pQaXTbRimW0XJpFhBkgwIDAQABAoICAQCQQe6aCGUSOMssf/O9Pm0W
+< 4aheh4mtB+QDgVkXZcW2CutZ+rGNoKhKTIGGlocf0NhjgnJchEWiBR8S3ThZOM4r
+< mqQoCOEZsYMeZJo85SOCTETXpTK8Cl2tvdlkhyRn9ruhndpfVj6Mb8MlZuQ3TWRT
+< 80cIn6X7VrwiSrqIOt0oOMkIYWvQDJ0oSVfpIv2hzKgxZEUusaUKC7CF/W5vC4R4
+< /hCsLumbPicbLPnZlvKmG6/6zuzNmPQ6NSP226wcCyKH4NzPQ1c89k5EaiRSbg2d
+< q3JJeDv8lN6sK9YCpbm9yWXG3nemTCjTuUEaCIDfO5vBQg7xxlNQuNT5nGXTAa0c
+< Kh7b3WaS2tkCrW4FwlKa/04ORl4GGMoY5oGZmN+0T3QMf1ScF2/83c6WDaxWvFYM
+< OPUcfi3prHJ/4h7zRZRkFXNibT6AQ3CW5FqVdCV+irY8dsOYbLgwF4U36SlCXkZq
+< 1vXwQj2cYXnbu/0wiwmrrotq1BjLFpUWJyqrVv4K3h0DVDhbhVBW9KNqbdI81jfo
+< f/0DdS3ivkP79rX+i8mu5tf7APciBkdbd+wMSEZzmsOEQVL5JScJw/OzQRF9AeYs
+< GF7myngovrZPQVikPszMswBqLiODU5UELEeVpzQILixkpegJoNYiH2GEAIBA20eY
+< uQIk6uDW2teUJ0dq1ddeAQKCAQEA6JNMjLj5HbQYbZ6Ujcw3JGeZdJa3Ezx4Da7b
+< O3atqJsClTydEbTULM3G7L0lARrWO6iqtkecCLGUQeXrvSMU4Spyzh/7Z9AcqyDQ
+< Ob4FgDfwuwLKYJw6IbfQr1WUPfIz+b6MOKoDcZV6oIVcZepRhMiKoCTCuIL+t1Ed
+< Pmcw32aH9GSqUH9Y5/jjcTpv1jgyhltPYWbh2bh5kpMaz277kWghSw0pucqK8w15
+< ZRz++D1kcW2C2DecwbtIVIv7mDASHBHQzKyqenmF7aoQEqTDyb+Ar1dEna0G7KXg
+< IlcB8HcVcKH+wqtVPF+t2Wd5gBggJ+c/jG3MniVPrEKeRlA0sQKCAQEAwjUkK7Ka
+< dJBMPRuAaCGCKcYQOKTRuE2Id3VX3zRblRXXwfZLmpyj4XTtwdBURgtOhODOokQe
+< 4pDd3uQRN4c4rUNb/SBzYu+R3fmywGMmUqNfHO9H6/ZxHm5OTUQGlYPYe1fxKk/d
+< DBq4Gr5LDskX92EJAefNzS+Ja/mMenVOVzdwJTM9+yHUVhZ1P9KjdFc6YFjKomF6
+< 2V53/Vs+F1iSlFvyI+BTCYmjUTMbi5eyKxtlB/dWdmxkYribmQ7pRiHDqH4QXxkg
+< lhZ54XwndGLGDb5EteoKFyZOsZY4E2BzIySubORh6YSk2JOofnngjsMCoPdT6oey
+< 3yNRUTzafraJcwKCAQBERWkFLg9CnulE1HY7IaVWNGshhFR9exSqv5dvXykfA1HA
+< ySg6WGCoPkeUmvlP17bnkF18YIz3KFmi9oE65h9s8W79/vlnwfmIant1V8h5mPI7
+< k1gg//s4hqLltTNs87o6J6s1vwJ/xydWE4/KAvynA89dryzRyPJIkbEJ7nS0P37N
+< SPeN5bQNdEwfos3NjnWWZxtoNjE6HiLh2fjWx3dlebG8PELxXPlo2521Bsv5xtvD
+< SChOnBSR8g4Lc4QJaqMGRlyKmGz6ws2DtJY/QsqOYH6/+dgUiQQtV4vxyKSzF+Hd
+< TFBiiLTeoh+AYBWUeoCF9iX7bQfRrJY0tOGNNmIhAoIBAQCmN0tU5xEQ8Kt/pXka
+< Jou76xvZDx+7qQhCjbj+fVZg3AgEpyMAGk6c2THgrshiBq1WRv4znS/949UxPmuJ
+< 5f7ZNAyYMdzv8XEb1elqhbG4CsGOBzG8P/mC/Q+hS7aC4ww2TQdImn/rKzclFHcz
+< GWOcw30tF1Np6OSp+DSGXr4FIZqnDBthRAvy/letnz9shHefHH+ZyOqW/iaePih/
+< XLxfo+4zTHxlblrMVXye1d+Uy2aGEef7hTvJzozFzCBVePJ31CV47w2Xx3bbSSKP
+< lzZBbvZp5/xo4c16asJluyfwDSYIZtNyRKe+AWq1jORn63nlgKle0nOCTTz81aN/
+< zgUHAoIBAAfADIYtUxwoXSgLgrOclNy6TJwCWdLmCIiPB/5++UJQtTn6e97Bn2Jh
+< h+Xs80iACXrglsVWHmTqaoBx/OXPC55WeIegUfWLu780Xd8el2JhTxfZ3yTTu34b
+< GCUL5Xv617KeN4u8gA8myEt9dcoI3xb5TCsVURFgwmImlBjHNf5w5f3w2Dgs1n/q
+< JDZhwXxnBNw+4nT5HsU1562Z/mNX8UAizqMeb61RurSXCzQzwcihbc7uItrt0DM7
+< BW3CvlWy7R1lIVU+VhY2yOZ4k0ByAt9/Rvp0FcgkJ1TlFks3dz06fFw72rbdtViY
+< THm1I1FDN9L9JAhP2ObyQFoODj3pt5s=
+---
+> MIIJRAIBADANBgkqhkiG9w0BAQEFAASCCS4wggkqAgEAAoICAQC2wzlQGDelQjY/
+> sKv9K9nCCF2Mvqoy322I+dybuco3kHyknQmNX8XahHnbPkGB+o6cjill6n9UJm/o
+> I3QvlHfioOTzeK5iTcbYwZz13oHRkncqPb04+x8lT2H4kdy5XOcRHeSwBaMECesq
+> Ghn6s2XAa6OkXelelzZ9atjPOnDWtcRxNcOmaZqG7iA5UFK0Fu2iwAY42REeKRkO
+> Eqtdf0q61ZsBFKow5V0HJpMGTt9Aa0W78NnDBoYvOm/j6/Pp1erTODQmlPAJfrMU
+> 0oX9G6Ttm7aNQws9PRmXN2ZgqmcbQ7EexZEpbJpVQ/zEN1jGDt3ltqTwo1Gmd5jX
+> lHZWIVyxD/p6hivWv/+PN5odZI8EAvyfW5GXuQrHHoTr82q7B4tMohVVo+nJEr3h
+> 0j6ZRC2o8cuXvT30ery3zV9hvQ+QEctAbQkju3tTS81OW0EdiwNqCaxMs6V00k2C
+> XbUALKTK/UkMI318qoyf4/gqiMdmpQQ0NqSlSefTNh1TDFJOcveaRNAs40Yp5OBT
+> FcvQeR2SOhzGbNGAkFymxuaHzvLWAZ/5Ynsn2ra74z/pGqhyLZj198gpdjGMj5AB
+> 0rGQmpeGHkcbXKhd0ZgDIKUFTCsdjq0zo1Q8eqfN62GOOZ092Y5u0T5aYqRyL8qc
+> jTrq1OvArfaehgJreFNjIbwu3993YwIDAQABAoICAQCw4wZnlOjWk9z5i78KjBR4
+> jawteqQ0FLdpKZvxRMKJQNjCYhNKt3VBZ5KhNgIlESJSN+2tbGbMRV9uKFJdcq8N
+> s3ekhhsRngFk7Q9DkJXJBp87TQIFUlf0vn4uHM6qwVYK5Qnfq7T5RbhLyXN3h4Zl
+> 1EhP32ztViExBebNutxXkxmMEONJ/0/GZFbf4fQJxV8+c+gRwVWmAVT0n/Enzvm/
+> FtqtExkdtgBx2U3XfyLosGqP2i6JaZkZwM9mo4oxug9LW0xuQxyHtA8TiiaQsN7R
+> 8jGfS1JndOl9x+rYiFS+uKeHBuTWWPyOpfzQ1FihaOYvXLULCqcOHRbbIB/ggO25
+> 9uxK/Pvsa916ifS8Ho727/2YmAJCbxrDB9trk+4bhA2FY1y6WtQwTv5hQ3IDhvMH
+> /J1MO9kMVaNdUqHh5HTaDhXjeH6rtNMDuJ43T8H1cGNIU2yE6ZA9E/oM7VSZJ3Z8
+> T0O1HXPspAuhz/X/5H3Oyecyo+tFrg3QOtuG6Fp0Ko+xc8rxrxh4ZKjEhy7CkXzB
+> yWv7C6xSfb2ay1Scj3SJk4nXf1vumZKuiCLRCJW0yYqNwxgNr0WbvLs2SV84K86G
+> wpiWs6Jn0Nf/4/4ixHxn4Vy3bClH40wNe3k6jMB1TcFingpSTv/NPqmqZISj6vS3
+> Jn5ZUXlMwQuY16BqMf0KYQKCAQEA2bPYKqlMmzQjEAUIlA3AvyhXCrn7LK6eDMe3
+> R9plpVrECHKv3Vc/AOo4cc8FP9xDGVCr64j568XPYIHvD7oT5Ez2EcL0UFxVxJCO
+> 2sTj7sGTE4jPAIaxHWa4ounn56R7tdASH9310m7HN/svpyES5LIobmPTg1N8SaVQ
+> EPb3ySbHCK9Q37lbYXdCWQZvxjrDDeoApqWDNy4IZ5Au/1ebkY2HcclunJ+SGmUA
+> PuijQDfFaVy81oO0AHjXcG0ZdkwMGHO3WACq/4gPO99r9fmtg6rA4SMDKl2HJeeE
+> Fz7FHkXcDgxfT8jYCwQFDUPu1INdjI0OUWySZ4LsHV/ONxNG6wKCAQEA1unfVd8/
+> aC3dmWgxducPNJp+U48bppzv0im+HvX4DDIPumP+pBIq34D9AI+UTbaht100go6Q
+> WpRB6QWgsY1yBw4iIfzFRF1wu1ViPUgZmpuMPLUv8V2uqZBkEyRgQzHOs/ugb4pF
+> 5+2mUi5dSr0mOAjld/JB4X5A8wYuy+u+F6qpQ1vyoZKi/DGIt9mbXUEG/TJXxZO6
+> mgXxNd/YDEMeksRzRnn8xBIT14Y9I7Dm7ZN21vZjB2v/3A9plZtN/LUcdwtx2j2r
+> G1sXSfYC14QmGv1PtwapHXQgRTg2lhNUhSzBjKpzyqFOUpBcTtXIbpIDdzXjSDKS
+> IOZx83YYZ//jaQKCAQEA2a0KkrWPRIygFm+CAU+zDzANwErvy+CZZdv39d94zRpx
+> cqUCFYYcGBUZ9SnzbMQXT2OrUyo2ArpaPXwOBiKfqyIM1PujAAsjMxT70eEWq29g
+> WSLtH/CNfgFs0nChEawUilmPFdAA8LUVe3MsVacrVgKRjLdCEUjTuGuUIDJg1f9w
+> +c0aR2j15wGxFITsFEBDMlFs7zQFfJIJk0vGwkfd5G6oJG0trWucUcn1sfE48ogR
+> WuWAZ9lujR5HBEICOJeXbIefpl2cnT51RP+D2oIZLdL5YuN4Uc8MyCiyme+Id1mQ
+> y3cxgfwnkPQm/PmU/2aOjm+oBmBSDzAIWOKntcgPmwKCAQBPupnBKL5ELufL9qyL
+> GPM6J6p/41J1wDj0NcozgDrSg2v0UQ5x3c+L9TVnFN0G658ZAHnviWYiRGgjQ5Q2
+> 6muIFIUzKKwiTav5w5Zbd7kP827WQr2ThJa8jzWhKFiR9RNjEBGX76s5fJ+8UzkG
+> 9h8MoLhIhFZOimEcB4oq2r092HFM7PqZWGYgu1umIROTSAGIwzlusfyDEXtH6lAj
+> VG8uMbU2SyEruC0mQsXBzOoO7ysiWmuooDdec1VPTDtlaecyfstxFHm6/1MnfB3X
+> yE2+q4T8OHta0u753v3ZNTig41a2kbG9VZRR6v5jvMnLw12HxzUXXrN5gyR5FrG9
+> O2ApAoIBAQCuozzQtq07+rtKF6eZiQLfG2NWhLFoR1pb5u5JWF3AMQOTVscN0VRz
+> QYnziV+Ca9AJdPcnufiVE8X0D3PQjnltW8Nb5SIKBaqILcXXh7AJpX0DmQLiqrz9
+> 4ZgZF/C2qLpdxoEtpsGy72OTMRLVz0M7/nOHhADg1+PkqHA3kZR5FSG4H/jXwki6
+> 6ididK6ZhjDSvpzZi2TGZ9VJ68QDjNpT8R6Qf8ROHXsimaQUMFEx/kdhFUWX9CFA
+> gMT4H5m7jgqYTmG15KA1SLn9gDv+nppYFHwURmuv/ChAmY2PRG05Ja2FWFsyH5DI
+> T+XK4meefyFnAJTunUWFpT7gVhgNmmeV
+Binary files linux-yocto-3.14-clean/signing_key.x509 and linux-yocto-3.14-working/signing_key.x509 differ
+Common subdirectories: linux-yocto-3.14-clean/sound and linux-yocto-3.14-working/sound
+Only in linux-yocto-3.14-clean/: System.map
+Only in linux-yocto-3.14-clean/: .tmp_kallsyms1.o
+Only in linux-yocto-3.14-clean/: .tmp_kallsyms2.o
+Only in linux-yocto-3.14-clean/: .tmp_System.map
+Only in linux-yocto-3.14-clean/: .tmp_versions
+Only in linux-yocto-3.14-clean/: .tmp_vmlinux1
+Only in linux-yocto-3.14-clean/: .tmp_vmlinux2
+Common subdirectories: linux-yocto-3.14-clean/tools and linux-yocto-3.14-working/tools
+Common subdirectories: linux-yocto-3.14-clean/usr and linux-yocto-3.14-working/usr
+Common subdirectories: linux-yocto-3.14-clean/virt and linux-yocto-3.14-working/virt
+Only in linux-yocto-3.14-clean/: vmlinux
+Only in linux-yocto-3.14-clean/: .vmlinux.cmd
+Only in linux-yocto-3.14-clean/: vmlinux.o
