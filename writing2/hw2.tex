@@ -104,7 +104,7 @@ In terms of functionality, I/O devices are scheduled in Linux with different bui
 The Linus Elevator acts as it seems like it should - an elevator. It does merging and sorting, and sends requests to the executing queue in the same way an elevator would. The deadline algorithm acts similarly, but keeps requests in a separate FIFO queue to
 prevent starvation. The provided No-op scheduler acts as a pure FIFO, and neither merges nor sorts. As a result it is not optimal for dealing with latency and overhead costs of moving the read/write head. Linux's default scheduler, the CFQ scheduler, aims to schedule requests as fairly as possible.
 
-The Linux kernel provides data structures for I/O scheduling. For instance, the list_head struct acts as a functioning list for queueing.
+The Linux kernel provides data structures for I/O scheduling. For instance, the list\_head struct acts as a functioning list for queueing.
 
 \subsection{Windows & FreeBSD}
 
