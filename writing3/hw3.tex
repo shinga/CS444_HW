@@ -1,4 +1,4 @@
-\documentclass[journal, letterpaper, draftclsnofoot, onecolumn, 10pt]{journal}
+\documentclass[journal, letterpaper, draftclsnofoot, onecolumn, 10pt]{IEEEtran}
 
 \usepackage{graphicx}
 \usepackage{amssymb}
@@ -53,8 +53,8 @@
    linkcolor = black,
    pdfauthor = {\name},
    pdfkeywords = {cs444 ``operating systems'' files filesystem I/O},
-   pdftitle = {CS 444 Writing Assignment 1},
-   pdfsubject = {CS 444 Writing Assignment 1},
+   pdftitle = {CS 444 Writing Assignment 3},
+   pdfsubject = {CS 444 Writing Assignment 3},
    pdfpagemode = UseNone
 }
 
@@ -63,7 +63,7 @@
 
 
 \begin{document}
-\title{Writing 2: I/O}
+\title{Writing 3: Memory Management}
 \author{Arthur Shing}
 
 
@@ -106,7 +106,36 @@ prevent starvation. The provided No-op scheduler acts as a pure FIFO, and neithe
 
 The Linux kernel provides data structures for I/O scheduling. For instance, the list\_head struct acts as a functioning list for queueing.
 
-\subsection{Windows \& FreeBSD}
+% \subsection{Windows \& FreeBSD}
+
+\section{Memory Management}
+
+A major part of an operating system's functionality is memory management.
+The operating system allocates memory to processes, keeps track of memory, and determines how much memory is allocated to processes.
+
+In the systems Linux, Windows, and FreeBSD, every process has its own virtual address space in blocks called pages. These pages are fixed-length contiguous blocks of memory. This memory management scheme, called paging, is used for virtual memory management where data is stored and retrieved in pages from secondary storage. \\
+
+In Linux and FreeBSD, the virtual memory manager (VMM) uses a lazy allocation strategy, where memory is not allocated until necessary. The virtual memory manager uses copy-on-write paging, meaning that when new processes are forked with the fork() system call, processes do not copy over all of a process's memory, and instead shares pages. When a process wants to write to a page, a copy of the page is made for that process, allowing for efficient memory allocation.
+In Windows, cluster demand paging is used in place of the lazy allocation demand paging strategy. What this means is that multiple pages are brought into memory when needed and are used together as a working set. \\
+
+
+In FreeBSD, a layered virtual memory object model is used to manage virtual memory usage. When a process is forked, two new object layers are created (for the parent and child) on top of the original parent process layer. Once the child process layer does an exec() call, the layer is destroyed and the parent process layers are collapsed into one.
+Because this model is fraught with problems such as dead inaccessible pages, FreeBSD uses an optimization called "All Shadowed Case" where if one of the two new object layers can shadow all pages in the original parent layer, the new layer bypasses the original parent and the other new layer collapses into the original parent layer. This optimization allows even heavily forked machines to have shallow virtual memory object stacks.\\
+
+Page tables, the data structure used by VMMs to store addresses, are implemented differently in Windows systems. Linux utilizes three page table levels - the Page Global Directory which points to the middle directory, Page Middle Directory which points to table entries, and the Page Table Entry which points to a physical address. In contrast, Windows systems only have two levels, a Page Directory and a Page Table.
+Windows systems also use a tree data structure rather than a list data structure that Linux uses to store virtual memory addresses. \\
+
+
+% BRANDONS PART
+% Firstly in Unix systems, processes are required to allocate a shared memory segment before other processes can attach it to their respective address spaces.  The contrast to this is seen in the Windows version of the process address space, which is managed by what is known as the memory manager.\cite{mwi10}  The working set is what Windows calls the process's virtual address space subset.  It is with this that Windows supports shared memory objects and memory mapped files which enables multiple processes to be opened on a single virtual address space.\\
+%
+% The following code sample displays the implementation of memory objects in Linux.  Take note of the initial segment (shm\_open).\cite{lkd12}\\
+%
+% \lstinputlisting[caption=Linux Memory Object Example, style=customc]{linuxMemoryManagement.c}
+%
+% In addition to this, the implementations of page tables in Unix systems versus Windows contrast as well.  In Linux, the four levels of page tables are: Page General Directory, Page Upper Directory, Page Middle Directory, and Page Table Entry.\cite{lkd12}  Windows systems only have two levels of page tables known as: Page Directory and Page Tables.  Both Unix and Windows support 4 KB pages.
+%
+% Another difference between Unix systems and Windows is the allocation of memory to virtual memory.  For every 4 GB process address space, Linux/FreeBSD allocates 1 GB for virtual memory.  In contrast, Windows allocates 2 GB of every 4 GB.\cite{mwi10}  This results in Windows having faster system calls as the kernel is able to execute more code in virtual memory without context switching.  However as a tradeoff, Windows processes have less private virtual memory.  FreeBSD/Linux processes have more context switching as a result of this architecture.  The following diagram displays the user output when using the kernel debugger for Windows.\cite{mwi10}  Make sure to take a note of the various pages and memory pools.\\
 
 
 
