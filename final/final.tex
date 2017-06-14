@@ -53,8 +53,8 @@
    linkcolor = black,
    pdfauthor = {\name},
    pdfkeywords = {cs444 ``operating systems'' files filesystem I/O},
-   pdftitle = {CS 444 Writing Assignment 3},
-   pdfsubject = {CS 444 Writing Assignment 3},
+   pdftitle = {CS 444: Operating System Feature Comparison},
+   pdfsubject = {CS 444: Operating System Feature Comparison},
    pdfpagemode = UseNone
 }
 
@@ -63,7 +63,7 @@
 
 
 \begin{document}
-\title{Writing 3: Memory Management}
+\title{Operating System Feature Comparison}
 \author{Arthur Shing}
 
 
@@ -71,7 +71,9 @@
     \pagenumbering{gobble}
     \centering
     \maketitle
-    \large Spring 2017
+    Spring 2017\\
+    \vspace{2cm}
+    Linux, Windows, and FreeBSD are three operating systems that take different approaches to implementation of the functionality of an operating system. In the following, the differences and similarities between the three systems will be compared with regard to processes, I/O, and memory management.
 
 
 
@@ -81,63 +83,256 @@
 \clearpage
 
 
+\section{Introduction}
+
+An operating system is an essential software for managing a piece of technology. These systems manage filesystems, user interfaces, device drivers, and a host of other things. While all operating systems must deal with managing these things, there are different ways to approach it. In this paper, we will examine three operating systems - Linux, FreeBSD, and Windows - and understand the differences in approaches when it comes to processes, threading, I/O management, and memory management.
 \section{Processes, Threads and CPU Scheduling}
 
 Processes, threads, and CPU Scheduling are parts of an operating system that define how the operating system functions. Different operating systems have different scheduling algorithms, and processes running on one operating system may behave differently on another operating system. In the following sections, I will examine the similarities and differences of these three components in Linux, FreeBSD, and Windows.
 
-\subsection{Processes}
 
 A process is often defined as a program in execution, or as an instance of running programs. Processes do not only include the program, but also the resources that are needed to run the program. The specific components of a process differ across operating systems; however, there are some properties of a process that are apparent across all operating systems.
 
-Processes are represented by a large data structure called a Process Control Block. In Linux, processes are represented by the task\_struct data structure. Each new process is appended to a task vector, which has by default can hold up to a limit of 512 processes. In Windows, processes are defined in the EPROCESS block.  Linux, FreeBSD, and Windows all contain similar components in their process control blocks. They all include things such as a unique PID, the execution state, virtual address space, program code, program data, scheduling information, and system resources.
+In Windows, processes are organized by an Executive Process data structure (EPROCESS). The EPROCESS data structure includes a number of fields, such as process ID, flags, the Process Control Block and the Process Environment Block. The Process Control Block is in the form of a Kernel Process (KPROCESS) data structure, which is used for kernel operations. The Process Environment Block contains information about thread storage, the process heap, and the image. \cite{mwi1}
 
-In Linux and FreeBSD, processes are created using the fork() and exec() calls, which creates a child process. This clones the current process, so that the child and parent process shares important resources. In Windows, the functional equivalent is CreateProcess(), which creates a new process but does not initialize a parent child relationship like Linux does. Because of this, child processes in Windows only store the PID of their parent process and no other information, and can continue running when a parent process is closed. In Linux, child processes tend to exit when the parent exits.
+Processes in Windows are created via the CreateProcess() call. The CreateProcess() call creates a .exe file and loads an EPROCESS. The call thus creates a new process but does not initialize a parent child relationship like Linux does. Because of this, child processes in Windows only store the PID of their parent process and no other information, and can continue running when a parent process is closed. The parameters taken by CreateProcess() is shown in the following block: \\
 
-\section{Input/Output}
+\begin{lstlisting}[frame=single, basicstyle=\small]
+    BOOL WINAPI CreateProcess(
+  _In_opt_    LPCTSTR               lpApplicationName,
+  _Inout_opt_ LPTSTR                lpCommandLine,
+  _In_opt_    LPSECURITY_ATTRIBUTES lpProcessAttributes,
+  _In_opt_    LPSECURITY_ATTRIBUTES lpThreadAttributes,
+  _In_        BOOL                  bInheritHandles,
+  _In_        DWORD                 dwCreationFlags,
+  _In_opt_    LPVOID                lpEnvironment,
+  _In_opt_    LPCTSTR               lpCurrentDirectory,
+  _In_        LPSTARTUPINFO         lpStartupInfo,
+  _Out_       LPPROCESS_INFORMATION lpProcessInformation
+);
+\end{lstlisting}
+
+On the topic of processes, background processes are also critical to the services that an operating system can provide. Background processes in Windows are known as Windows Services, and are called such because they rely on the Windows API to interact with the system and are not tied to an interactive user. These are similar to Linux daemons, which are created when a process forks and the parent dies. In terms of components, Windows services consist of a service application, a service control program (SCP), and a service control manager.
+
+Like Windows, Linux and FreeBSD processes include the Process Control Block data structure, which includes components such as a unique PID, the execution state, virtual address space, program code/data, scheduling information, and system resources. In these two operating systems, processes are represented by the task\_struct data structure. Processes are appended to a task vector, which by default can hold up to a limit of 512 processes. The process control block in Windows contains similar information, but are forms of the KPROCESS data structure.
+
+To create processes in Linux and FreeBSD, the fork() and exec() calls are used, which creates a child process. This clones the current process, so that the child and parent process shares important resources.  In Linux, child processes tend to exit when the parent exits.
+
+\subsubsection{Differences}
+As explained earlier, process creation in Windows differs from that of FreeBSD/Linux. The fork() command duplicates a process, and is typically implemented with a clone() call which specifies shared resources. The exec() call then loads an executable file into the process address space and executes it. Because of these multiple steps, forks can perform additional work before being loaded into the address space.
+
+The designs behind Linux processes and Windows processes can be explained by the Linux emphasis on modularity. Windows, as a whole cohesive system, does not emphasize modularity as much and does not expect the functionality of CreateProcess() to change much.
+
+\section{Threads}
+
+Threads are an abstraction in computing, and are more or less paths of execution within a process. Processes can contain multiple threads, which can be executed concurrently or in parallel. Threads enable multiple things to work with shared resources at more or less the same time.
+
+In FreeBSD, Windows, and Linux, the operating system operates under a user and kernel mode. This allows threads to utilize system calls to kernel code that executes on behalf of the thread. In Unix-likes, some data in the task\_struct are only available in the kernel space. In Linux and FreeBSD, threading is done through pthreads. In Windows systems, threads have the Process Environment Block and a Thread Environment Block, the former of which is only available in kernel mode but can be accessed through system calls.
+
+All three operating systems also support kernel-only threads. These are threads that are created when the machine boots, and have no separate process context. These kernel-mode threads - known as system threads in Windows - deal with low-level jobs, such as handling interrupts. These threads have no separate environment structure, such as the Thread Environment Block in Windows or the task\_struct data structure in Linux and FreeBSD.
+
+\subsection{Differences}
+
+Windows, FreeBSD, and Linux threads act as similar abstractions. However, they differ greatly in application. In Linux and FreeBSD, threads are just like processes that share resources with other threads or processes. However, in Windows, all processes must contain at least one thread, which get processed by the scheduler and are handled by explicit kernel functions.
+
+One of the benefits of the Windows implementation is that Windows threads are quicker and more efficient. However, the Linux implementation reflects the focus on sharing resources, as threads are essentially the same as processes and can share the same resources in held in the task\_struct, while the data structure for Windows threads (ETHREADS) is less robust than the EPROCESS structure and instead holds a pointer to the EPROCESS of the thread.
+
+\section{Input/Output and Scheduling}
 
 I/O is shorthand for input/output, and is used by computer scientists to describe the interaction between a computer system and anything outside of the computer system, such as users and external devices.
 In the following sections, I will discuss I/O functionality in Windows, FreeBSD, and Linux systems.
 
-\subsection{Functionality}
 
 In terms of functionality, I/O devices are scheduled in Linux with different built in functions. Some scheduling algorithms provided in the kernel inclkude the Linus Elevator, Deadline algorithm, No-op, and CFQ (Completely Fair Queueing).
 The Linus Elevator acts as it seems like it should - an elevator. It does merging and sorting, and sends requests to the executing queue in the same way an elevator would. The deadline algorithm acts similarly, but keeps requests in a separate FIFO queue to
 prevent starvation. The provided No-op scheduler acts as a pure FIFO, and neither merges nor sorts. As a result it is not optimal for dealing with latency and overhead costs of moving the read/write head. Linux's default scheduler, the CFQ scheduler, aims to schedule requests as fairly as possible.
 
-The Linux kernel provides data structures for I/O scheduling. For instance, the list\_head struct acts as a functioning list for queueing.
+The Linux kernel provides data structures for I/O scheduling. For instance, the list\_head struct acts as a functioning list for queueing. This struct is a basic linked list, with working functions that enable simplicity when developing in the kernel. For instance, there is a function that allows you to replace entries in the list\_head. \cite{listh}
+\begin{lstlisting}[frame=single, basicstyle=\small]
 
-% \subsection{Windows \& FreeBSD}
+    /**
+ * list_replace - replace old entry by new one
+ * @old : the element to be replaced
+ * @new : the new element to insert
+ *
+ * If @old was empty, it will be overwritten.
+ */
+static inline void list_replace(struct list_head *old,
+				struct list_head *new)
+{
+	new->next = old->next;
+	new->next->prev = new;
+	new->prev = old->prev;
+	new->prev->next = new;
+}
+\end{lstlisting}
+
+\subsection{Differences}
+
+In Windows, the I/O system is made up of drivers and the I/O manager. The I/O manager manages I/O requests, which are sent by the form of an I/O request packet. The I/O manager also has some common functions used by some I/O processing device drivers, allowing for a more centralized workflow and simpler device designs. Devices are implemented as Windows Driver Models (WDMs), enabling developers to create devices based on a standard template or model. The I/O manager also allows for I/O requests to have a level of priority, which tends to be a common theme in Windows architecture. Because of this priority optimization, higher priority I/O is given more focus, but on the flip side, idle I/O is more likely to starve. This priority hierarchy system stands in contrast with the scheduling algorithm found in Linux.
+
+FreeBSD has a mildly similar form of scheduling. The default scheduler in FreeBSD is the ULE scheduler, which splits the request queue into a high and low level. While the high level scheduler organizes I/O requests by priority, the low level section dispatches the request of the highest priority. In this case, FreeBSD's scheduling implementation is very similar to Linux.
+
+The three operating systems also have asynchronous I/O, meaning that processes can continue to run after an I/O request, rather than waiting.
 
 \section{Memory Management}
 
 A major part of an operating system's functionality is memory management.
-The operating system allocates memory to processes, keeps track of memory, and determines how much memory is allocated to processes.
+Operating systems allocate memory to processes, keep track of memory, and determine how much memory is allocated to processes.
 
 In the systems Linux, Windows, and FreeBSD, every process has its own virtual address space in blocks called pages. These pages are fixed-length contiguous blocks of memory. This memory management scheme, called paging, is used for virtual memory management where data is stored and retrieved in pages from secondary storage. \\
 
-In Linux and FreeBSD, the virtual memory manager (VMM) uses a lazy allocation strategy, where memory is not allocated until necessary. The virtual memory manager uses copy-on-write paging, meaning that when new processes are forked with the fork() system call, processes do not copy over all of a process's memory, and instead shares pages. When a process wants to write to a page, a copy of the page is made for that process, allowing for efficient memory allocation.
-In Windows, cluster demand paging is used in place of the lazy allocation demand paging strategy. What this means is that multiple pages are brought into memory when needed and are used together as a working set. \\
+Page tables, the data structure used by VMMs to store addresses, are implemented differently in Windows systems. Linux utilizes three page table levels - the Page Global Directory which points to the middle directory, Page Middle Directory which points to table entries, and the Page Table Entry which points to a physical address. In contrast, Windows systems only have two levels, a Page Directory and a Page Table.
+Windows systems also use a tree data structure rather than a list data structure that Linux uses to store virtual memory addresses.
 
+In Linux, these pages are represented by a page struct. This struct includes information such as important flags, usage count, and the virtual memory address. The declaration in Linux is shown in the following: \cite{pages}
+
+\begin{lstlisting}[frame=single, basicstyle=\small]
+
+    struct page {
+	/* First double word block */
+	unsigned long flags;		/* Atomic flags, some possibly
+					 * updated asynchronously */
+	union {
+		struct address_space *mapping;	/* If low bit clear, points to
+						 * inode address_space, or NULL.
+						 * If page mapped as anonymous
+						 * memory, low bit is set, and
+						 * it points to anon_vma object:
+						 * see PAGE_MAPPING_ANON below.
+						 */
+		void *s_mem;			/* slab first object */
+		atomic_t compound_mapcount;	/* first tail page */
+		/* page_deferred_list().next	 -- second tail page */
+	};
+
+	/* Second double word */
+	union {
+		pgoff_t index;		/* Our offset within mapping. */
+		void *freelist;		/* sl[aou]b first free object */
+		/* page_deferred_list().prev	-- second tail page */
+	};
+
+	union {
+#if defined(CONFIG_HAVE_CMPXCHG_DOUBLE) && \
+	defined(CONFIG_HAVE_ALIGNED_STRUCT_PAGE)
+		/* Used for cmpxchg_double in slub */
+		unsigned long counters;
+#else
+		/*
+		 * Keep _refcount separate from slub cmpxchg_double data.
+		 * As the rest of the double word is protected by slab_lock
+		 * but _refcount is not.
+		 */
+		unsigned counters;
+#endif
+		struct {
+
+			union {
+				/*
+				 * Count of ptes mapped in mms, to show when
+				 * page is mapped & limit reverse map searches.
+				 *
+				 * Extra information about page type may be
+				 * stored here for pages that are never mapped,
+				 * in which case the value MUST BE <= -2.
+				 * See page-flags.h for more details.
+				 */
+				atomic_t _mapcount;
+
+				unsigned int active;		/* SLAB */
+				struct {			/* SLUB */
+					unsigned inuse:16;
+					unsigned objects:15;
+					unsigned frozen:1;
+				};
+				int units;			/* SLOB */
+			};
+			/*
+			 * Usage count, *USE WRAPPER FUNCTION* when manual
+			 * accounting. See page_ref.h
+			 */
+			atomic_t _refcount;
+		};
+	};
+
+	/*
+	 * Third double word block
+	 *
+	 * WARNING: bit 0 of the first word encode PageTail(). That means
+	 * the rest users of the storage space MUST NOT use the bit to
+	 * avoid collision and false-positive PageTail().
+	 */
+	union {
+		struct list_head lru;	/* Pageout list, eg. active_list
+					 * protected by zone_lru_lock !
+					 * Can be used as a generic list
+					 * by the page owner.
+					 */
+		struct dev_pagemap *pgmap; /* ZONE_DEVICE pages are never on an
+					    * lru or handled by a slab
+					    * allocator, this points to the
+					    * hosting device page map.
+					    */
+		struct {		/* slub per cpu partial pages */
+			struct page *next;	/* Next partial slab */
+#ifdef CONFIG_64BIT
+			int pages;	/* Nr of partial slabs left */
+			int pobjects;	/* Approximate # of objects */
+#else
+			short int pages;
+			short int pobjects;
+#endif
+		};
+
+		struct rcu_head rcu_head;	/* Used by SLAB
+						 * when destroying via RCU
+						 */
+		/* Tail pages of compound page */
+		struct {
+			unsigned long compound_head; /* If bit zero is set */
+
+			/* First tail page only */
+#ifdef CONFIG_64BIT
+			/*
+			 * On 64 bit system we have enough space in struct page
+			 * to encode compound_dtor and compound_order with
+			 * unsigned int. It can help compiler generate better or
+			 * smaller code on some archtectures.
+			 */
+			unsigned int compound_dtor;
+			unsigned int compound_order;
+#else
+			unsigned short int compound_dtor;
+			unsigned short int compound_order;
+#endif
+		};
+    \end{lstlisting}
+
+
+
+Unlike Linux, Windows pages can be free, reserved, committed (private), or shareable. Windows systems also have a data structure that represents a block of shared memory called a section object. FreeBSD has a similar implementation of pages as Linux, but like Windows, FreeBSD also differs from Linux in their strategies and algorithms for memory allocation and management.
+
+\subsection{Differences}
+
+In Linux and FreeBSD, the virtual memory manager (VMM) uses a lazy allocation strategy, where memory is not allocated until necessary. The virtual memory manager uses copy-on-write paging, meaning that when new processes are forked with the fork() system call, processes do not copy over all of a process's memory, and instead shares pages. When a process wants to write to a page, a copy of the page is made for that process, allowing for efficient memory allocation.
+In Windows, cluster demand paging is used in place of the lazy allocation demand paging strategy. What this means is that multiple pages are brought into memory when needed and are used together as a working set. \cite{linux}
 
 In FreeBSD, a layered virtual memory object model is used to manage virtual memory usage. When a process is forked, two new object layers are created (for the parent and child) on top of the original parent process layer. Once the child process layer does an exec() call, the layer is destroyed and the parent process layers are collapsed into one.
-Because this model is fraught with problems such as dead inaccessible pages, FreeBSD uses an optimization called "All Shadowed Case" where if one of the two new object layers can shadow all pages in the original parent layer, the new layer bypasses the original parent and the other new layer collapses into the original parent layer. This optimization allows even heavily forked machines to have shallow virtual memory object stacks.\\
+Because this model is fraught with problems such as dead inaccessible pages, FreeBSD uses an optimization called "All Shadowed Case" where if one of the two new object layers can shadow all pages in the original parent layer, the new layer bypasses the original parent and the other new layer collapses into the original parent layer \cite{freebsd}. This optimization allows even heavily forked machines to have shallow virtual memory object stacks.
 
-Page tables, the data structure used by VMMs to store addresses, are implemented differently in Windows systems. Linux utilizes three page table levels - the Page Global Directory which points to the middle directory, Page Middle Directory which points to table entries, and the Page Table Entry which points to a physical address. In contrast, Windows systems only have two levels, a Page Directory and a Page Table.
-Windows systems also use a tree data structure rather than a list data structure that Linux uses to store virtual memory addresses. \\
+Overall, the differences and similarities between the three operating systems (in terms of memory management) reflect the differences in design between the three systems. The Windows implementation allows for virtual memory to be a part of another process's memory, which allows for software to run in Kernel mode with few context switches. As for another difference, the FreeBSD memory model is inherently an attempt at an optimization of Linux's memory model. This specific difference is described of by FreeBSD developers to be a novel, optimized way of managing memory over the traditional Linux way.
+
+\section{Conclusion}
+
+We have seen how operating systems may differ in their approaches at management and how they may be similar in their approaches. This is valuable info that informs developers how the underlying operating system is interacting with the program that is being developed. It is important to understand how complex systems manage and execute programs, and especially so when such operating systems are so widely used.
+While different systems may take different approaches, understanding why the developers took such approaches will aid us in developing more optimal operating systems in the future.
 
 
-% BRANDONS PART
-% Firstly in Unix systems, processes are required to allocate a shared memory segment before other processes can attach it to their respective address spaces.  The contrast to this is seen in the Windows version of the process address space, which is managed by what is known as the memory manager.\cite{mwi10}  The working set is what Windows calls the process's virtual address space subset.  It is with this that Windows supports shared memory objects and memory mapped files which enables multiple processes to be opened on a single virtual address space.\\
-%
-% The following code sample displays the implementation of memory objects in Linux.  Take note of the initial segment (shm\_open).\cite{lkd12}\\
-%
-% \lstinputlisting[caption=Linux Memory Object Example, style=customc]{linuxMemoryManagement.c}
-%
-% In addition to this, the implementations of page tables in Unix systems versus Windows contrast as well.  In Linux, the four levels of page tables are: Page General Directory, Page Upper Directory, Page Middle Directory, and Page Table Entry.\cite{lkd12}  Windows systems only have two levels of page tables known as: Page Directory and Page Tables.  Both Unix and Windows support 4 KB pages.
-%
-% Another difference between Unix systems and Windows is the allocation of memory to virtual memory.  For every 4 GB process address space, Linux/FreeBSD allocates 1 GB for virtual memory.  In contrast, Windows allocates 2 GB of every 4 GB.\cite{mwi10}  This results in Windows having faster system calls as the kernel is able to execute more code in virtual memory without context switching.  However as a tradeoff, Windows processes have less private virtual memory.  FreeBSD/Linux processes have more context switching as a result of this architecture.  The following diagram displays the user output when using the kernel debugger for Windows.\cite{mwi10}  Make sure to take a note of the various pages and memory pools.\\
+\pagebreak
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
 
 
 
-\FloatBarrier
 \end{document}
